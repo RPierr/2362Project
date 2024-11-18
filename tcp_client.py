@@ -7,9 +7,11 @@ import os
 # The client will then send a message to the server and receive a response.
 # Then close the connection.
 
-# Goals: Implement a file transfer system using TCP and SSL. The server should wait for user input
-# to receive commands to either send or receive files. Implement a client that can send commands,
-# waiting for user input.
+# Goals: 
+# 
+#   X Implement a file transfer system using TCP and SSL. The server should wait for user input
+#   to receive commands to either send or receive files. Implement a client that can send commands,
+#   waiting for user input.
 
 
 
@@ -65,7 +67,7 @@ while not authenticated:
 # //////////////// Command processing ////////////////
 print("Connection established! Type 'exit' to close the connection.")
 while True:
-    command = input("Enter a command (upload <filename> | download <filename> | list | exit): ")
+    command = input("Enter a command (upload <filename> | download <filename> | delete <filename> | manage | list | exit): ")
     ssl_client_socket.send(command.encode())
 
     if command.lower() == "exit":
@@ -115,6 +117,16 @@ while True:
         # Receive the list of files from the server
         file_list = ssl_client_socket.recv(1024).decode()
         print(f"Your files:\n{file_list}")
+
+    elif command.startswith("delete"):
+        filename = command.split()[1]
+        ssl_client_socket.send(filename.encode())
+        response = ssl_client_socket.recv(1024).decode()
+        print(response)
+    
+    elif command.lower() == "manage":
+        response = ssl_client_socket.recv(1024).decode()
+        print(response)
 # //////////////// Command processing ////////////////
 
 
