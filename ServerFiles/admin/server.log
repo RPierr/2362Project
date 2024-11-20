@@ -1,0 +1,58 @@
+2024-11-20 18:50:41,468 - Credentials loaded from pwd.txt
+2024-11-20 18:50:58,664 - User Pierre authenticated successfully
+2024-11-20 18:52:47,763 - Credentials loaded from pwd.txt
+2024-11-20 18:52:55,803 - Failed authentication attempt for user admin
+2024-11-20 18:53:00,186 - Failed authentication attempt for user admin
+2024-11-20 18:53:09,973 - Failed authentication attempt for user Taylor
+2024-11-20 18:53:39,129 - User TaylorGraham authenticated successfully
+2024-11-20 19:05:12,826 - Server started and listening on 127.0.0.1:10615
+2024-11-20 19:05:12,826 - Credentials loaded from pwd.txt
+2024-11-20 19:05:15,729 - Connection established with ('127.0.0.1', 45460)
+2024-11-20 19:05:37,874 - Failed authentication attempt for user gurst
+2024-11-20 19:05:46,582 - Server started and listening on 127.0.0.1:10615
+2024-11-20 19:05:46,583 - Credentials loaded from pwd.txt
+2024-11-20 19:05:48,546 - Connection established with ('127.0.0.1', 37878)
+2024-11-20 19:05:53,455 - User guest authenticated successfully
+2024-11-20 19:05:56,914 - Received command: list from guest
+2024-11-20 19:05:56,914 - List of files sent to guest
+2024-11-20 19:06:11,109 - Received command: upload test.txt from guest
+2024-11-20 19:06:11,150 - File test.txt received successfully from guest
+2024-11-20 19:06:14,579 - Received command: list from guest
+2024-11-20 19:06:14,579 - List of files sent to guest
+2024-11-20 19:06:33,159 - Received command: donwload GuGuestTestDoc.txt from guest
+2024-11-20 19:06:33,159 - User guest attempted an invalid command
+2024-11-20 19:06:46,002 - Received command: download GuestTestDoc.txt from guest
+2024-11-20 19:06:46,003 - File GuestTestDoc.txt sent successfully to guest
+2024-11-20 19:06:57,244 - Server started and listening on 127.0.0.1:10615
+2024-11-20 19:06:57,244 - Credentials loaded from pwd.txt
+2024-11-20 19:07:03,170 - Connection established with ('127.0.0.1', 36982)
+2024-11-20 19:08:38,917 - User Pierre authenticated successfully
+2024-11-20 19:09:01,764 - Received command: list from Pierre
+2024-11-20 19:09:01,764 - List of files sent to Pierre
+2024-11-20 19:09:16,887 - Received command: delete test.py from Pierre
+2024-11-20 19:09:16,888 - User Pierre with admin role requested to delete a file
+2024-11-20 19:09:16,888 - File test.py deleted successfully
+2024-11-20 19:09:16,888 - Received command: test.py from Pierre
+2024-11-20 19:09:16,888 - User Pierre attempted an invalid command
+2024-11-20 19:10:13,413 - Received command: list from Pierre
+2024-11-20 19:10:13,413 - List of files sent to Pierre
+2024-11-20 19:10:21,123 - Received command: list from Pierre
+2024-11-20 19:10:21,123 - List of files sent to Pierre
+2024-11-20 19:10:29,271 - Received command: upload test.py from Pierre
+2024-11-20 19:10:29,315 - File test.py received successfully from Pierre
+2024-11-20 19:10:45,700 - Received command: manage from Pierre
+2024-11-20 19:10:45,700 - User Pierre with admin role requested to manage files
+2024-11-20 19:10:54,883 - Received command: exit from Pierre
+2024-11-20 19:10:54,884 - Client Pierre closed the connection
+2024-11-20 19:10:54,884 - Connection with Pierre closed
+2024-11-20 19:10:54,884 - Server closed
+2024-11-20 19:14:57,937 - Server started and listening on 127.0.0.1:10615
+2024-11-20 19:14:57,937 - Credentials loaded from pwd.txt
+2024-11-20 19:14:59,864 - Connection established with ('127.0.0.1', 50782)
+2024-11-20 19:15:05,718 - User Pierre authenticated successfully
+2024-11-20 19:15:24,266 - Received command: upload test.py from Pierre
+2024-11-20 19:15:24,351 - File test.py received successfully from Pierre
+2024-11-20 19:15:49,566 - Received command: download ../admin/server.log from Pierre
+2024-11-20 19:15:49,566 - File ../admin/server.log sent successfully to Pierre
+2024-11-20 19:15:49,566 - Received command: SIZE RECEIVED from Pierre
+2024-11-20 19:15:49,566 - User Pierre attempted an invalid command
