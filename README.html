@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="secure-file-transfer-application">Secure File Transfer Application</h1>
+<h2 id="overview">Overview</h2>
+<p>This project implements a secure client-server file transfer system using <strong>SSL/TLS</strong> for encrypted communication. It integrates authentication, role-based access control (RBAC), and logging mechanisms to ensure data confidentiality, integrity, and secure file management.</p>
+<hr>
+<h2 id="features">Features</h2>
+<ol>
+<li>
+<p><strong>Encrypted Communication</strong>:</p>
+<ul>
+<li>All communication between the client and server is secured with <strong>SSL/TLS</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authentication</strong>:</p>
+<ul>
+<li>
+<p>Users authenticate using a <strong>username</strong> and <strong>password</strong>.</p>
+</li>
+<li>
+<p>Passwords are stored securely as <strong>SHA-256 hashes</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Role-Based Access Control (RBAC)</strong>:</p>
+<ul>
+<li>
+<p>Roles:</p>
+<ul>
+<li>
+<p><strong>Admin</strong>: Full permissions (upload, download, list, delete, manage).</p>
+</li>
+<li>
+<p><strong>User</strong>: Limited permissions (upload, download, list).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Permissions are enforced server-side.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>File Operations</strong>:</p>
+<ul>
+<li>
+<p><strong>Upload</strong>: Send files to the server.</p>
+</li>
+<li>
+<p><strong>Download</strong>: Retrieve files from the server.</p>
+</li>
+<li>
+<p><strong>List</strong>: View files in the user’s directory.</p>
+</li>
+<li>
+<p><strong>Delete</strong>: Admin-only feature to remove files.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Logging</strong>:</p>
+<ul>
+<li>All actions are logged for auditing, including authentication attempts and file operations.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="system-architecture">System Architecture</h2>
+<h3 id="client">Client</h3>
+<ul>
+<li>
+<p>The client sends commands to the server and receives responses.</p>
+</li>
+<li>
+<p>Commands include: <code>upload</code>, <code>download</code>, <code>list</code>, <code>delete</code>, and <code>manage</code>.</p>
+</li>
+<li>
+<p>It verifies the server’s identity using the <strong>server.crt</strong> file.</p>
+</li>
+</ul>
+<h3 id="server">Server</h3>
+<ul>
+<li>
+<p>The server authenticates clients and enforces RBAC.</p>
+</li>
+<li>
+<p>Stores files in user-specific directories.</p>
+</li>
+<li>
+<p>Loads credentials from a file (<code>pwd.txt</code>).</p>
+</li>
+<li>
+<p>Uses the following files:</p>
+<ul>
+<li>
+<p><code>server.crt</code>: Server’s public certificate.</p>
+</li>
+<li>
+<p><code>server.key</code>: Server’s private key.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="running-the-project">Running the Project</h2>
+<h3 id="start-the-server">Start the Server</h3>
+<p>Run the server script:</p>
+<pre><code>python tcp_server.py
+</code></pre>
+<ul>
+<li>
+<p>The server listens on <code>127.0.0.1:10615</code> by default.</p>
+</li>
+<li>
+<p>Logs are stored in <code>ServerFiles/admin/server.log</code>.</p>
+</li>
+</ul>
+<h3 id="start-the-client">Start the Client</h3>
+<p>Run the client script:</p>
+<pre><code>python tcp_client.py
+</code></pre>
+<ul>
+<li>The client connects to the server and provides a command-line interface for interacting with the server.</li>
+</ul>
+<hr>
+<h2 id="file-commands">File Commands</h2>
+<h3 id="authentication">Authentication</h3>
+<p>The client must log in with a valid username and password stored in <code>pwd.txt</code>. Users and their login credentials must be inputted manually into the text file, for now.</p>
+<h3 id="supported-commands">Supported Commands</h3>
+<ol>
+<li>
+<p><strong>Upload</strong>:</p>
+<pre><code>upload &lt;filename&gt;
+</code></pre>
+<ul>
+<li>Sends a file to the server.</li>
+</ul>
+</li>
+<li>
+<p><strong>Download</strong>:</p>
+<pre><code>download &lt;filename&gt;
+</code></pre>
+<ul>
+<li>Retrieves a file from the server.</li>
+</ul>
+</li>
+<li>
+<p><strong>List</strong>:</p>
+<pre><code>list
+</code></pre>
+<ul>
+<li>Displays the files available in the user’s directory.</li>
+</ul>
+</li>
+<li>
+<p><strong>Delete</strong> (Admin-only):</p>
+<pre><code>delete &lt;filename&gt;
+</code></pre>
+<ul>
+<li>Removes a file from the server.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manage</strong> (Admin-only):</p>
+<pre><code>manage
+</code></pre>
+<ul>
+<li>Prints a message to the client about proposed management feature.</li>
+</ul>
+</li>
+<li>
+<p><strong>Exit</strong>:</p>
+<pre><code>exit
+</code></pre>
+<ul>
+<li>Closes the connection.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="security-considerations">Security Considerations</h2>
+<ol>
+<li>
+<p><strong>SSL/TLS</strong>:</p>
+<ul>
+<li>All communication is encrypted, ensuring confidentiality and integrity.</li>
+</ul>
+</li>
+<li>
+<p><strong>Private Key Security</strong>:</p>
+<ul>
+<li>The <code>server.key</code> file is critical and should be kept secure with restricted permissions (e.g., <code>chmod 600</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Password Hashing</strong>:</p>
+<ul>
+<li>Passwords are hashed with SHA-256 before being stored in <code>pwd.txt</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Role Enforcement</strong>:</p>
+<ul>
+<li>Role-based permissions prevent unauthorized actions.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li>
+<p><strong>File Access Restrictions</strong>: Clients should be confined to their directories. Attempts to access files outside their directory, such as admin files, should be blocked server-side</p>
+</li>
+<li>
+<p><strong>Database Integration</strong>: Replace <code>pwd.txt</code> with a database for scalability and security.</p>
+</li>
+<li>
+<p><strong>Shared Directory</strong>: Introduce a shared folder accessible by all users.</p>
+</li>
+<li>
+<p><strong>Guest Role</strong>: Add a more meaningful <code>guest</code> role and user with limited permissions (e.g., list-only access).</p>
+</li>
+<li>
+<p><strong>Enhanced Logging</strong>: Include more detailed audit logs. Timestamps, IP.</p>
+</li>
+<li>
+<p><strong>File Management</strong>: Expand the <code>manage</code> command for advanced file and user administration.</p>
+</li>
+</ul>
+<hr>
+</div>
+</body>
+
+</html>
