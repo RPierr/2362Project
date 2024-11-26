@@ -79,20 +79,25 @@ while True:
         if os.path.exists(filename):
             file_size = os.path.getsize(filename)
             ssl_client_socket.send(str(file_size).encode())
-            ssl_client_socket.recv(1024)  # Wait for the server to acknowledge
-
-            with open(filename, "rb") as file:
-                for data in file:
-                    ssl_client_socket.send(data)
-            print(f"File {filename} sent successfully!")
+            
+            # Wait for the server to acknowledge
+            ack = ssl_client_socket.recv(1024).decode()
+            if ack == "ACK":
+                with open(filename, "rb") as file:
+                    for data in file:
+                        ssl_client_socket.send(data)
+                print(f"File {filename} sent successfully!")
+            else:
+                print("Failed to receive ACK from the server")
         else:
             print("File not found!")
+            ssl_client_socket.send(b"File not found")
 
     elif command.startswith("download"):
         filename = command.split()[1]
 
         # Send the filename to the server
-        ssl_client_socket.send(filename.encode())
+        #ssl_client_socket.send(filename.encode())
 
         # Receive the file size or error message
         response = ssl_client_socket.recv(1024).decode()
@@ -102,7 +107,7 @@ while True:
         else:
             # Acknowledge the file size
             file_size = int(response)
-            # ssl_client_socket.send(b"SIZE RECEIVED")
+            ssl_client_socket.send(b"SIZE RECEIVED")
 
         # Receive the file
         with open(filename, "wb") as file:

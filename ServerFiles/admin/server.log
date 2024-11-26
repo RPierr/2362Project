@@ -173,3 +173,358 @@
 2024-11-26 17:25:39,553 - Client Pierre closed the connection
 2024-11-26 17:25:39,554 - Connection with Pierre closed
 2024-11-26 17:25:39,554 - Server closed
+2024-11-26 17:30:17,425 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:30:17,425 - Credentials loaded from pwd.txt
+2024-11-26 17:30:37,321 - Connection established with ('127.0.0.1', 59888)
+2024-11-26 17:30:45,016 - User guest authenticated successfully
+2024-11-26 17:30:55,491 - Received command: list from guest
+2024-11-26 17:30:55,492 - List of files sent to guest
+2024-11-26 17:31:06,054 - Received command: upload doesnotexist from guest
+2024-11-26 17:31:31,191 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:31:31,191 - Credentials loaded from pwd.txt
+2024-11-26 17:31:34,465 - Connection established with ('127.0.0.1', 36634)
+2024-11-26 17:31:38,423 - User guest authenticated successfully
+2024-11-26 17:31:40,721 - Received command: download dne from guest
+2024-11-26 17:31:40,721 - File dne not found for user guest
+2024-11-26 17:31:40,721 - Received command: dne from guest
+2024-11-26 17:31:40,721 - User guest attempted an invalid command
+2024-11-26 17:31:44,296 - Received command: download dne from guest
+2024-11-26 17:31:44,296 - File dne not found for user guest
+2024-11-26 17:31:44,296 - Received command: dne from guest
+2024-11-26 17:31:44,296 - User guest attempted an invalid command
+2024-11-26 17:32:24,241 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:32:24,241 - Credentials loaded from pwd.txt
+2024-11-26 17:32:35,305 - Connection established with ('127.0.0.1', 58180)
+2024-11-26 17:32:42,532 - User guest authenticated successfully
+2024-11-26 17:33:05,379 - Received command: download dne from guest
+2024-11-26 17:33:05,380 - File dne not found for user guest
+2024-11-26 17:33:19,227 - Received command: dne from guest
+2024-11-26 17:33:19,227 - User guest attempted an invalid command
+2024-11-26 17:34:23,730 - Received command: download dne from guest
+2024-11-26 17:34:23,731 - File dne not found for user guest
+2024-11-26 17:34:37,443 - Received command: dne from guest
+2024-11-26 17:34:37,443 - User guest attempted an invalid command
+2024-11-26 17:34:57,102 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:34:57,102 - Credentials loaded from pwd.txt
+2024-11-26 17:35:02,451 - Connection established with ('127.0.0.1', 50888)
+2024-11-26 17:35:06,364 - User guest authenticated successfully
+2024-11-26 17:35:17,119 - Received command: download dne from guest
+2024-11-26 17:35:17,119 - File dne not found for user guest
+2024-11-26 17:35:41,188 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:35:41,188 - Credentials loaded from pwd.txt
+2024-11-26 17:35:46,064 - Connection established with ('127.0.0.1', 39222)
+2024-11-26 17:35:49,807 - User guest authenticated successfully
+2024-11-26 17:35:59,414 - Received command: download dne from guest
+2024-11-26 17:35:59,414 - File dne not found for user guest
+2024-11-26 17:36:13,730 - Received command: download dne from guest
+2024-11-26 17:36:13,730 - File dne not found for user guest
+2024-11-26 17:37:08,585 - Received command: manage from guest
+2024-11-26 17:37:08,585 - User guest attempted an invalid command
+2024-11-26 17:41:01,984 - Received command: manage from guest
+2024-11-26 17:41:01,984 - User guest attempted an invalid command
+2024-11-26 17:41:16,983 - Received command: exit from guest
+2024-11-26 17:41:16,984 - Client guest closed the connection
+2024-11-26 17:41:16,984 - Connection with guest closed
+2024-11-26 17:41:16,984 - Server closed
+2024-11-26 17:43:29,567 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:43:29,568 - Credentials loaded from pwd.txt
+2024-11-26 17:43:41,443 - Connection established with ('127.0.0.1', 38994)
+2024-11-26 17:44:06,014 - User guest authenticated successfully
+2024-11-26 17:44:17,327 - Received command: download dne from guest
+2024-11-26 17:44:17,328 - File dne not found for user guest
+2024-11-26 17:44:29,364 - Received command: manage from guest
+2024-11-26 17:44:29,364 - User guest attempted an invalid command
+2024-11-26 17:46:00,975 - Received command: delete test.txt from guest
+2024-11-26 17:46:00,975 - User guest attempted an invalid command
+2024-11-26 17:46:38,116 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:46:38,118 - Credentials loaded from pwd.txt
+2024-11-26 17:46:47,819 - Connection established with ('127.0.0.1', 42538)
+2024-11-26 17:46:50,835 - User guest authenticated successfully
+2024-11-26 17:47:36,917 - Received command: delete something from guest
+2024-11-26 17:47:42,191 - User guest attempted an invalid command
+2024-11-26 17:48:29,917 - Received command: delete anything.lol from guest
+2024-11-26 17:49:39,731 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:49:39,732 - Credentials loaded from pwd.txt
+2024-11-26 17:49:43,082 - Connection established with ('127.0.0.1', 51406)
+2024-11-26 17:49:45,538 - User guest authenticated successfully
+2024-11-26 17:49:57,507 - Received command: manage from guest
+2024-11-26 17:50:02,122 - User guest attempted an invalid command
+2024-11-26 17:50:10,860 - Received command: exit from guest
+2024-11-26 17:50:12,578 - Client guest closed the connection
+2024-11-26 17:50:13,916 - Connection with guest closed
+2024-11-26 17:50:14,794 - Server closed
+2024-11-26 17:53:14,179 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:53:14,180 - Credentials loaded from pwd.txt
+2024-11-26 17:53:17,059 - Connection established with ('127.0.0.1', 47174)
+2024-11-26 17:53:22,829 - User guest authenticated successfully
+2024-11-26 17:53:28,651 - Received command: manage from guest
+2024-11-26 17:53:40,001 - User guest attempted an unauthorized action
+2024-11-26 17:53:48,309 - Received command: delete anything from guest
+2024-11-26 17:53:56,771 - User guest attempted an unauthorized action
+2024-11-26 17:54:05,840 - Received command: exit from guest
+2024-11-26 17:54:09,121 - Client guest closed the connection
+2024-11-26 17:54:11,335 - Connection with guest closed
+2024-11-26 17:54:12,406 - Server closed
+2024-11-26 17:55:22,438 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:55:22,438 - Credentials loaded from pwd.txt
+2024-11-26 17:55:27,162 - Connection established with ('127.0.0.1', 38636)
+2024-11-26 17:55:29,896 - User guest authenticated successfully
+2024-11-26 17:55:32,106 - Received command: list from guest
+2024-11-26 17:55:32,106 - List of files sent to guest
+2024-11-26 17:56:17,417 - Received command: download doesnotexist.exe from guest
+2024-11-26 17:56:17,417 - File doesnotexist.exe not found for user guest
+2024-11-26 17:56:25,412 - Received command: upload alsonotreal.pdf from guest
+2024-11-26 17:57:09,797 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:57:09,797 - Credentials loaded from pwd.txt
+2024-11-26 17:57:12,018 - Connection established with ('127.0.0.1', 60392)
+2024-11-26 17:57:19,303 - User guest authenticated successfully
+2024-11-26 17:57:24,719 - Received command: download notreal.pdf from guest
+2024-11-26 17:57:24,719 - File notreal.pdf not found for user guest
+2024-11-26 17:57:31,824 - Received command: download notrealagain.pdf from guest
+2024-11-26 17:57:31,824 - File notrealagain.pdf not found for user guest
+2024-11-26 17:57:37,203 - Received command: upload dne from guest
+2024-11-26 17:58:53,795 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:58:53,796 - Credentials loaded from pwd.txt
+2024-11-26 17:59:00,620 - Connection established with ('127.0.0.1', 45804)
+2024-11-26 17:59:03,037 - User guest authenticated successfully
+2024-11-26 17:59:20,578 - Received command: upload dne from guest
+2024-11-26 18:03:38,226 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:03:38,228 - Credentials loaded from pwd.txt
+2024-11-26 18:03:41,302 - Connection established with ('127.0.0.1', 44014)
+2024-11-26 18:03:43,731 - User guest authenticated successfully
+2024-11-26 18:03:55,277 - Received command: upload dne from guest
+2024-11-26 18:04:01,568 - File dne does not exist for user guest
+2024-11-26 18:04:22,547 - Received command: download dne from guest
+2024-11-26 18:04:34,490 - File dne not found for user guest
+2024-11-26 18:06:36,663 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:06:36,663 - Credentials loaded from pwd.txt
+2024-11-26 18:06:40,762 - Connection established with ('127.0.0.1', 34774)
+2024-11-26 18:07:04,710 - User Pierre authenticated successfully
+2024-11-26 18:08:24,971 - Received command: list from Pierre
+2024-11-26 18:08:24,971 - List of files sent to Pierre
+2024-11-26 18:08:54,395 - Received command: manage from Pierre
+2024-11-26 18:08:54,395 - User Pierre with admin role requested to manage files
+2024-11-26 18:09:09,618 - Received command: delete test.py from Pierre
+2024-11-26 18:09:09,619 - User Pierre with admin role requested to delete a file
+2024-11-26 18:09:09,619 - File test.py deleted successfully
+2024-11-26 18:09:21,653 - Received command: downlaod doesnotecist from Pierre
+2024-11-26 18:09:21,653 - User Pierre attempted an invalid command
+2024-11-26 18:09:33,667 - Received command: list from Pierre
+2024-11-26 18:09:33,667 - List of files sent to Pierre
+2024-11-26 18:09:35,579 - Received command: list from Pierre
+2024-11-26 18:09:35,579 - List of files sent to Pierre
+2024-11-26 18:10:13,165 - Received command: list from Pierre
+2024-11-26 18:10:13,165 - List of files sent to Pierre
+2024-11-26 18:10:52,641 - Received command: download file.txt from Pierre
+2024-11-26 18:10:52,643 - File file.txt sent successfully to Pierre
+2024-11-26 18:10:56,510 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:10:56,510 - Credentials loaded from pwd.txt
+2024-11-26 18:10:58,769 - Connection established with ('127.0.0.1', 46002)
+2024-11-26 18:11:02,939 - User Pierre authenticated successfully
+2024-11-26 18:11:07,844 - Received command: download file.txt from Pierre
+2024-11-26 18:11:07,846 - File file.txt sent successfully to Pierre
+2024-11-26 18:11:39,703 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:11:39,703 - Credentials loaded from pwd.txt
+2024-11-26 18:11:41,806 - Connection established with ('127.0.0.1', 41562)
+2024-11-26 18:11:45,179 - User guest authenticated successfully
+2024-11-26 18:11:46,584 - Received command: list from guest
+2024-11-26 18:11:46,585 - List of files sent to guest
+2024-11-26 18:11:52,987 - Received command: upload file.txt from guest
+2024-11-26 18:11:53,028 - File file.txt does not exist for user guest
+2024-11-26 18:12:05,299 - Received command: upload test.py from guest
+2024-11-26 18:13:00,766 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:13:00,766 - Credentials loaded from pwd.txt
+2024-11-26 18:13:02,434 - Connection established with ('127.0.0.1', 36646)
+2024-11-26 18:13:05,363 - User guest authenticated successfully
+2024-11-26 18:13:06,060 - Received command: list from guest
+2024-11-26 18:13:06,061 - List of files sent to guest
+2024-11-26 18:13:16,104 - Received command: upload test.py from guest
+2024-11-26 18:18:48,543 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:18:48,544 - Credentials loaded from pwd.txt
+2024-11-26 18:18:56,566 - Connection established with ('127.0.0.1', 57656)
+2024-11-26 18:19:00,918 - User guest authenticated successfully
+2024-11-26 18:19:14,324 - Received command: list from guest
+2024-11-26 18:26:42,644 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:26:42,644 - Credentials loaded from pwd.txt
+2024-11-26 18:26:46,542 - Connection established with ('127.0.0.1', 34390)
+2024-11-26 18:26:51,543 - User Pierre authenticated successfully
+2024-11-26 18:26:53,021 - Received command: list from Pierre
+2024-11-26 18:26:53,021 - List of files sent to Pierre
+2024-11-26 18:27:01,569 - Received command: upload test.py from Pierre
+2024-11-26 18:28:17,980 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:28:17,980 - Credentials loaded from pwd.txt
+2024-11-26 18:28:19,748 - Connection established with ('127.0.0.1', 44280)
+2024-11-26 18:28:24,201 - Failed authentication attempt for user Pierre
+2024-11-26 18:28:33,000 - Failed authentication attempt for user password123
+2024-11-26 18:28:35,573 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:28:35,573 - Credentials loaded from pwd.txt
+2024-11-26 18:28:38,064 - Connection established with ('127.0.0.1', 36018)
+2024-11-26 18:28:41,569 - User Pierre authenticated successfully
+2024-11-26 18:28:43,009 - Received command: list from Pierre
+2024-11-26 18:28:43,009 - List of files sent to Pierre
+2024-11-26 18:28:46,125 - Received command: upload test.py from Pierre
+2024-11-26 18:29:46,012 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:29:46,013 - Credentials loaded from pwd.txt
+2024-11-26 18:29:49,052 - Connection established with ('127.0.0.1', 50652)
+2024-11-26 18:29:53,241 - User Pierre authenticated successfully
+2024-11-26 18:29:55,078 - Received command: list from Pierre
+2024-11-26 18:29:55,078 - List of files sent to Pierre
+2024-11-26 18:29:58,558 - Received command: upload test.py from Pierre
+2024-11-26 18:30:56,910 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:30:56,910 - Credentials loaded from pwd.txt
+2024-11-26 18:30:59,014 - Connection established with ('127.0.0.1', 41840)
+2024-11-26 18:31:02,437 - User Pierre authenticated successfully
+2024-11-26 18:31:03,736 - Received command: list from Pierre
+2024-11-26 18:31:03,737 - List of files sent to Pierre
+2024-11-26 18:31:09,442 - Received command: upload test.py from Pierre
+2024-11-26 18:33:53,318 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:33:53,319 - Credentials loaded from pwd.txt
+2024-11-26 18:33:56,985 - Connection established with ('127.0.0.1', 58342)
+2024-11-26 18:34:02,372 - User guest authenticated successfully
+2024-11-26 18:34:21,386 - Received command: upload test.py from guest
+2024-11-26 18:36:53,224 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:36:53,225 - Credentials loaded from pwd.txt
+2024-11-26 18:36:55,197 - Connection established with ('127.0.0.1', 37766)
+2024-11-26 18:36:58,387 - User guest authenticated successfully
+2024-11-26 18:37:09,289 - Received command: list from guest
+2024-11-26 18:37:15,012 - List of files sent to guest
+2024-11-26 18:37:31,054 - Received command: upload notes.txt from guest
+2024-11-26 18:41:09,501 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:41:09,502 - Credentials loaded from pwd.txt
+2024-11-26 18:41:11,755 - Connection established with ('127.0.0.1', 47838)
+2024-11-26 18:41:15,038 - User guest authenticated successfully
+2024-11-26 18:41:27,421 - Received command: upload test.py from guest
+2024-11-26 18:42:18,623 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:42:18,623 - Credentials loaded from pwd.txt
+2024-11-26 18:42:24,092 - Connection established with ('127.0.0.1', 57208)
+2024-11-26 18:42:28,622 - User guest authenticated successfully
+2024-11-26 18:42:39,916 - Received command: upload test.py from guest
+2024-11-26 18:45:11,659 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:45:11,660 - Credentials loaded from pwd.txt
+2024-11-26 18:45:18,211 - Connection established with ('127.0.0.1', 56964)
+2024-11-26 18:45:21,953 - User guest authenticated successfully
+2024-11-26 18:45:32,735 - Received command: upload test.py from guest
+2024-11-26 18:49:45,305 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:49:45,305 - Credentials loaded from pwd.txt
+2024-11-26 18:49:51,508 - Connection established with ('127.0.0.1', 40998)
+2024-11-26 18:49:54,491 - User guest authenticated successfully
+2024-11-26 18:50:01,404 - Received command: upload test.py from guest
+2024-11-26 18:53:36,221 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:53:36,222 - Credentials loaded from pwd.txt
+2024-11-26 18:53:56,100 - Connection established with ('127.0.0.1', 45288)
+2024-11-26 18:54:01,962 - User guest authenticated successfully
+2024-11-26 18:54:11,675 - Received command: [21~list from guest
+2024-11-26 18:54:11,675 - User guest attempted an invalid command
+2024-11-26 18:54:29,199 - Received command: exit from guest
+2024-11-26 18:54:29,199 - Client guest closed the connection
+2024-11-26 18:54:29,199 - Connection with guest closed
+2024-11-26 18:54:29,199 - Server closed
+2024-11-26 18:54:43,820 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:54:43,820 - Credentials loaded from pwd.txt
+2024-11-26 18:54:48,200 - Connection established with ('127.0.0.1', 55902)
+2024-11-26 18:54:51,029 - User guest authenticated successfully
+2024-11-26 18:54:52,256 - Received command: list from guest
+2024-11-26 18:54:52,256 - List of files sent to guest
+2024-11-26 18:54:55,353 - Received command: upload test.oy from guest
+2024-11-26 18:55:05,567 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:55:05,568 - Credentials loaded from pwd.txt
+2024-11-26 18:55:07,582 - Connection established with ('127.0.0.1', 54264)
+2024-11-26 18:55:10,229 - User guest authenticated successfully
+2024-11-26 18:55:13,573 - Received command: upload test.py from guest
+2024-11-26 18:55:13,665 - File test.py received successfully from guest
+2024-11-26 18:55:16,545 - Received command: list from guest
+2024-11-26 18:55:16,546 - List of files sent to guest
+2024-11-26 18:55:38,395 - Received command: clrea from guest
+2024-11-26 18:55:38,395 - User guest attempted an invalid command
+2024-11-26 18:55:41,763 - Received command: exit from guest
+2024-11-26 18:55:41,764 - Client guest closed the connection
+2024-11-26 18:55:41,764 - Connection with guest closed
+2024-11-26 18:55:41,764 - Server closed
+2024-11-26 18:55:49,738 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:55:49,738 - Credentials loaded from pwd.txt
+2024-11-26 18:55:52,201 - Connection established with ('127.0.0.1', 49384)
+2024-11-26 18:55:56,903 - Failed authentication attempt for user guest
+2024-11-26 18:56:04,534 - User Pierre authenticated successfully
+2024-11-26 18:56:06,446 - Received command: list from Pierre
+2024-11-26 18:56:06,446 - List of files sent to Pierre
+2024-11-26 18:56:11,944 - Received command: upload test.py from Pierre
+2024-11-26 18:56:12,029 - File test.py received successfully from Pierre
+2024-11-26 18:56:14,248 - Received command: list from Pierre
+2024-11-26 18:56:14,248 - List of files sent to Pierre
+2024-11-26 18:56:25,816 - Received command: download file.txt from Pierre
+2024-11-26 18:56:33,826 - File file.txt sent successfully to Pierre
+2024-11-26 18:57:07,706 - Server started and listening on 127.0.0.1:10615
+2024-11-26 18:57:07,707 - Credentials loaded from pwd.txt
+2024-11-26 18:57:09,179 - Connection established with ('127.0.0.1', 39144)
+2024-11-26 18:57:13,408 - User Pierre authenticated successfully
+2024-11-26 18:57:15,903 - Received command: list from Pierre
+2024-11-26 18:57:15,903 - List of files sent to Pierre
+2024-11-26 18:57:21,663 - Received command: delete test.py from Pierre
+2024-11-26 18:57:21,663 - User Pierre with admin role requested to delete a file
+2024-11-26 18:57:21,663 - File test.py deleted successfully
+2024-11-26 18:57:25,059 - Received command: list from Pierre
+2024-11-26 18:57:25,059 - List of files sent to Pierre
+2024-11-26 18:57:35,254 - Received command: manage from Pierre
+2024-11-26 18:57:35,254 - User Pierre with admin role requested to manage files
+2024-11-26 18:57:40,350 - Received command: exit from Pierre
+2024-11-26 18:57:40,350 - Client Pierre closed the connection
+2024-11-26 18:57:40,350 - Connection with Pierre closed
+2024-11-26 18:57:40,350 - Server closed
+2024-11-26 19:03:24,529 - Server started and listening on 127.0.0.1:10615
+2024-11-26 19:03:24,529 - Credentials loaded from pwd.txt
+2024-11-26 19:03:26,495 - Connection established with ('127.0.0.1', 40912)
+2024-11-26 19:03:31,433 - User guest authenticated successfully
+2024-11-26 19:03:33,619 - Received command: list from guest
+2024-11-26 19:03:33,619 - List of files sent to guest
+2024-11-26 19:03:35,336 - Received command: manage from guest
+2024-11-26 19:03:35,336 - User guest attempted an unauthorized action
+2024-11-26 19:03:43,208 - Received command: delete test.txt from guest
+2024-11-26 19:03:43,209 - User guest attempted an unauthorized action
+2024-11-26 19:03:54,728 - Received command: download test.txt from guest
+2024-11-26 19:03:54,731 - File test.txt sent successfully to guest
+2024-11-26 19:04:02,131 - Server started and listening on 127.0.0.1:10615
+2024-11-26 19:04:02,131 - Credentials loaded from pwd.txt
+2024-11-26 19:04:04,930 - Connection established with ('127.0.0.1', 48832)
+2024-11-26 19:04:11,616 - Failed authentication attempt for user guest
+2024-11-26 19:04:14,928 - User guest authenticated successfully
+2024-11-26 19:04:16,755 - Received command: list from guest
+2024-11-26 19:04:16,755 - List of files sent to guest
+2024-11-26 19:04:24,502 - Received command: upload notes.txt from guest
+2024-11-26 19:04:24,545 - File notes.txt received successfully from guest
+2024-11-26 19:04:26,781 - Received command: list from guest
+2024-11-26 19:04:26,783 - List of files sent to guest
+2024-11-26 19:04:32,777 - Received command: delete test.txt from guest
+2024-11-26 19:04:32,777 - User guest attempted an unauthorized action
+2024-11-26 19:04:34,237 - Received command: manage from guest
+2024-11-26 19:04:34,237 - User guest attempted an unauthorized action
+2024-11-26 19:04:35,755 - Received command: exit from guest
+2024-11-26 19:04:35,755 - Client guest closed the connection
+2024-11-26 19:04:35,755 - Connection with guest closed
+2024-11-26 19:04:35,756 - Server closed
+2024-11-26 19:08:51,810 - Server started and listening on 127.0.0.1:10615
+2024-11-26 19:08:51,810 - Credentials loaded from pwd.txt
+2024-11-26 19:08:59,751 - Connection established with ('127.0.0.1', 42176)
+2024-11-26 19:09:04,667 - User Pierre authenticated successfully
+2024-11-26 19:09:14,547 - Received command: list from Pierre
+2024-11-26 19:09:25,077 - List of files sent to Pierre
+2024-11-26 19:09:48,748 - Received command: download file.txt from Pierre
+2024-11-26 19:11:19,439 - Server started and listening on 127.0.0.1:10615
+2024-11-26 19:11:19,440 - Credentials loaded from pwd.txt
+2024-11-26 19:11:22,692 - Connection established with ('127.0.0.1', 45032)
+2024-11-26 19:11:28,339 - User Pierre authenticated successfully
+2024-11-26 19:11:40,696 - Received command: download file.txt from Pierre
+2024-11-26 19:13:30,885 - File file.txt sent successfully to Pierre
+2024-11-26 19:15:02,760 - Server started and listening on 127.0.0.1:10615
+2024-11-26 19:15:02,761 - Credentials loaded from pwd.txt
+2024-11-26 19:15:04,646 - Connection established with ('127.0.0.1', 33652)
+2024-11-26 19:15:10,225 - User Pierre authenticated successfully
+2024-11-26 19:15:17,714 - Received command: list from Pierre
+2024-11-26 19:15:23,506 - List of files sent to Pierre
+2024-11-26 19:15:32,857 - Received command: delete file.txt from Pierre
+2024-11-26 19:15:40,238 - User Pierre with admin role requested to delete a file
+2024-11-26 19:15:46,203 - File file.txt deleted successfully
+2024-11-26 19:16:35,429 - Received command: upload PierreTextDoc.txt from Pierre
+2024-11-26 19:16:54,833 - File PierreTextDoc.txt received successfully from Pierre
+2024-11-26 19:17:21,417 - Received command: download PierreTextDoc.txt from Pierre
+2024-11-26 19:17:52,084 - File PierreTextDoc.txt sent successfully to Pierre
+2024-11-26 19:18:47,397 - Received command: upload ServerFiles/admin/server.log from Pierre

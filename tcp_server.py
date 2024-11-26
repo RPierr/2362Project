@@ -142,64 +142,68 @@ while True:
         logging.info("Client %s closed the connection", current_user)
         break
 
-    # Check role permissions to following commands
 
-    if action in ROLE_PERMISSIONS[current_role]:
+    # The client intends to upload a file to their respective directory
+    if action == "upload":
+        # Extract filename
+        filename = command.split()[1]
 
-        # The client intends to upload a file to their respective directory
-        if action == "upload":
-            # Extract filename
-            filename = command.split()[1]
-            file_size = int(ssl_client_socket.recv(1024).decode())
-            ssl_client_socket.send(b"ACK")  # Acknowledge the file size
+        # check if the file exists
+        #if ssl_client_socket.recv(1024).decode() == "File not found":
+        #    logging.info("File %s does not exist for user %s", filename, current_user)
+        #    continue
+        #else:
+        file_size = int(ssl_client_socket.recv(1024).decode())
+        ssl_client_socket.send(b"ACK")  # Acknowledge the file size
 
             # Receive the file
-            file_path = os.path.join(user_folder, filename)
-            with open(file_path, "wb") as file:
-                received = 0
-                while received < file_size:
-                    data = ssl_client_socket.recv(1024)
-                    file.write(data)
-                    received += len(data)
-            print(f"File {filename} received successfully!")
-            logging.info("File %s received successfully from %s", filename, current_user)
+        file_path = os.path.join(user_folder, filename)
+        with open(file_path, "wb") as file:
+            received = 0
+            while received < file_size:
+                data = ssl_client_socket.recv(1024)
+                file.write(data)
+                received += len(data)
+        print(f"File {filename} received successfully!")
+        logging.info("File %s received successfully from %s", filename, current_user)
 
-        # The client intends to download a file from their respective directory 
-        elif action == "download":
-            # Extract filename
-            filename = command.split()[1]
-            file_path = os.path.join(user_folder, filename)
-            if os.path.exists(file_path):
-                # Send the file size
-                file_size = os.path.getsize(file_path)
-                ssl_client_socket.send(str(file_size).encode())
-                ssl_client_socket.recv(1024) # Wait for the client to acknowledge the file size
+    # The client intends to download a file from their respective directory 
+    elif action == "download":
+        # Extract filename
+        filename = command.split()[1]
+        file_path = os.path.join(user_folder, filename)
+        if os.path.exists(file_path):
+            # Send the file size
+            file_size = os.path.getsize(file_path)
+            ssl_client_socket.send(str(file_size).encode())
+            ssl_client_socket.recv(1024) # Wait for the client to acknowledge the file size
 
-                # Send the file
-                with open(file_path, "rb") as file:
-                    for data in file:
-                        ssl_client_socket.send(data)
-                print(f"File {filename} sent successfully!")
-                logging.info("File %s sent successfully to %s", filename, current_user)
-            else:
-                ssl_client_socket.send("File not found!".encode())
-                logging.warning("File %s not found for user %s", filename, current_user)
+            # Send the file
+            with open(file_path, "rb") as file:
+                for data in file:
+                    ssl_client_socket.send(data)
+            print(f"File {filename} sent successfully!")
+            logging.info("File %s sent successfully to %s", filename, current_user)
+        else:
+            ssl_client_socket.send("File not found!".encode())
+            logging.warning("File %s not found for user %s", filename, current_user)
 
-        # The client intends to list the files in their respective directory
-        elif action ==  "list":
-            # Send the list of files in the user's folder
-            files = os.listdir(user_folder)
+    # The client intends to list the files in their respective directory
+    elif action ==  "list":
+        # Send the list of files in the user's folder
+        files = os.listdir(user_folder)
 
-            if files:
-                file_list = "\n".join(files)
-                ssl_client_socket.send(file_list.encode())
-                logging.info("List of files sent to %s", current_user)
-            else:
-                ssl_client_socket.send(b"No files in your directory.")
-                logging.info("No files in directory for %s", current_user)
+        if files:
+            file_list = "\n".join(files)
+            ssl_client_socket.send(file_list.encode())
+            logging.info("List of files sent to %s", current_user)
+        else:
+            ssl_client_socket.send(b"No files in your directory.")
+            logging.info("No files in directory for %s", current_user)
 
-        # The client is an admin who intends to delete a specific file in their (for now only their) directory
-        elif action == "delete" and current_role == "admin":
+    # The client is an admin who intends to delete a specific file in their (for now only their) directory
+    elif action == "delete":
+        if current_role == "admin":
             logging.info("User %s with admin role requested to delete a file", current_user)
             filename = command.split()[1]
             file_path = os.path.join(f"ServerFiles/{current_user}", filename)
@@ -211,9 +215,15 @@ while True:
             else:
                 ssl_client_socket.send(b"ERROR: File not found.")
                 logging.warning("File %s not found for deletion", filename)
+
+        # Denied Access
+        else:
+            ssl_client_socket.send(b"Access Denied: You do not have permission for this action")
+            logging.warning("User %s attempted an unauthorized action", current_user)
         
-        # Management action to be implemented later
-        elif action == "manage" and current_role == "admin":
+    # Management action to be implemented later
+    elif action == "manage":
+        if current_role == "admin":
             logging.info("User %s with admin role requested to manage files", current_user)
             ssl_client_socket.send(b"Admin Management Feature Coming Soon")
 
@@ -221,10 +231,10 @@ while True:
         else:
             ssl_client_socket.send(b"Access Denied: You do not have permission for this action")
             logging.warning("User %s attempted an unauthorized action", current_user)
-    # Command Invalid
+# Command Invalid
     else:
         ssl_client_socket.send(b"Invalid Command. Try again.")
-        logging.warning("User %s attempted an invalid command", current_user)
+        logging.info("User %s attempted an invalid command", current_user)
 # ////////////////// Command processing ////////////////
 
 
