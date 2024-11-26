@@ -536,3 +536,15 @@
 2024-11-26 19:30:16,242 - Client Pierre closed the connection
 2024-11-26 19:30:16,242 - Connection with Pierre closed
 2024-11-26 19:30:16,242 - Server closed
+2024-11-26 19:43:25,372 - Server started and listening on 127.0.0.1:10615
+2024-11-26 19:43:25,373 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-11-26 19:43:37,255 - Connection established with ('127.0.0.1', 42302)
+2024-11-26 19:43:45,298 - User Pierre authenticated successfully
+2024-11-26 19:43:47,074 - Received command: list from Pierre
+2024-11-26 19:43:47,074 - List of files sent to Pierre
+2024-11-26 19:43:50,914 - Received command: manage from Pierre
+2024-11-26 19:43:50,914 - User Pierre with admin role requested to manage files
+2024-11-26 19:43:51,980 - Received command: exit from Pierre
+2024-11-26 19:43:51,980 - Client Pierre closed the connection
+2024-11-26 19:43:51,980 - Connection with Pierre closed
+2024-11-26 19:43:51,981 - Server closed
