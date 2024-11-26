@@ -528,3 +528,11 @@
 2024-11-26 19:17:21,417 - Received command: download PierreTextDoc.txt from Pierre
 2024-11-26 19:17:52,084 - File PierreTextDoc.txt sent successfully to Pierre
 2024-11-26 19:18:47,397 - Received command: upload ServerFiles/admin/server.log from Pierre
+2024-11-26 19:29:56,417 - Server started and listening on 127.0.0.1:10615
+2024-11-26 19:29:56,418 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-11-26 19:30:03,918 - Connection established with ('127.0.0.1', 52124)
+2024-11-26 19:30:10,432 - User Pierre authenticated successfully
+2024-11-26 19:30:16,241 - Received command: exit from Pierre
+2024-11-26 19:30:16,242 - Client Pierre closed the connection
+2024-11-26 19:30:16,242 - Connection with Pierre closed
+2024-11-26 19:30:16,242 - Server closed

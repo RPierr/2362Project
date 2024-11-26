@@ -32,7 +32,7 @@ logging.basicConfig(filename="ServerFiles/admin/server.log", level=logging.INFO,
 # ///////////////// Authentication Process /////////////////////////
 
 # Function to load credentials from data source, currently "pwd.txt"
-def load_credentials(file_path="pwd.txt"):
+def load_credentials(file_path="ServerFiles/admin/pwd.txt"):
     credentials = {} # passwords
     roles = {} # roles
     with open(file_path, "r") as file:
@@ -76,7 +76,7 @@ PORT = 10615
 # Load Server-side SSL context. The server loads its own certificate and private key. The client will load the
 # server's cert to verify the server's identity.
 context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-context.load_cert_chain(certfile="server.crt", keyfile="server.key")
+context.load_cert_chain(certfile="ServerFiles/admin/server.crt", keyfile="ServerFiles/admin/server.key")
 
 # Bind the socket to the defined address and port
 server_socket.bind((HOST, PORT))
