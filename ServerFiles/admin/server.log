@@ -56,3 +56,120 @@
 2024-11-20 19:15:49,566 - File ../admin/server.log sent successfully to Pierre
 2024-11-20 19:15:49,566 - Received command: SIZE RECEIVED from Pierre
 2024-11-20 19:15:49,566 - User Pierre attempted an invalid command
+2024-11-26 16:55:52,584 - Server started and listening on 127.0.0.1:10615
+2024-11-26 16:55:52,609 - Credentials loaded from pwd.txt
+2024-11-26 16:56:00,109 - Connection established with ('127.0.0.1', 37800)
+2024-11-26 16:56:08,844 - User Pierre authenticated successfully
+2024-11-26 16:56:16,459 - Received command: list from Pierre
+2024-11-26 16:56:16,459 - List of files sent to Pierre
+2024-11-26 16:56:50,183 - Received command: upload file.txt from Pierre
+2024-11-26 16:56:50,225 - File file.txt received successfully from Pierre
+2024-11-26 16:57:21,490 - Received command: download PierreTextDoc.txt from Pierre
+2024-11-26 16:57:21,490 - File PierreTextDoc.txt sent successfully to Pierre
+2024-11-26 16:57:21,532 - Received command: SIZE RECEIVED from Pierre
+2024-11-26 16:57:21,533 - User Pierre attempted an invalid command
+2024-11-26 16:57:35,832 - Received command: list from Pierre
+2024-11-26 16:57:35,832 - List of files sent to Pierre
+2024-11-26 16:59:29,253 - Received command: exit from Pierre
+2024-11-26 16:59:29,253 - Client Pierre closed the connection
+2024-11-26 16:59:29,253 - Connection with Pierre closed
+2024-11-26 16:59:29,254 - Server closed
+2024-11-26 16:59:34,383 - Server started and listening on 127.0.0.1:10615
+2024-11-26 16:59:34,385 - Credentials loaded from pwd.txt
+2024-11-26 16:59:39,409 - Connection established with ('127.0.0.1', 41070)
+2024-11-26 16:59:45,360 - User Pierre authenticated successfully
+2024-11-26 16:59:51,385 - Received command: delete file.txt from Pierre
+2024-11-26 16:59:51,386 - User Pierre with admin role requested to delete a file
+2024-11-26 16:59:51,386 - File file.txt deleted successfully
+2024-11-26 16:59:51,386 - Received command: file.txt from Pierre
+2024-11-26 16:59:51,386 - User Pierre attempted an invalid command
+2024-11-26 17:02:21,210 - Received command: exit from Pierre
+2024-11-26 17:02:21,210 - Client Pierre closed the connection
+2024-11-26 17:02:21,210 - Connection with Pierre closed
+2024-11-26 17:02:21,210 - Server closed
+2024-11-26 17:02:28,776 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:02:28,776 - Credentials loaded from pwd.txt
+2024-11-26 17:02:41,143 - Connection established with ('127.0.0.1', 46556)
+2024-11-26 17:02:51,275 - User Pierre authenticated successfully
+2024-11-26 17:03:08,724 - Received command: list from Pierre
+2024-11-26 17:03:08,725 - List of files sent to Pierre
+2024-11-26 17:03:43,653 - Received command: delete PierreTextDoc.txt from Pierre
+2024-11-26 17:04:56,801 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:04:56,801 - Credentials loaded from pwd.txt
+2024-11-26 17:05:03,274 - Connection established with ('127.0.0.1', 43284)
+2024-11-26 17:05:09,522 - User Pierre authenticated successfully
+2024-11-26 17:06:08,141 - Received command: list from Pierre
+2024-11-26 17:06:24,455 - List of files sent to Pierre
+2024-11-26 17:07:37,263 - Received command: delete PierreTextDoc.txt from Pierre
+2024-11-26 17:07:52,535 - User Pierre with admin role requested to delete a file
+2024-11-26 17:09:31,747 - File PierreTextDoc.txt deleted successfully
+2024-11-26 17:10:08,130 - Received command: PierreTextDoc.txt from Pierre
+2024-11-26 17:10:17,971 - User Pierre attempted an invalid command
+2024-11-26 17:11:36,604 - Received command: upload PierreTextDoc.txt from Pierre
+2024-11-26 17:11:48,367 - File PierreTextDoc.txt received successfully from Pierre
+2024-11-26 17:11:57,755 - Received command: manage from Pierre
+2024-11-26 17:12:08,045 - User Pierre with admin role requested to manage files
+2024-11-26 17:12:43,022 - Received command: list from Pierre
+2024-11-26 17:12:52,968 - List of files sent to Pierre
+2024-11-26 17:13:50,782 - Received command: exit from Pierre
+2024-11-26 17:13:56,119 - Client Pierre closed the connection
+2024-11-26 17:13:59,930 - Connection with Pierre closed
+2024-11-26 17:14:02,783 - Server closed
+2024-11-26 17:14:24,298 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:14:24,298 - Credentials loaded from pwd.txt
+2024-11-26 17:14:46,530 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:14:46,530 - Credentials loaded from pwd.txt
+2024-11-26 17:14:53,093 - Connection established with ('127.0.0.1', 59898)
+2024-11-26 17:15:00,270 - User Pierre authenticated successfully
+2024-11-26 17:15:24,922 - Received command: list from Pierre
+2024-11-26 17:15:24,922 - List of files sent to Pierre
+2024-11-26 17:16:34,873 - Received command: delete PierreTextDoc.txt from Pierre
+2024-11-26 17:16:34,873 - User Pierre with admin role requested to delete a file
+2024-11-26 17:16:34,874 - File PierreTextDoc.txt deleted successfully
+2024-11-26 17:17:02,703 - Received command: PierreTextDoc.txt from Pierre
+2024-11-26 17:17:02,703 - User Pierre attempted an invalid command
+2024-11-26 17:17:34,036 - Received command: exit from Pierre
+2024-11-26 17:17:34,036 - Client Pierre closed the connection
+2024-11-26 17:17:34,036 - Connection with Pierre closed
+2024-11-26 17:17:34,036 - Server closed
+2024-11-26 17:17:41,131 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:17:41,131 - Credentials loaded from pwd.txt
+2024-11-26 17:17:45,569 - Connection established with ('127.0.0.1', 37300)
+2024-11-26 17:17:56,409 - Failed authentication attempt for user Piere
+2024-11-26 17:18:16,506 - User Pierre authenticated successfully
+2024-11-26 17:18:25,818 - Received command: list from Pierre
+2024-11-26 17:18:25,819 - List of files sent to Pierre
+2024-11-26 17:18:52,788 - Received command: upload PierreTextDoc.txt from Pierre
+2024-11-26 17:18:59,628 - File PierreTextDoc.txt received successfully from Pierre
+2024-11-26 17:19:47,526 - Received command: delete PierreTextDoc.txt from Pierre
+2024-11-26 17:19:47,526 - User Pierre with admin role requested to delete a file
+2024-11-26 17:19:47,526 - File PierreTextDoc.txt deleted successfully
+2024-11-26 17:20:49,463 - Received command: download ASecondTextDoc.txt from Pierre
+2024-11-26 17:21:06,048 - File ASecondTextDoc.txt sent successfully to Pierre
+2024-11-26 17:21:54,533 - Received command: manage from Pierre
+2024-11-26 17:21:54,533 - User Pierre with admin role requested to manage files
+2024-11-26 17:22:31,071 - Received command: exit from Pierre
+2024-11-26 17:22:31,071 - Client Pierre closed the connection
+2024-11-26 17:22:31,071 - Connection with Pierre closed
+2024-11-26 17:22:31,072 - Server closed
+2024-11-26 17:23:35,757 - Server started and listening on 127.0.0.1:10615
+2024-11-26 17:23:35,757 - Credentials loaded from pwd.txt
+2024-11-26 17:23:43,243 - Connection established with ('127.0.0.1', 35496)
+2024-11-26 17:23:55,971 - User Pierre authenticated successfully
+2024-11-26 17:23:58,894 - Received command: list from Pierre
+2024-11-26 17:23:58,894 - List of files sent to Pierre
+2024-11-26 17:24:12,106 - Received command: upload file.txt from Pierre
+2024-11-26 17:24:12,149 - File file.txt received successfully from Pierre
+2024-11-26 17:24:40,464 - Received command: download test.py from Pierre
+2024-11-26 17:24:40,464 - File test.py sent successfully to Pierre
+2024-11-26 17:25:09,920 - Received command: delete ASecondTextDoc.txt from Pierre
+2024-11-26 17:25:09,920 - User Pierre with admin role requested to delete a file
+2024-11-26 17:25:09,921 - File ASecondTextDoc.txt deleted successfully
+2024-11-26 17:25:11,605 - Received command: list from Pierre
+2024-11-26 17:25:11,605 - List of files sent to Pierre
+2024-11-26 17:25:21,417 - Received command: manage from Pierre
+2024-11-26 17:25:21,417 - User Pierre with admin role requested to manage files
+2024-11-26 17:25:39,552 - Received command: exit from Pierre
+2024-11-26 17:25:39,553 - Client Pierre closed the connection
+2024-11-26 17:25:39,554 - Connection with Pierre closed
+2024-11-26 17:25:39,554 - Server closed

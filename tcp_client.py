@@ -102,7 +102,7 @@ while True:
         else:
             # Acknowledge the file size
             file_size = int(response)
-            ssl_client_socket.send(b"SIZE RECEIVED")
+            # ssl_client_socket.send(b"SIZE RECEIVED")
 
         # Receive the file
         with open(filename, "wb") as file:
@@ -119,8 +119,8 @@ while True:
         print(f"Your files:\n{file_list}")
 
     elif command.startswith("delete"):
-        filename = command.split()[1]
-        ssl_client_socket.send(filename.encode())
+        #filename = command.split()[1]
+        #ssl_client_socket.send(filename.encode())
         response = ssl_client_socket.recv(1024).decode()
         print(response)
     
