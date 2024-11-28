@@ -9,6 +9,12 @@ import logging
 # The server will then receive a message from the client and respond with a message of its own.
 # Then close the connection.
 
+# Notes:
+#   Admin account upload functionality is broken, for now. Downloads are functional, but require the full path
+#   relative to the root directory (where tcp_server.py is). EX: 'download ServerFiles/{account}/{file}' instead of 'download {file}'. This 
+#   allows full access to every account, but is a temporary solution. The user account upload/download functions work as 
+#   intended. Admin deletion is also still limited to their respective directories. 
+#
 # Goals: 
 #   X Implement a file transfer system using TCP and SSL. The server should wait for user input
 #   to receive commands to either send or receive files.
@@ -131,8 +137,23 @@ while not authenticated:
 print("Connection established with user:", current_user)
 print("Waiting for commands...")
 while True:
+
     command = ssl_client_socket.recv(1024).decode().strip()
-    action = command.split()[0]
+
+    # Validate the command
+    if not command:
+        ssl_client_socket.send(b"Invalid Command: Command is empty.")
+        logging.warning("Empty command received from %s", current_user)
+        continue
+
+    # Split and extract the action
+    try:
+        action = command.split()[0]
+    except IndexError:
+        ssl_client_socket.send(b"Invalid Command: Unable to parse action.")
+        logging.warning("Malformed command received from %s: %s", current_user, command)
+        continue
+
     print(f"Received command: {command}")
     logging.info("Received command: %s from %s", command, current_user)
 
@@ -169,24 +190,38 @@ while True:
 
     # The client intends to download a file from their respective directory 
     elif action == "download":
-        # Extract filename
-        filename = command.split()[1]
-        file_path = os.path.join(user_folder, filename)
-        if os.path.exists(file_path):
+
+        # Validate and construct the full file path
+        relative_path = command.split()[1] # User-specified path
+        full_path = os.path.abspath(os.path.join(user_folder, relative_path))
+
+        # Check user permissions
+        if current_role == "admin":
+            # admins should have access to all files
+            full_path = os.path.abspath(relative_path)
+
+        # Ensure the path is within the user's folder
+        if not current_role == "admin" and not full_path.startswith(os.path.abspath(user_folder)):
+            ssl_client_socket.send(b"Invalid Command: Unauthorized file access attempt.")
+            logging.warning("Unauthorized file access attempt by %s: %s", current_user, relative_path)
+            continue
+
+        # Check if the file exists for admins and non-admins
+        if os.path.exists(full_path) and os.path.isfile(full_path):
             # Send the file size
-            file_size = os.path.getsize(file_path)
+            file_size = os.path.getsize(full_path)
             ssl_client_socket.send(str(file_size).encode())
             ssl_client_socket.recv(1024) # Wait for the client to acknowledge the file size
 
             # Send the file
-            with open(file_path, "rb") as file:
+            with open(full_path, "rb") as file:
                 for data in file:
                     ssl_client_socket.send(data)
-            print(f"File {filename} sent successfully!")
-            logging.info("File %s sent successfully to %s", filename, current_user)
+            print(f"File {relative_path} sent successfully!")
+            logging.info("File %s sent successfully to %s", relative_path, current_user)
         else:
             ssl_client_socket.send("File not found!".encode())
-            logging.warning("File %s not found for user %s", filename, current_user)
+            logging.warning("File %s not found for user %s", relative_path, current_user)
 
     # The client intends to list the files in their respective directory
     elif action ==  "list":

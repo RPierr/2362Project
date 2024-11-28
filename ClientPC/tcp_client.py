@@ -75,18 +75,19 @@ while True:
         break
 
     elif command.startswith("upload"):
-        filename = command.split()[1]
-        if os.path.exists(filename):
-            file_size = os.path.getsize(filename)
+        # Extract the file path
+        filepath = command.split(maxsplit=1)[1]
+        if os.path.exists(filepath):
+            file_size = os.path.getsize(filepath)
             ssl_client_socket.send(str(file_size).encode())
             
             # Wait for the server to acknowledge
             ack = ssl_client_socket.recv(1024).decode()
             if ack == "ACK":
-                with open(filename, "rb") as file:
+                with open(filepath, "rb") as file:
                     for data in file:
                         ssl_client_socket.send(data)
-                print(f"File {filename} sent successfully!")
+                print(f"File {filepath} sent successfully!")
             else:
                 print("Failed to receive ACK from the server")
         else:
@@ -94,29 +95,30 @@ while True:
             ssl_client_socket.send(b"File not found")
 
     elif command.startswith("download"):
-        filename = command.split()[1]
+        # Extract the filepath
+        filepath = command.split(maxsplit=1)[1]
 
         # Send the filename to the server
-        #ssl_client_socket.send(filename.encode())
+        # ssl_client_socket.send(filepath.encode())
 
         # Receive the file size or error message
         response = ssl_client_socket.recv(1024).decode()
-        if "File not found" in response:
-            print(response)
-            continue
-        else:
+        
+        if response.isdigit():
             # Acknowledge the file size
             file_size = int(response)
-            ssl_client_socket.send(b"SIZE RECEIVED")
+        else:
+            print(response)
+            continue
 
         # Receive the file
-        with open(filename, "wb") as file:
+        with open(os.path.basename(filepath), "wb") as file:
             received = 0
             while received < file_size:
                 data = ssl_client_socket.recv(1024)
                 file.write(data)
                 received += len(data)
-            print(f"File {filename} received successfully!")
+            print(f"File {filepath} received successfully!")
 
     elif command.lower() == "list":
         # Receive the list of files from the server
