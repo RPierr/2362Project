@@ -10,10 +10,9 @@ import logging
 # Then close the connection.
 
 # Notes:
-#   Admin account upload functionality is broken, for now. Downloads are functional, but require the full path
-#   relative to the root directory (where tcp_server.py is). EX: 'download ServerFiles/{account}/{file}' instead of 'download {file}'. This 
-#   allows full access to every account, but is a temporary solution. The user account upload/download functions work as 
-#   intended. Admin deletion is also still limited to their respective directories. 
+#   
+#   Uploading and Downloading for admins and non-admins work now. Filepaths entered into the client are relative to the user's folder.
+#   Admins can access other folders with "../" in the filepath, but non-admins cannot. Uploads still upload to user's folder.
 #
 # Goals: 
 #   X Implement a file transfer system using TCP and SSL. The server should wait for user input
@@ -26,7 +25,7 @@ import logging
 #   X Implement a logging/audit system
 #
 #   Create 'shared' directory that any user can upload/download to. Only admins should be able to delete/manage
-#   Consider what the 'manage' command should do
+#   Consider what the 'manage' command should do. maybe change permissions.
 #   Possibly add a guest role with limited permisions. (Only list?)
 #   Implement a SQL database to handle stored authentication credentials (yes) and roles (maybe)
 
@@ -196,9 +195,9 @@ while True:
         full_path = os.path.abspath(os.path.join(user_folder, relative_path))
 
         # Check user permissions
-        if current_role == "admin":
+        #if current_role == "admin":
             # admins should have access to all files
-            full_path = os.path.abspath(relative_path)
+            #full_path = os.path.abspath(relative_path)
 
         # Ensure the path is within the user's folder
         if not current_role == "admin" and not full_path.startswith(os.path.abspath(user_folder)):

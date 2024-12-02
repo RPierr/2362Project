@@ -864,10 +864,3 @@
 2024-12-02 18:36:20,283 - Connection established with ('127.0.0.1', 37318)
 2024-12-02 18:36:26,126 - User Pierre authenticated successfully
 2024-12-02 18:36:35,681 - Received command: download ../admin/server.log from Pierre
-2024-12-02 18:36:35,686 - File ../admin/server.log sent successfully to Pierre
-2024-12-02 18:36:45,231 - Received command: manage from Pierre
-2024-12-02 18:36:45,231 - User Pierre with admin role requested to manage files
-2024-12-02 18:36:47,261 - Received command: exit from Pierre
-2024-12-02 18:36:47,261 - Client Pierre closed the connection
-2024-12-02 18:36:47,262 - Connection with Pierre closed
-2024-12-02 18:36:47,262 - Server closed

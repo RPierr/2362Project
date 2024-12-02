@@ -107,6 +107,7 @@ while True:
         if response.isdigit():
             # Acknowledge the file size
             file_size = int(response)
+            ssl_client_socket.send(b"ACK")
         else:
             print(response)
             continue
