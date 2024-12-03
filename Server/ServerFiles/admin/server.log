@@ -1673,3 +1673,56 @@
 2024-12-03 17:06:46,596 - Failed authentication attempt for user TaylorGraham
 2024-12-03 17:07:49,505 - Failed authentication attempt for user exit
 2024-12-03 17:07:55,969 - Failed authentication attempt for user 
+2024-12-03 17:36:34,049 - Server started and listening on 127.0.0.1:10615
+2024-12-03 17:36:34,049 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 17:36:38,113 - Connection established with ('127.0.0.1', 42954)
+2024-12-03 17:36:50,243 - User classAdmin authenticated successfully
+2024-12-03 17:36:53,732 - Received command: list from classAdmin
+2024-12-03 17:36:53,732 - No files in directory for classAdmin
+2024-12-03 17:36:59,536 - Received command: manage from classAdmin
+2024-12-03 17:36:59,536 - User classAdmin with admin role requested to manage files
+2024-12-03 17:37:02,998 - Received command: delete from classAdmin
+2024-12-03 17:37:02,999 - User classAdmin with admin role requested to delete a file
+2024-12-03 17:37:02,999 - Invalid delete command by classAdmin: Missing filename
+2024-12-03 17:37:09,537 - Received command: delete nothing from classAdmin
+2024-12-03 17:37:09,537 - User classAdmin with admin role requested to delete a file
+2024-12-03 17:37:09,537 - File nothing not found for deletion
+2024-12-03 17:37:19,639 - Received command: upload nothing from classAdmin
+2024-12-03 17:39:12,262 - Server started and listening on 127.0.0.1:10615
+2024-12-03 17:39:12,262 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 17:39:15,059 - Connection established with ('127.0.0.1', 50162)
+2024-12-03 17:39:23,459 - User classAdmin authenticated successfully
+2024-12-03 17:39:25,099 - Received command: list from classAdmin
+2024-12-03 17:39:25,100 - No files in directory for classAdmin
+2024-12-03 17:39:44,679 - Received command: upload fllod_test.py from classAdmin
+2024-12-03 17:39:54,801 - Server started and listening on 127.0.0.1:10615
+2024-12-03 17:39:54,801 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 17:39:56,427 - Connection established with ('127.0.0.1', 36372)
+2024-12-03 17:40:06,490 - User classAdmin authenticated successfully
+2024-12-03 17:40:14,437 - Received command: download dne from classAdmin
+2024-12-03 17:40:14,437 - File dne not found for user classAdmin
+2024-12-03 17:40:22,955 - Received command: upload flood_test.py from classAdmin
+2024-12-03 17:40:23,043 - File flood_test.py received successfully from classAdmin
+2024-12-03 17:40:24,533 - Received command: list from classAdmin
+2024-12-03 17:40:24,534 - List of files sent to classAdmin
+2024-12-03 17:40:50,345 - Received command: delete flood_test.py from classAdmin
+2024-12-03 17:40:50,345 - User classAdmin with admin role requested to delete a file
+2024-12-03 17:40:50,345 - File flood_test.py deleted successfully
+2024-12-03 17:40:52,405 - Received command: list from classAdmin
+2024-12-03 17:40:52,406 - No files in directory for classAdmin
+2024-12-03 17:40:55,005 - Received command: manage from classAdmin
+2024-12-03 17:40:55,005 - User classAdmin with admin role requested to manage files
+2024-12-03 17:40:56,960 - Received command: man from classAdmin
+2024-12-03 17:40:56,960 - User classAdmin attempted an invalid command
+2024-12-03 17:41:00,250 - Received command: aw :( from classAdmin
+2024-12-03 17:41:00,250 - User classAdmin attempted an invalid command
+2024-12-03 17:41:02,830 - Received command: list from classAdmin
+2024-12-03 17:41:02,830 - No files in directory for classAdmin
+2024-12-03 17:41:04,325 - Received command: ,anage from classAdmin
+2024-12-03 17:41:04,326 - User classAdmin attempted an invalid command
+2024-12-03 17:41:39,077 - Received command: download ../admin/../Pierre/../guest/file.txt from classAdmin
+2024-12-03 17:41:39,078 - File ../admin/../Pierre/../guest/file.txt sent successfully to classAdmin
+2024-12-03 17:41:46,676 - Received command: exit from classAdmin
+2024-12-03 17:41:46,676 - Client classAdmin closed the connection
+2024-12-03 17:41:46,677 - Connection with classAdmin closed
+2024-12-03 17:41:46,677 - Server closed

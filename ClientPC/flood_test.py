@@ -6,7 +6,7 @@ HOST = "127.0.0.1"  # Server IP address
 PORT = 10615        # port number
 
 # Number of commands to send
-NUM_COMMANDS = 1000
+NUM_COMMANDS = 350000 # DOS achieved at 211864, mitigate with rate-limiting
 
 # Create SSL context (same as in tcp_client.py)
 context = ssl.create_default_context()
