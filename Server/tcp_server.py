@@ -14,6 +14,8 @@ import logging
 #   Uploading and Downloading for admins and non-admins work now. Filepaths entered into the client are relative to the user's folder.
 #   Admins can access other folders with "../" in the filepath, but non-admins cannot. Uploads still upload to user's folder.
 #
+#   Resolved empty commands and malformed commands. Invalid commands are now handled better.
+#
 # Goals: 
 #   X Implement a file transfer system using TCP and SSL. The server should wait for user input
 #   to receive commands to either send or receive files.
@@ -24,14 +26,15 @@ import logging
 #
 #   X Implement a logging/audit system
 #
+#   Implement brute-force protection. Lockout after x failed attempts.
 #   Create 'shared' directory that any user can upload/download to. Only admins should be able to delete/manage
 #   Consider what the 'manage' command should do. maybe change permissions.
 #   Possibly add a guest role with limited permisions. (Only list?)
 #   Implement a SQL database to handle stored authentication credentials (yes) and roles (maybe)
 
-# //////////////////////// Logging ////////////////////////
+# //////////////////////// Logging //////////////////////////////////
 logging.basicConfig(filename="ServerFiles/admin/server.log", level=logging.INFO, format="%(asctime)s - %(message)s")
-# //////////////////////// Logging ////////////////////////
+# //////////////////////// Logging //////////////////////////////////
 
 
 # ///////////////// Authentication Process /////////////////////////
@@ -143,6 +146,7 @@ while True:
     if not command:
         ssl_client_socket.send(b"Invalid Command: Command is empty.")
         logging.warning("Empty command received from %s", current_user)
+        command = None
         continue
 
     # Split and extract the action
@@ -168,16 +172,18 @@ while True:
         # Extract filename
         filename = command.split()[1]
 
-        # check if the file exists
-        #if ssl_client_socket.recv(1024).decode() == "File not found":
-        #    logging.info("File %s does not exist for user %s", filename, current_user)
-        #    continue
-        #else:
+        # Receive the file size    
         file_size = int(ssl_client_socket.recv(1024).decode())
         ssl_client_socket.send(b"ACK")  # Acknowledge the file size
 
             # Receive the file
         file_path = os.path.join(user_folder, filename)
+
+        if os.path.exists(file_path):
+            ssl_client_socket.send(b"File already exists!")
+            logging.warning("File %s already exists for user %s", filename, current_user)
+            continue
+
         with open(file_path, "wb") as file:
             received = 0
             while received < file_size:
@@ -193,11 +199,6 @@ while True:
         # Validate and construct the full file path
         relative_path = command.split()[1] # User-specified path
         full_path = os.path.abspath(os.path.join(user_folder, relative_path))
-
-        # Check user permissions
-        #if current_role == "admin":
-            # admins should have access to all files
-            #full_path = os.path.abspath(relative_path)
 
         # Ensure the path is within the user's folder
         if not current_role == "admin" and not full_path.startswith(os.path.abspath(user_folder)):
@@ -239,7 +240,14 @@ while True:
     elif action == "delete":
         if current_role == "admin":
             logging.info("User %s with admin role requested to delete a file", current_user)
-            filename = command.split()[1]
+
+             # Check if a filename parameter was provided
+            parts = command.split(maxsplit=1)
+            if len(parts) < 2:  # If there is no second part, the filename is missing
+                ssl_client_socket.send(b"Invalid Command: Missing filename. Usage: delete <filename>")
+                logging.warning("Invalid delete command by %s: Missing filename", current_user)
+                continue
+            filename = parts[1]
             file_path = os.path.join(f"ServerFiles/{current_user}", filename)
 
             if os.path.exists(file_path):
@@ -247,7 +255,7 @@ while True:
                 ssl_client_socket.send(f"File '{filename}' deleted successfully.".encode())
                 logging.info("File %s deleted successfully", filename)
             else:
-                ssl_client_socket.send(b"ERROR: File not found.")
+                ssl_client_socket.send(b"File not found!")
                 logging.warning("File %s not found for deletion", filename)
 
         # Denied Access

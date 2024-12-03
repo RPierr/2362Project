@@ -871,3 +871,805 @@
 2024-12-02 18:36:47,261 - Client Pierre closed the connection
 2024-12-02 18:36:47,262 - Connection with Pierre closed
 2024-12-02 18:36:47,262 - Server closed
+2024-12-02 19:08:10,535 - Server started and listening on 127.0.0.1:10615
+2024-12-02 19:08:10,535 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-02 19:08:18,880 - Connection established with ('127.0.0.1', 34386)
+2024-12-02 19:08:23,694 - User Pierre authenticated successfully
+2024-12-02 19:08:25,164 - Received command: list from Pierre
+2024-12-02 19:08:25,165 - List of files sent to Pierre
+2024-12-02 19:08:34,447 - Received command: download PierreTextDoc.txt from Pierre
+2024-12-02 19:08:34,448 - File PierreTextDoc.txt sent successfully to Pierre
+2024-12-02 19:08:48,976 - Received command: download ../admin/server.log from Pierre
+2024-12-02 19:08:48,981 - File ../admin/server.log sent successfully to Pierre
+2024-12-02 19:08:54,228 - Received command: manage from Pierre
+2024-12-02 19:08:54,228 - User Pierre with admin role requested to manage files
+2024-12-02 19:09:01,881 - Received command: list from Pierre
+2024-12-02 19:09:01,881 - List of files sent to Pierre
+2024-12-02 19:09:08,993 - Received command: delete PierreTextDoc.txt from Pierre
+2024-12-02 19:09:08,994 - User Pierre with admin role requested to delete a file
+2024-12-02 19:09:08,994 - File PierreTextDoc.txt deleted successfully
+2024-12-02 19:09:10,989 - Received command: list from Pierre
+2024-12-02 19:09:10,990 - List of files sent to Pierre
+2024-12-02 19:09:27,278 - Received command: delete ./admin/server.log from Pierre
+2024-12-02 19:09:27,279 - User Pierre with admin role requested to delete a file
+2024-12-02 19:09:27,279 - File ./admin/server.log not found for deletion
+2024-12-02 19:09:40,759 - Received command: download ../admin/pwd.txt from Pierre
+2024-12-02 19:09:40,759 - File ../admin/pwd.txt sent successfully to Pierre
+2024-12-02 19:11:11,104 - Received command: list from Pierre
+2024-12-02 19:11:11,105 - List of files sent to Pierre
+2024-12-02 19:11:13,506 - Received command: manage from Pierre
+2024-12-02 19:11:13,506 - User Pierre with admin role requested to manage files
+2024-12-02 19:11:19,655 - Received command: upload PierreTextDoc.txt from Pierre
+2024-12-02 19:11:19,697 - File PierreTextDoc.txt received successfully from Pierre
+2024-12-02 19:11:21,256 - Received command: list from Pierre
+2024-12-02 19:11:21,256 - List of files sent to Pierre
+2024-12-02 19:12:08,195 - Received command: list from Pierre
+2024-12-02 19:12:08,195 - List of files sent to Pierre
+2024-12-02 19:12:11,092 - Received command: manage from Pierre
+2024-12-02 19:12:11,092 - User Pierre with admin role requested to manage files
+2024-12-02 19:12:14,448 - Received command: notacommand from Pierre
+2024-12-02 19:12:14,448 - User Pierre attempted an invalid command
+2024-12-02 19:12:19,058 - Received command: list from Pierre
+2024-12-02 19:12:19,058 - List of files sent to Pierre
+2024-12-02 19:12:21,155 - Received command: list from Pierre
+2024-12-02 19:12:21,155 - List of files sent to Pierre
+2024-12-02 19:12:24,419 - Received command: okay from Pierre
+2024-12-02 19:12:24,419 - User Pierre attempted an invalid command
+2024-12-02 19:13:11,463 - Received command: lsit is isistst from Pierre
+2024-12-02 19:13:11,463 - User Pierre attempted an invalid command
+2024-12-02 19:13:15,134 - Received command: list from Pierre
+2024-12-02 19:13:15,135 - List of files sent to Pierre
+2024-12-02 19:13:48,022 - Received command: manage manage manage from Pierre
+2024-12-02 19:13:48,022 - User Pierre with admin role requested to manage files
+2024-12-02 19:13:50,320 - Received command: okay from Pierre
+2024-12-02 19:13:50,320 - User Pierre attempted an invalid command
+2024-12-02 19:13:51,205 - Received command: list from Pierre
+2024-12-02 19:13:51,205 - List of files sent to Pierre
+2024-12-02 19:13:53,346 - Received command: list from Pierre
+2024-12-02 19:13:53,346 - List of files sent to Pierre
+2024-12-02 19:13:54,115 - Received command: list from Pierre
+2024-12-02 19:13:54,116 - List of files sent to Pierre
+2024-12-02 19:13:55,154 - Received command: list from Pierre
+2024-12-02 19:13:55,154 - List of files sent to Pierre
+2024-12-02 19:13:57,458 - Received command: list from Pierre
+2024-12-02 19:13:57,458 - List of files sent to Pierre
+2024-12-02 19:13:58,258 - Received command: list from Pierre
+2024-12-02 19:13:58,258 - List of files sent to Pierre
+2024-12-02 19:13:58,982 - Received command: list from Pierre
+2024-12-02 19:13:58,982 - List of files sent to Pierre
+2024-12-02 19:13:59,689 - Received command: list from Pierre
+2024-12-02 19:13:59,689 - List of files sent to Pierre
+2024-12-02 19:14:00,241 - Received command: list from Pierre
+2024-12-02 19:14:00,241 - List of files sent to Pierre
+2024-12-02 19:14:00,931 - Received command: list from Pierre
+2024-12-02 19:14:00,931 - List of files sent to Pierre
+2024-12-02 19:14:01,554 - Received command: list from Pierre
+2024-12-02 19:14:01,555 - List of files sent to Pierre
+2024-12-02 19:14:02,100 - Received command: list from Pierre
+2024-12-02 19:14:02,100 - List of files sent to Pierre
+2024-12-02 19:14:02,642 - Received command: list from Pierre
+2024-12-02 19:14:02,642 - List of files sent to Pierre
+2024-12-02 19:14:03,270 - Received command: list from Pierre
+2024-12-02 19:14:03,270 - List of files sent to Pierre
+2024-12-02 19:14:03,833 - Received command: liust from Pierre
+2024-12-02 19:14:03,833 - User Pierre attempted an invalid command
+2024-12-02 19:14:05,283 - Received command: luist]] from Pierre
+2024-12-02 19:14:05,283 - User Pierre attempted an invalid command
+2024-12-02 19:14:06,259 - Received command: list from Pierre
+2024-12-02 19:14:06,259 - List of files sent to Pierre
+2024-12-02 19:14:06,785 - Received command: list from Pierre
+2024-12-02 19:14:06,785 - List of files sent to Pierre
+2024-12-02 19:14:07,365 - Received command: list from Pierre
+2024-12-02 19:14:07,365 - List of files sent to Pierre
+2024-12-02 19:14:07,922 - Received command: list from Pierre
+2024-12-02 19:14:07,923 - List of files sent to Pierre
+2024-12-02 19:14:08,788 - Received command: lst from Pierre
+2024-12-02 19:14:08,789 - User Pierre attempted an invalid command
+2024-12-02 19:14:11,572 - Received command: exit from Pierre
+2024-12-02 19:14:11,572 - Client Pierre closed the connection
+2024-12-02 19:14:11,572 - Connection with Pierre closed
+2024-12-02 19:14:11,572 - Server closed
+2024-12-03 15:59:46,336 - Server started and listening on 127.0.0.1:10615
+2024-12-03 15:59:46,338 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 15:59:52,710 - Connection established with ('127.0.0.1', 33368)
+2024-12-03 15:59:56,803 - Failed authentication attempt for user f
+2024-12-03 16:00:18,089 - Failed authentication attempt for user 
+2024-12-03 16:00:21,057 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:00:21,058 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:00:22,959 - Connection established with ('127.0.0.1', 36432)
+2024-12-03 16:00:48,466 - User admin authenticated successfully
+2024-12-03 16:01:23,890 - Received command: list from admin
+2024-12-03 16:01:23,890 - List of files sent to admin
+2024-12-03 16:01:37,622 - Received command: notacommand from admin
+2024-12-03 16:01:37,622 - User admin attempted an invalid command
+2024-12-03 16:01:42,066 - Received command: list from admin
+2024-12-03 16:01:42,066 - List of files sent to admin
+2024-12-03 16:01:47,706 - Received command: list from admin
+2024-12-03 16:01:47,707 - List of files sent to admin
+2024-12-03 16:01:52,560 - Received command: manage from admin
+2024-12-03 16:01:52,560 - User admin with admin role requested to manage files
+2024-12-03 16:01:54,286 - Received command: manage from admin
+2024-12-03 16:01:54,287 - User admin with admin role requested to manage files
+2024-12-03 16:01:56,352 - Received command: list from admin
+2024-12-03 16:01:56,352 - List of files sent to admin
+2024-12-03 16:08:14,766 - Received command: list from admin
+2024-12-03 16:08:14,766 - List of files sent to admin
+2024-12-03 16:08:18,224 - Received command: manage from admin
+2024-12-03 16:08:18,224 - User admin with admin role requested to manage files
+2024-12-03 16:08:22,415 - Received command: manage from admin
+2024-12-03 16:08:22,415 - User admin with admin role requested to manage files
+2024-12-03 16:08:23,863 - Received command: list from admin
+2024-12-03 16:08:23,863 - List of files sent to admin
+2024-12-03 16:09:50,398 - Received command: exit from admin
+2024-12-03 16:09:50,399 - Client admin closed the connection
+2024-12-03 16:09:50,399 - Connection with admin closed
+2024-12-03 16:09:50,399 - Server closed
+2024-12-03 16:09:52,567 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:09:52,568 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:09:55,160 - Connection established with ('127.0.0.1', 41996)
+2024-12-03 16:09:59,311 - User Pierre authenticated successfully
+2024-12-03 16:10:08,711 - Received command: what from Pierre
+2024-12-03 16:10:08,711 - User Pierre attempted an invalid command
+2024-12-03 16:10:12,503 - Received command: manage from Pierre
+2024-12-03 16:10:12,503 - User Pierre with admin role requested to manage files
+2024-12-03 16:10:21,567 - Received command: list from Pierre
+2024-12-03 16:10:21,568 - List of files sent to Pierre
+2024-12-03 16:10:24,704 - Received command: what from Pierre
+2024-12-03 16:10:24,704 - User Pierre attempted an invalid command
+2024-12-03 16:10:26,288 - Received command: what from Pierre
+2024-12-03 16:10:26,288 - User Pierre attempted an invalid command
+2024-12-03 16:10:27,576 - Received command: list from Pierre
+2024-12-03 16:10:27,576 - List of files sent to Pierre
+2024-12-03 16:10:29,239 - Received command: manage from Pierre
+2024-12-03 16:10:29,239 - User Pierre with admin role requested to manage files
+2024-12-03 16:10:30,095 - Received command: manage from Pierre
+2024-12-03 16:10:30,095 - User Pierre with admin role requested to manage files
+2024-12-03 16:10:31,808 - Received command: manage from Pierre
+2024-12-03 16:10:31,808 - User Pierre with admin role requested to manage files
+2024-12-03 16:10:32,624 - Received command: manage from Pierre
+2024-12-03 16:10:32,625 - User Pierre with admin role requested to manage files
+2024-12-03 16:10:34,687 - Received command: exit from Pierre
+2024-12-03 16:10:34,687 - Client Pierre closed the connection
+2024-12-03 16:10:34,687 - Connection with Pierre closed
+2024-12-03 16:10:34,687 - Server closed
+2024-12-03 16:14:54,049 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:14:54,049 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:15:00,652 - Connection established with ('127.0.0.1', 49480)
+2024-12-03 16:15:06,635 - User admin authenticated successfully
+2024-12-03 16:15:16,468 - Received command: what from admin
+2024-12-03 16:15:16,468 - User admin attempted an invalid command
+2024-12-03 16:15:58,460 - Received command: manage from admin
+2024-12-03 16:15:58,461 - User admin with admin role requested to manage files
+2024-12-03 16:16:46,310 - Received command: list from admin
+2024-12-03 16:16:46,311 - List of files sent to admin
+2024-12-03 16:16:48,700 - Received command: list from admin
+2024-12-03 16:16:48,700 - List of files sent to admin
+2024-12-03 16:19:36,795 - Received command: exit from admin
+2024-12-03 16:19:36,795 - Client admin closed the connection
+2024-12-03 16:19:36,795 - Connection with admin closed
+2024-12-03 16:19:36,796 - Server closed
+2024-12-03 16:19:38,756 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:19:38,757 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:19:40,599 - Connection established with ('127.0.0.1', 56944)
+2024-12-03 16:19:44,604 - User Pierre authenticated successfully
+2024-12-03 16:19:49,507 - Received command: notacommand from Pierre
+2024-12-03 16:19:49,507 - User Pierre attempted an invalid command
+2024-12-03 16:19:56,973 - Received command: list from Pierre
+2024-12-03 16:19:56,973 - List of files sent to Pierre
+2024-12-03 16:20:04,265 - Received command: whatisthis from Pierre
+2024-12-03 16:20:04,266 - User Pierre attempted an invalid command
+2024-12-03 16:20:10,860 - Received command: manage from Pierre
+2024-12-03 16:20:10,860 - User Pierre with admin role requested to manage files
+2024-12-03 16:20:31,637 - Received command: what from Pierre
+2024-12-03 16:20:31,637 - User Pierre attempted an invalid command
+2024-12-03 16:20:33,612 - Received command: exit from Pierre
+2024-12-03 16:20:33,612 - Client Pierre closed the connection
+2024-12-03 16:20:33,612 - Connection with Pierre closed
+2024-12-03 16:20:33,612 - Server closed
+2024-12-03 16:20:35,563 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:20:35,564 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:20:37,733 - Connection established with ('127.0.0.1', 38976)
+2024-12-03 16:20:41,804 - User admin authenticated successfully
+2024-12-03 16:20:42,796 - Received command: what from admin
+2024-12-03 16:20:42,796 - User admin attempted an invalid command
+2024-12-03 16:20:48,369 - Received command: aw :( from admin
+2024-12-03 16:20:48,369 - User admin attempted an invalid command
+2024-12-03 16:20:51,574 - Received command: delete from admin
+2024-12-03 16:20:51,574 - User admin with admin role requested to delete a file
+2024-12-03 16:23:18,012 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:23:18,012 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:23:19,791 - Connection established with ('127.0.0.1', 58252)
+2024-12-03 16:23:23,113 - User admin authenticated successfully
+2024-12-03 16:23:24,844 - Received command: delete from admin
+2024-12-03 16:23:24,844 - User admin with admin role requested to delete a file
+2024-12-03 16:23:24,844 - Invalid delete command by admin: Missing filename
+2024-12-03 16:23:30,724 - Received command: list from admin
+2024-12-03 16:23:30,724 - List of files sent to admin
+2024-12-03 16:23:34,479 - Received command: delete notes.txt from admin
+2024-12-03 16:23:34,480 - User admin with admin role requested to delete a file
+2024-12-03 16:23:34,480 - File notes.txt deleted successfully
+2024-12-03 16:23:38,007 - Received command: list from admin
+2024-12-03 16:23:38,007 - List of files sent to admin
+2024-12-03 16:23:41,713 - Received command: delete doesnotexist from admin
+2024-12-03 16:23:41,713 - User admin with admin role requested to delete a file
+2024-12-03 16:23:41,714 - File doesnotexist not found for deletion
+2024-12-03 16:24:03,892 - Received command: manage from admin
+2024-12-03 16:24:03,892 - User admin with admin role requested to manage files
+2024-12-03 16:24:05,781 - Received command: manag from admin
+2024-12-03 16:24:05,781 - User admin attempted an invalid command
+2024-12-03 16:24:09,003 - Received command: hvuianoviroav from admin
+2024-12-03 16:24:09,004 - User admin attempted an invalid command
+2024-12-03 16:24:13,748 - Received command: whatisthiscommand???? from admin
+2024-12-03 16:24:13,748 - User admin attempted an invalid command
+2024-12-03 16:24:18,716 - Received command: list from admin
+2024-12-03 16:24:18,716 - List of files sent to admin
+2024-12-03 16:24:34,211 - Received command: download adminTextDoc.txt from admin
+2024-12-03 16:24:34,212 - File adminTextDoc.txt sent successfully to admin
+2024-12-03 16:43:15,754 - Received command: delete adminTextDoc.txt from admin
+2024-12-03 16:43:15,755 - User admin with admin role requested to delete a file
+2024-12-03 16:43:15,755 - File adminTextDoc.txt deleted successfully
+2024-12-03 16:43:17,219 - Received command: list from admin
+2024-12-03 16:43:17,219 - List of files sent to admin
+2024-12-03 16:46:04,081 - Received command: delete from admin
+2024-12-03 16:46:04,082 - User admin with admin role requested to delete a file
+2024-12-03 16:46:04,082 - Invalid delete command by admin: Missing filename
+2024-12-03 16:46:50,973 - Received command: delet from admin
+2024-12-03 16:46:50,973 - User admin attempted an invalid command
+2024-12-03 16:46:53,516 - Received command: delet e from admin
+2024-12-03 16:46:53,516 - User admin attempted an invalid command
+2024-12-03 16:47:03,629 - Received command: list from admin
+2024-12-03 16:47:03,629 - List of files sent to admin
+2024-12-03 16:48:21,063 - Received command: download ../userdoesnotexist/file.txt from admin
+2024-12-03 16:48:21,063 - File ../userdoesnotexist/file.txt not found for user admin
+2024-12-03 16:50:01,457 - Received command: exit from admin
+2024-12-03 16:50:01,457 - Client admin closed the connection
+2024-12-03 16:50:01,457 - Connection with admin closed
+2024-12-03 16:50:01,457 - Server closed
+2024-12-03 16:50:03,326 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:50:03,326 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:50:14,572 - Connection established with ('127.0.0.1', 49340)
+2024-12-03 16:54:45,541 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:54:45,541 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:54:48,672 - Connection established with ('127.0.0.1', 39412)
+2024-12-03 16:54:48,714 - Failed authentication attempt for user upload test_file_0.txt
+2024-12-03 16:54:48,715 - Failed authentication attempt for user upload test_file_2.txt
+2024-12-03 16:54:48,715 - Failed authentication attempt for user upload test_file_4.txt
+2024-12-03 16:54:48,715 - Failed authentication attempt for user upload test_file_6.txt
+2024-12-03 16:54:48,716 - Failed authentication attempt for user upload test_file_8.txt
+2024-12-03 16:54:48,716 - Failed authentication attempt for user upload test_file_10.txt
+2024-12-03 16:54:48,716 - Failed authentication attempt for user upload test_file_12.txt
+2024-12-03 16:54:48,717 - Failed authentication attempt for user upload test_file_14.txt
+2024-12-03 16:54:48,717 - Failed authentication attempt for user upload test_file_16.txt
+2024-12-03 16:54:48,718 - Failed authentication attempt for user upload test_file_18.txt
+2024-12-03 16:54:48,718 - Failed authentication attempt for user upload test_file_20.txt
+2024-12-03 16:54:48,718 - Failed authentication attempt for user upload test_file_22.txt
+2024-12-03 16:54:48,719 - Failed authentication attempt for user upload test_file_24.txt
+2024-12-03 16:54:48,719 - Failed authentication attempt for user upload test_file_26.txt
+2024-12-03 16:54:48,719 - Failed authentication attempt for user upload test_file_28.txt
+2024-12-03 16:54:48,720 - Failed authentication attempt for user upload test_file_30.txt
+2024-12-03 16:54:48,720 - Failed authentication attempt for user upload test_file_32.txt
+2024-12-03 16:54:48,720 - Failed authentication attempt for user upload test_file_34.txt
+2024-12-03 16:54:48,721 - Failed authentication attempt for user upload test_file_36.txt
+2024-12-03 16:54:48,721 - Failed authentication attempt for user upload test_file_38.txt
+2024-12-03 16:54:48,721 - Failed authentication attempt for user upload test_file_40.txt
+2024-12-03 16:54:48,721 - Failed authentication attempt for user upload test_file_42.txt
+2024-12-03 16:54:48,721 - Failed authentication attempt for user upload test_file_44.txt
+2024-12-03 16:54:48,721 - Failed authentication attempt for user upload test_file_46.txt
+2024-12-03 16:54:48,722 - Failed authentication attempt for user upload test_file_48.txt
+2024-12-03 16:54:48,723 - Failed authentication attempt for user upload test_file_50.txt
+2024-12-03 16:54:48,723 - Failed authentication attempt for user upload test_file_52.txt
+2024-12-03 16:54:48,723 - Failed authentication attempt for user upload test_file_54.txt
+2024-12-03 16:54:48,723 - Failed authentication attempt for user upload test_file_56.txt
+2024-12-03 16:54:48,724 - Failed authentication attempt for user upload test_file_58.txt
+2024-12-03 16:54:48,724 - Failed authentication attempt for user upload test_file_60.txt
+2024-12-03 16:54:48,725 - Failed authentication attempt for user upload test_file_62.txt
+2024-12-03 16:54:48,727 - Failed authentication attempt for user upload test_file_64.txt
+2024-12-03 16:54:48,727 - Failed authentication attempt for user upload test_file_66.txt
+2024-12-03 16:54:48,727 - Failed authentication attempt for user upload test_file_68.txt
+2024-12-03 16:54:48,728 - Failed authentication attempt for user upload test_file_70.txt
+2024-12-03 16:54:48,728 - Failed authentication attempt for user upload test_file_72.txt
+2024-12-03 16:54:48,728 - Failed authentication attempt for user upload test_file_74.txt
+2024-12-03 16:54:48,729 - Failed authentication attempt for user upload test_file_76.txt
+2024-12-03 16:54:48,729 - Failed authentication attempt for user upload test_file_78.txt
+2024-12-03 16:54:48,729 - Failed authentication attempt for user upload test_file_80.txt
+2024-12-03 16:54:48,730 - Failed authentication attempt for user upload test_file_82.txt
+2024-12-03 16:54:48,730 - Failed authentication attempt for user upload test_file_84.txt
+2024-12-03 16:54:48,730 - Failed authentication attempt for user upload test_file_86.txt
+2024-12-03 16:54:48,730 - Failed authentication attempt for user upload test_file_88.txt
+2024-12-03 16:54:48,730 - Failed authentication attempt for user upload test_file_90.txt
+2024-12-03 16:54:48,731 - Failed authentication attempt for user upload test_file_92.txt
+2024-12-03 16:54:48,731 - Failed authentication attempt for user upload test_file_94.txt
+2024-12-03 16:54:48,732 - Failed authentication attempt for user upload test_file_96.txt
+2024-12-03 16:54:48,732 - Failed authentication attempt for user upload test_file_98.txt
+2024-12-03 16:54:48,732 - Failed authentication attempt for user upload test_file_100.txt
+2024-12-03 16:54:48,732 - Failed authentication attempt for user upload test_file_102.txt
+2024-12-03 16:54:48,732 - Failed authentication attempt for user upload test_file_104.txt
+2024-12-03 16:54:48,733 - Failed authentication attempt for user upload test_file_106.txt
+2024-12-03 16:54:48,733 - Failed authentication attempt for user upload test_file_108.txt
+2024-12-03 16:54:48,733 - Failed authentication attempt for user upload test_file_110.txt
+2024-12-03 16:54:48,733 - Failed authentication attempt for user upload test_file_112.txt
+2024-12-03 16:54:48,733 - Failed authentication attempt for user upload test_file_114.txt
+2024-12-03 16:54:48,734 - Failed authentication attempt for user upload test_file_116.txt
+2024-12-03 16:54:48,734 - Failed authentication attempt for user upload test_file_118.txt
+2024-12-03 16:54:48,734 - Failed authentication attempt for user upload test_file_120.txt
+2024-12-03 16:54:48,734 - Failed authentication attempt for user upload test_file_122.txt
+2024-12-03 16:54:48,734 - Failed authentication attempt for user upload test_file_124.txt
+2024-12-03 16:54:48,735 - Failed authentication attempt for user upload test_file_126.txt
+2024-12-03 16:54:48,735 - Failed authentication attempt for user upload test_file_128.txt
+2024-12-03 16:54:48,735 - Failed authentication attempt for user upload test_file_130.txt
+2024-12-03 16:54:48,735 - Failed authentication attempt for user upload test_file_132.txt
+2024-12-03 16:54:48,735 - Failed authentication attempt for user upload test_file_134.txt
+2024-12-03 16:54:48,736 - Failed authentication attempt for user upload test_file_136.txt
+2024-12-03 16:54:48,736 - Failed authentication attempt for user upload test_file_138.txt
+2024-12-03 16:54:48,737 - Failed authentication attempt for user upload test_file_140.txt
+2024-12-03 16:54:48,737 - Failed authentication attempt for user upload test_file_142.txt
+2024-12-03 16:54:48,737 - Failed authentication attempt for user upload test_file_144.txt
+2024-12-03 16:54:48,737 - Failed authentication attempt for user upload test_file_146.txt
+2024-12-03 16:54:48,737 - Failed authentication attempt for user upload test_file_148.txt
+2024-12-03 16:54:48,738 - Failed authentication attempt for user upload test_file_150.txt
+2024-12-03 16:54:48,738 - Failed authentication attempt for user upload test_file_152.txt
+2024-12-03 16:54:48,738 - Failed authentication attempt for user upload test_file_154.txt
+2024-12-03 16:54:48,738 - Failed authentication attempt for user upload test_file_156.txt
+2024-12-03 16:54:48,738 - Failed authentication attempt for user upload test_file_158.txt
+2024-12-03 16:54:48,739 - Failed authentication attempt for user upload test_file_160.txt
+2024-12-03 16:54:48,739 - Failed authentication attempt for user upload test_file_162.txt
+2024-12-03 16:54:48,739 - Failed authentication attempt for user upload test_file_164.txt
+2024-12-03 16:54:48,739 - Failed authentication attempt for user upload test_file_166.txt
+2024-12-03 16:54:48,739 - Failed authentication attempt for user upload test_file_168.txt
+2024-12-03 16:54:48,740 - Failed authentication attempt for user upload test_file_170.txt
+2024-12-03 16:54:48,740 - Failed authentication attempt for user upload test_file_172.txt
+2024-12-03 16:54:48,740 - Failed authentication attempt for user upload test_file_174.txt
+2024-12-03 16:54:48,740 - Failed authentication attempt for user upload test_file_176.txt
+2024-12-03 16:54:48,740 - Failed authentication attempt for user upload test_file_178.txt
+2024-12-03 16:54:48,741 - Failed authentication attempt for user upload test_file_180.txt
+2024-12-03 16:54:48,741 - Failed authentication attempt for user upload test_file_182.txt
+2024-12-03 16:54:48,742 - Failed authentication attempt for user upload test_file_184.txt
+2024-12-03 16:54:48,742 - Failed authentication attempt for user upload test_file_186.txt
+2024-12-03 16:54:48,742 - Failed authentication attempt for user upload test_file_188.txt
+2024-12-03 16:54:48,742 - Failed authentication attempt for user upload test_file_190.txt
+2024-12-03 16:54:48,742 - Failed authentication attempt for user upload test_file_192.txt
+2024-12-03 16:54:48,745 - Failed authentication attempt for user upload test_file_194.txt
+2024-12-03 16:54:48,745 - Failed authentication attempt for user upload test_file_196.txt
+2024-12-03 16:54:48,746 - Failed authentication attempt for user upload test_file_198.txt
+2024-12-03 16:54:48,746 - Failed authentication attempt for user upload test_file_200.txt
+2024-12-03 16:54:48,746 - Failed authentication attempt for user upload test_file_202.txt
+2024-12-03 16:54:48,746 - Failed authentication attempt for user upload test_file_204.txt
+2024-12-03 16:54:48,747 - Failed authentication attempt for user upload test_file_206.txt
+2024-12-03 16:54:48,747 - Failed authentication attempt for user upload test_file_208.txt
+2024-12-03 16:54:48,747 - Failed authentication attempt for user upload test_file_210.txt
+2024-12-03 16:54:48,747 - Failed authentication attempt for user upload test_file_212.txt
+2024-12-03 16:54:48,748 - Failed authentication attempt for user upload test_file_214.txt
+2024-12-03 16:54:48,748 - Failed authentication attempt for user upload test_file_216.txt
+2024-12-03 16:54:48,748 - Failed authentication attempt for user upload test_file_218.txt
+2024-12-03 16:54:48,748 - Failed authentication attempt for user upload test_file_220.txt
+2024-12-03 16:54:48,748 - Failed authentication attempt for user upload test_file_222.txt
+2024-12-03 16:54:48,748 - Failed authentication attempt for user upload test_file_224.txt
+2024-12-03 16:54:48,748 - Failed authentication attempt for user upload test_file_226.txt
+2024-12-03 16:54:48,749 - Failed authentication attempt for user upload test_file_228.txt
+2024-12-03 16:54:48,749 - Failed authentication attempt for user upload test_file_230.txt
+2024-12-03 16:54:48,749 - Failed authentication attempt for user upload test_file_232.txt
+2024-12-03 16:54:48,749 - Failed authentication attempt for user upload test_file_234.txt
+2024-12-03 16:54:48,752 - Failed authentication attempt for user upload test_file_236.txt
+2024-12-03 16:54:48,753 - Failed authentication attempt for user upload test_file_238.txt
+2024-12-03 16:54:48,753 - Failed authentication attempt for user upload test_file_240.txt
+2024-12-03 16:54:48,753 - Failed authentication attempt for user upload test_file_242.txt
+2024-12-03 16:54:48,753 - Failed authentication attempt for user upload test_file_244.txt
+2024-12-03 16:54:48,753 - Failed authentication attempt for user upload test_file_246.txt
+2024-12-03 16:54:48,754 - Failed authentication attempt for user upload test_file_248.txt
+2024-12-03 16:54:48,754 - Failed authentication attempt for user upload test_file_250.txt
+2024-12-03 16:54:48,754 - Failed authentication attempt for user upload test_file_252.txt
+2024-12-03 16:54:48,754 - Failed authentication attempt for user upload test_file_254.txt
+2024-12-03 16:54:48,755 - Failed authentication attempt for user upload test_file_256.txt
+2024-12-03 16:54:48,755 - Failed authentication attempt for user upload test_file_258.txt
+2024-12-03 16:54:48,755 - Failed authentication attempt for user upload test_file_260.txt
+2024-12-03 16:54:48,755 - Failed authentication attempt for user upload test_file_262.txt
+2024-12-03 16:54:48,755 - Failed authentication attempt for user upload test_file_264.txt
+2024-12-03 16:54:48,755 - Failed authentication attempt for user upload test_file_266.txt
+2024-12-03 16:54:48,756 - Failed authentication attempt for user upload test_file_268.txt
+2024-12-03 16:54:48,757 - Failed authentication attempt for user upload test_file_270.txt
+2024-12-03 16:54:48,757 - Failed authentication attempt for user upload test_file_272.txt
+2024-12-03 16:54:48,757 - Failed authentication attempt for user upload test_file_274.txt
+2024-12-03 16:54:48,758 - Failed authentication attempt for user upload test_file_276.txt
+2024-12-03 16:54:48,758 - Failed authentication attempt for user upload test_file_278.txt
+2024-12-03 16:54:48,758 - Failed authentication attempt for user upload test_file_280.txt
+2024-12-03 16:54:48,759 - Failed authentication attempt for user upload test_file_282.txt
+2024-12-03 16:54:48,759 - Failed authentication attempt for user upload test_file_284.txt
+2024-12-03 16:54:48,759 - Failed authentication attempt for user upload test_file_286.txt
+2024-12-03 16:54:48,759 - Failed authentication attempt for user upload test_file_288.txt
+2024-12-03 16:54:48,759 - Failed authentication attempt for user upload test_file_290.txt
+2024-12-03 16:54:48,760 - Failed authentication attempt for user upload test_file_292.txt
+2024-12-03 16:54:48,760 - Failed authentication attempt for user upload test_file_294.txt
+2024-12-03 16:54:48,760 - Failed authentication attempt for user upload test_file_296.txt
+2024-12-03 16:54:48,760 - Failed authentication attempt for user upload test_file_298.txt
+2024-12-03 16:54:48,760 - Failed authentication attempt for user upload test_file_300.txt
+2024-12-03 16:54:48,761 - Failed authentication attempt for user upload test_file_302.txt
+2024-12-03 16:54:48,761 - Failed authentication attempt for user upload test_file_304.txt
+2024-12-03 16:54:48,762 - Failed authentication attempt for user upload test_file_306.txt
+2024-12-03 16:54:48,762 - Failed authentication attempt for user upload test_file_308.txt
+2024-12-03 16:54:48,762 - Failed authentication attempt for user upload test_file_310.txt
+2024-12-03 16:54:48,762 - Failed authentication attempt for user upload test_file_312.txt
+2024-12-03 16:54:48,762 - Failed authentication attempt for user upload test_file_314.txt
+2024-12-03 16:54:48,763 - Failed authentication attempt for user upload test_file_316.txt
+2024-12-03 16:54:48,763 - Failed authentication attempt for user upload test_file_318.txt
+2024-12-03 16:54:48,763 - Failed authentication attempt for user upload test_file_320.txt
+2024-12-03 16:54:48,763 - Failed authentication attempt for user upload test_file_322.txt
+2024-12-03 16:54:48,763 - Failed authentication attempt for user upload test_file_324.txt
+2024-12-03 16:54:48,764 - Failed authentication attempt for user upload test_file_326.txt
+2024-12-03 16:54:48,764 - Failed authentication attempt for user upload test_file_328.txt
+2024-12-03 16:54:48,764 - Failed authentication attempt for user upload test_file_330.txt
+2024-12-03 16:54:48,764 - Failed authentication attempt for user upload test_file_332.txt
+2024-12-03 16:54:48,764 - Failed authentication attempt for user upload test_file_334.txt
+2024-12-03 16:54:48,765 - Failed authentication attempt for user upload test_file_336.txt
+2024-12-03 16:54:48,765 - Failed authentication attempt for user upload test_file_338.txt
+2024-12-03 16:54:48,765 - Failed authentication attempt for user upload test_file_340.txt
+2024-12-03 16:54:48,765 - Failed authentication attempt for user upload test_file_342.txt
+2024-12-03 16:54:48,765 - Failed authentication attempt for user upload test_file_344.txt
+2024-12-03 16:54:48,768 - Failed authentication attempt for user upload test_file_346.txt
+2024-12-03 16:54:48,769 - Failed authentication attempt for user upload test_file_348.txt
+2024-12-03 16:54:48,769 - Failed authentication attempt for user upload test_file_350.txt
+2024-12-03 16:54:48,769 - Failed authentication attempt for user upload test_file_352.txt
+2024-12-03 16:54:48,769 - Failed authentication attempt for user upload test_file_354.txt
+2024-12-03 16:54:48,769 - Failed authentication attempt for user upload test_file_356.txt
+2024-12-03 16:54:48,770 - Failed authentication attempt for user upload test_file_358.txt
+2024-12-03 16:54:48,770 - Failed authentication attempt for user upload test_file_360.txt
+2024-12-03 16:54:48,770 - Failed authentication attempt for user upload test_file_362.txt
+2024-12-03 16:54:48,770 - Failed authentication attempt for user upload test_file_364.txt
+2024-12-03 16:54:48,770 - Failed authentication attempt for user upload test_file_366.txt
+2024-12-03 16:54:48,771 - Failed authentication attempt for user upload test_file_368.txt
+2024-12-03 16:54:48,771 - Failed authentication attempt for user upload test_file_370.txt
+2024-12-03 16:54:48,772 - Failed authentication attempt for user upload test_file_372.txt
+2024-12-03 16:54:48,772 - Failed authentication attempt for user upload test_file_374.txt
+2024-12-03 16:54:48,772 - Failed authentication attempt for user upload test_file_376.txt
+2024-12-03 16:54:48,772 - Failed authentication attempt for user upload test_file_378.txt
+2024-12-03 16:54:48,772 - Failed authentication attempt for user upload test_file_380.txt
+2024-12-03 16:54:48,773 - Failed authentication attempt for user upload test_file_382.txt
+2024-12-03 16:54:48,773 - Failed authentication attempt for user upload test_file_384.txt
+2024-12-03 16:54:48,773 - Failed authentication attempt for user upload test_file_386.txt
+2024-12-03 16:54:48,773 - Failed authentication attempt for user upload test_file_388.txt
+2024-12-03 16:54:48,773 - Failed authentication attempt for user upload test_file_390.txt
+2024-12-03 16:54:48,774 - Failed authentication attempt for user upload test_file_392.txt
+2024-12-03 16:54:48,774 - Failed authentication attempt for user upload test_file_394.txt
+2024-12-03 16:54:48,774 - Failed authentication attempt for user upload test_file_396.txt
+2024-12-03 16:54:48,774 - Failed authentication attempt for user upload test_file_398.txt
+2024-12-03 16:54:48,774 - Failed authentication attempt for user upload test_file_400.txt
+2024-12-03 16:54:48,775 - Failed authentication attempt for user upload test_file_402.txt
+2024-12-03 16:54:48,775 - Failed authentication attempt for user upload test_file_404.txt
+2024-12-03 16:54:48,775 - Failed authentication attempt for user upload test_file_406.txt
+2024-12-03 16:54:48,775 - Failed authentication attempt for user upload test_file_408.txt
+2024-12-03 16:54:48,775 - Failed authentication attempt for user upload test_file_410.txt
+2024-12-03 16:54:48,776 - Failed authentication attempt for user upload test_file_412.txt
+2024-12-03 16:54:48,776 - Failed authentication attempt for user upload test_file_414.txt
+2024-12-03 16:54:48,777 - Failed authentication attempt for user upload test_file_416.txt
+2024-12-03 16:54:48,777 - Failed authentication attempt for user upload test_file_418.txt
+2024-12-03 16:54:48,777 - Failed authentication attempt for user upload test_file_420.txt
+2024-12-03 16:54:48,777 - Failed authentication attempt for user upload test_file_422.txt
+2024-12-03 16:54:48,777 - Failed authentication attempt for user upload test_file_424.txt
+2024-12-03 16:54:48,778 - Failed authentication attempt for user upload test_file_426.txt
+2024-12-03 16:54:48,778 - Failed authentication attempt for user upload test_file_428.txt
+2024-12-03 16:54:48,778 - Failed authentication attempt for user upload test_file_430.txt
+2024-12-03 16:54:48,778 - Failed authentication attempt for user upload test_file_432.txt
+2024-12-03 16:54:48,778 - Failed authentication attempt for user upload test_file_434.txt
+2024-12-03 16:54:48,779 - Failed authentication attempt for user upload test_file_436.txt
+2024-12-03 16:54:48,779 - Failed authentication attempt for user upload test_file_438.txt
+2024-12-03 16:54:48,779 - Failed authentication attempt for user upload test_file_440.txt
+2024-12-03 16:54:48,779 - Failed authentication attempt for user upload test_file_442.txt
+2024-12-03 16:54:48,779 - Failed authentication attempt for user upload test_file_444.txt
+2024-12-03 16:54:48,779 - Failed authentication attempt for user upload test_file_446.txt
+2024-12-03 16:54:48,780 - Failed authentication attempt for user upload test_file_448.txt
+2024-12-03 16:54:48,780 - Failed authentication attempt for user upload test_file_450.txt
+2024-12-03 16:54:48,780 - Failed authentication attempt for user upload test_file_452.txt
+2024-12-03 16:54:48,780 - Failed authentication attempt for user upload test_file_454.txt
+2024-12-03 16:54:48,780 - Failed authentication attempt for user upload test_file_456.txt
+2024-12-03 16:54:48,781 - Failed authentication attempt for user upload test_file_458.txt
+2024-12-03 16:54:48,782 - Failed authentication attempt for user upload test_file_460.txt
+2024-12-03 16:54:48,782 - Failed authentication attempt for user upload test_file_462.txt
+2024-12-03 16:54:48,782 - Failed authentication attempt for user upload test_file_464.txt
+2024-12-03 16:54:48,782 - Failed authentication attempt for user upload test_file_466.txt
+2024-12-03 16:54:48,782 - Failed authentication attempt for user upload test_file_468.txt
+2024-12-03 16:54:48,783 - Failed authentication attempt for user upload test_file_470.txt
+2024-12-03 16:54:48,783 - Failed authentication attempt for user upload test_file_472.txt
+2024-12-03 16:54:48,783 - Failed authentication attempt for user upload test_file_474.txt
+2024-12-03 16:54:48,783 - Failed authentication attempt for user upload test_file_476.txt
+2024-12-03 16:54:48,783 - Failed authentication attempt for user upload test_file_478.txt
+2024-12-03 16:54:48,784 - Failed authentication attempt for user upload test_file_480.txt
+2024-12-03 16:54:48,784 - Failed authentication attempt for user upload test_file_482.txt
+2024-12-03 16:54:48,784 - Failed authentication attempt for user upload test_file_484.txt
+2024-12-03 16:54:48,784 - Failed authentication attempt for user upload test_file_486.txt
+2024-12-03 16:54:48,784 - Failed authentication attempt for user upload test_file_488.txt
+2024-12-03 16:54:48,784 - Failed authentication attempt for user upload test_file_490.txt
+2024-12-03 16:54:48,785 - Failed authentication attempt for user upload test_file_492.txt
+2024-12-03 16:54:48,785 - Failed authentication attempt for user upload test_file_494.txt
+2024-12-03 16:54:48,785 - Failed authentication attempt for user upload test_file_496.txt
+2024-12-03 16:54:48,785 - Failed authentication attempt for user upload test_file_498.txt
+2024-12-03 16:54:48,785 - Failed authentication attempt for user upload test_file_500.txt
+2024-12-03 16:54:48,797 - Failed authentication attempt for user upload test_file_502.txt
+2024-12-03 16:54:48,798 - Failed authentication attempt for user upload test_file_504.txt
+2024-12-03 16:54:48,798 - Failed authentication attempt for user upload test_file_506.txt
+2024-12-03 16:54:48,798 - Failed authentication attempt for user upload test_file_508.txt
+2024-12-03 16:54:48,798 - Failed authentication attempt for user upload test_file_510.txt
+2024-12-03 16:54:48,798 - Failed authentication attempt for user upload test_file_512.txt
+2024-12-03 16:54:48,799 - Failed authentication attempt for user upload test_file_514.txt
+2024-12-03 16:54:48,799 - Failed authentication attempt for user upload test_file_516.txt
+2024-12-03 16:54:48,800 - Failed authentication attempt for user upload test_file_518.txt
+2024-12-03 16:54:48,800 - Failed authentication attempt for user upload test_file_520.txt
+2024-12-03 16:54:48,800 - Failed authentication attempt for user upload test_file_522.txt
+2024-12-03 16:54:48,800 - Failed authentication attempt for user upload test_file_524.txt
+2024-12-03 16:54:48,800 - Failed authentication attempt for user upload test_file_526.txt
+2024-12-03 16:54:48,801 - Failed authentication attempt for user upload test_file_528.txt
+2024-12-03 16:54:48,801 - Failed authentication attempt for user upload test_file_530.txt
+2024-12-03 16:54:48,801 - Failed authentication attempt for user upload test_file_532.txt
+2024-12-03 16:54:48,801 - Failed authentication attempt for user upload test_file_534.txt
+2024-12-03 16:54:48,802 - Failed authentication attempt for user upload test_file_536.txt
+2024-12-03 16:54:48,802 - Failed authentication attempt for user upload test_file_538.txt
+2024-12-03 16:54:48,802 - Failed authentication attempt for user upload test_file_540.txt
+2024-12-03 16:54:48,802 - Failed authentication attempt for user upload test_file_542.txt
+2024-12-03 16:54:48,802 - Failed authentication attempt for user upload test_file_544.txt
+2024-12-03 16:54:48,803 - Failed authentication attempt for user upload test_file_546.txt
+2024-12-03 16:54:48,803 - Failed authentication attempt for user upload test_file_548.txt
+2024-12-03 16:54:48,804 - Failed authentication attempt for user upload test_file_550.txt
+2024-12-03 16:54:48,804 - Failed authentication attempt for user upload test_file_552.txt
+2024-12-03 16:54:48,808 - Failed authentication attempt for user upload test_file_554.txt
+2024-12-03 16:54:48,814 - Failed authentication attempt for user upload test_file_556.txt
+2024-12-03 16:54:48,815 - Failed authentication attempt for user upload test_file_558.txt
+2024-12-03 16:54:48,815 - Failed authentication attempt for user upload test_file_560.txt
+2024-12-03 16:54:48,815 - Failed authentication attempt for user upload test_file_562.txt
+2024-12-03 16:54:48,815 - Failed authentication attempt for user upload test_file_564.txt
+2024-12-03 16:54:48,815 - Failed authentication attempt for user upload test_file_566.txt
+2024-12-03 16:54:48,816 - Failed authentication attempt for user upload test_file_568.txt
+2024-12-03 16:54:48,819 - Failed authentication attempt for user upload test_file_570.txt
+2024-12-03 16:54:48,819 - Failed authentication attempt for user upload test_file_572.txt
+2024-12-03 16:54:48,820 - Failed authentication attempt for user upload test_file_574.txt
+2024-12-03 16:54:48,821 - Failed authentication attempt for user upload test_file_576.txt
+2024-12-03 16:54:48,824 - Failed authentication attempt for user upload test_file_578.txt
+2024-12-03 16:54:48,824 - Failed authentication attempt for user upload test_file_580.txt
+2024-12-03 16:54:48,824 - Failed authentication attempt for user upload test_file_582.txt
+2024-12-03 16:54:48,824 - Failed authentication attempt for user upload test_file_584.txt
+2024-12-03 16:54:48,825 - Failed authentication attempt for user upload test_file_586.txt
+2024-12-03 16:54:48,825 - Failed authentication attempt for user upload test_file_588.txt
+2024-12-03 16:54:48,825 - Failed authentication attempt for user upload test_file_590.txt
+2024-12-03 16:54:48,826 - Failed authentication attempt for user upload test_file_592.txt
+2024-12-03 16:54:48,826 - Failed authentication attempt for user upload test_file_594.txt
+2024-12-03 16:54:48,826 - Failed authentication attempt for user upload test_file_596.txt
+2024-12-03 16:54:48,826 - Failed authentication attempt for user upload test_file_598.txt
+2024-12-03 16:54:48,826 - Failed authentication attempt for user upload test_file_600.txt
+2024-12-03 16:54:48,827 - Failed authentication attempt for user upload test_file_602.txt
+2024-12-03 16:54:48,827 - Failed authentication attempt for user upload test_file_604.txt
+2024-12-03 16:54:48,827 - Failed authentication attempt for user upload test_file_606.txt
+2024-12-03 16:54:48,827 - Failed authentication attempt for user upload test_file_608.txt
+2024-12-03 16:54:48,828 - Failed authentication attempt for user upload test_file_610.txt
+2024-12-03 16:54:48,828 - Failed authentication attempt for user upload test_file_612.txt
+2024-12-03 16:54:48,829 - Failed authentication attempt for user upload test_file_614.txt
+2024-12-03 16:54:48,829 - Failed authentication attempt for user upload test_file_616.txt
+2024-12-03 16:54:48,829 - Failed authentication attempt for user upload test_file_618.txt
+2024-12-03 16:54:48,829 - Failed authentication attempt for user upload test_file_620.txt
+2024-12-03 16:54:48,830 - Failed authentication attempt for user upload test_file_622.txt
+2024-12-03 16:54:48,830 - Failed authentication attempt for user upload test_file_624.txt
+2024-12-03 16:54:48,831 - Failed authentication attempt for user upload test_file_626.txt
+2024-12-03 16:54:48,831 - Failed authentication attempt for user upload test_file_628.txt
+2024-12-03 16:54:48,831 - Failed authentication attempt for user upload test_file_630.txt
+2024-12-03 16:54:48,831 - Failed authentication attempt for user upload test_file_632.txt
+2024-12-03 16:54:48,831 - Failed authentication attempt for user upload test_file_634.txt
+2024-12-03 16:54:48,831 - Failed authentication attempt for user upload test_file_636.txt
+2024-12-03 16:54:48,831 - Failed authentication attempt for user upload test_file_638.txt
+2024-12-03 16:54:48,832 - Failed authentication attempt for user upload test_file_640.txt
+2024-12-03 16:54:48,832 - Failed authentication attempt for user upload test_file_642.txt
+2024-12-03 16:54:48,832 - Failed authentication attempt for user upload test_file_644.txt
+2024-12-03 16:54:48,832 - Failed authentication attempt for user upload test_file_646.txt
+2024-12-03 16:54:48,832 - Failed authentication attempt for user upload test_file_648.txt
+2024-12-03 16:54:48,832 - Failed authentication attempt for user upload test_file_650.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_652.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_654.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_656.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_658.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_660.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_662.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_664.txt
+2024-12-03 16:54:48,833 - Failed authentication attempt for user upload test_file_666.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_668.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_670.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_672.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_674.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_676.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_678.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_680.txt
+2024-12-03 16:54:48,834 - Failed authentication attempt for user upload test_file_682.txt
+2024-12-03 16:54:48,835 - Failed authentication attempt for user upload test_file_684.txt
+2024-12-03 16:54:48,835 - Failed authentication attempt for user upload test_file_686.txt
+2024-12-03 16:54:48,835 - Failed authentication attempt for user upload test_file_688.txt
+2024-12-03 16:54:48,835 - Failed authentication attempt for user upload test_file_690.txt
+2024-12-03 16:54:48,835 - Failed authentication attempt for user upload test_file_692.txt
+2024-12-03 16:54:48,835 - Failed authentication attempt for user upload test_file_694.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_696.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_698.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_700.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_702.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_704.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_706.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_708.txt
+2024-12-03 16:54:48,836 - Failed authentication attempt for user upload test_file_710.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_712.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_714.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_716.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_718.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_720.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_722.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_724.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_726.txt
+2024-12-03 16:54:48,837 - Failed authentication attempt for user upload test_file_728.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_730.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_732.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_734.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_736.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_738.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_740.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_742.txt
+2024-12-03 16:54:48,838 - Failed authentication attempt for user upload test_file_744.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_746.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_748.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_750.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_752.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_754.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_756.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_758.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_760.txt
+2024-12-03 16:54:48,839 - Failed authentication attempt for user upload test_file_762.txt
+2024-12-03 16:54:48,840 - Failed authentication attempt for user upload test_file_764.txt
+2024-12-03 16:54:48,840 - Failed authentication attempt for user upload test_file_766.txt
+2024-12-03 16:54:48,840 - Failed authentication attempt for user upload test_file_768.txt
+2024-12-03 16:54:48,840 - Failed authentication attempt for user upload test_file_770.txt
+2024-12-03 16:54:48,840 - Failed authentication attempt for user upload test_file_772.txt
+2024-12-03 16:54:48,840 - Failed authentication attempt for user upload test_file_774.txt
+2024-12-03 16:54:48,840 - Failed authentication attempt for user upload test_file_776.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_778.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_780.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_782.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_784.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_786.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_788.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_790.txt
+2024-12-03 16:54:48,841 - Failed authentication attempt for user upload test_file_792.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_794.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_796.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_798.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_800.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_802.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_804.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_806.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_808.txt
+2024-12-03 16:54:48,842 - Failed authentication attempt for user upload test_file_810.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_812.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_814.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_816.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_818.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_820.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_822.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_824.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_826.txt
+2024-12-03 16:54:48,843 - Failed authentication attempt for user upload test_file_828.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_830.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_832.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_834.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_836.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_838.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_840.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_842.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_844.txt
+2024-12-03 16:54:48,844 - Failed authentication attempt for user upload test_file_846.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_848.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_850.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_852.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_854.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_856.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_858.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_860.txt
+2024-12-03 16:54:48,845 - Failed authentication attempt for user upload test_file_862.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_864.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_866.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_868.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_870.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_872.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_874.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_876.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_878.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_880.txt
+2024-12-03 16:54:48,846 - Failed authentication attempt for user upload test_file_882.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_884.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_886.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_888.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_890.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_892.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_894.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_896.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_898.txt
+2024-12-03 16:54:48,847 - Failed authentication attempt for user upload test_file_900.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_902.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_904.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_906.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_908.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_910.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_912.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_914.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_916.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_918.txt
+2024-12-03 16:54:48,848 - Failed authentication attempt for user upload test_file_920.txt
+2024-12-03 16:54:48,849 - Failed authentication attempt for user upload test_file_922.txt
+2024-12-03 16:54:48,849 - Failed authentication attempt for user upload test_file_924.txt
+2024-12-03 16:54:48,849 - Failed authentication attempt for user upload test_file_926.txt
+2024-12-03 16:54:48,849 - Failed authentication attempt for user upload test_file_928.txt
+2024-12-03 16:54:48,849 - Failed authentication attempt for user upload test_file_930.txt
+2024-12-03 16:54:48,849 - Failed authentication attempt for user upload test_file_932.txt
+2024-12-03 16:54:48,849 - Failed authentication attempt for user upload test_file_934.txt
+2024-12-03 16:54:48,850 - Failed authentication attempt for user upload test_file_936.txt
+2024-12-03 16:54:48,850 - Failed authentication attempt for user upload test_file_938.txt
+2024-12-03 16:54:48,850 - Failed authentication attempt for user upload test_file_940.txt
+2024-12-03 16:54:48,850 - Failed authentication attempt for user upload test_file_942.txt
+2024-12-03 16:54:48,850 - Failed authentication attempt for user upload test_file_944.txt
+2024-12-03 16:54:48,850 - Failed authentication attempt for user upload test_file_946.txt
+2024-12-03 16:54:48,851 - Failed authentication attempt for user upload test_file_948.txt
+2024-12-03 16:54:48,851 - Failed authentication attempt for user upload test_file_950.txt
+2024-12-03 16:54:48,851 - Failed authentication attempt for user upload test_file_952.txt
+2024-12-03 16:54:48,851 - Failed authentication attempt for user upload test_file_954.txt
+2024-12-03 16:54:48,851 - Failed authentication attempt for user upload test_file_956.txt
+2024-12-03 16:54:48,852 - Failed authentication attempt for user upload test_file_958.txt
+2024-12-03 16:54:48,852 - Failed authentication attempt for user upload test_file_960.txt
+2024-12-03 16:54:48,852 - Failed authentication attempt for user upload test_file_962.txt
+2024-12-03 16:54:48,852 - Failed authentication attempt for user upload test_file_964.txt
+2024-12-03 16:54:48,853 - Failed authentication attempt for user upload test_file_966.txt
+2024-12-03 16:54:48,853 - Failed authentication attempt for user upload test_file_968.txt
+2024-12-03 16:54:48,853 - Failed authentication attempt for user upload test_file_970.txt
+2024-12-03 16:54:48,854 - Failed authentication attempt for user upload test_file_972.txt
+2024-12-03 16:54:48,854 - Failed authentication attempt for user upload test_file_974.txt
+2024-12-03 16:54:48,854 - Failed authentication attempt for user upload test_file_976.txt
+2024-12-03 16:54:48,854 - Failed authentication attempt for user upload test_file_978.txt
+2024-12-03 16:54:48,854 - Failed authentication attempt for user upload test_file_980.txt
+2024-12-03 16:54:48,854 - Failed authentication attempt for user upload test_file_982.txt
+2024-12-03 16:54:48,855 - Failed authentication attempt for user upload test_file_984.txt
+2024-12-03 16:54:48,855 - Failed authentication attempt for user upload test_file_986.txt
+2024-12-03 16:54:48,855 - Failed authentication attempt for user upload test_file_988.txt
+2024-12-03 16:54:48,856 - Failed authentication attempt for user upload test_file_990.txt
+2024-12-03 16:58:47,884 - Server started and listening on 127.0.0.1:10615
+2024-12-03 16:58:47,884 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 16:58:54,765 - Connection established with ('127.0.0.1', 38188)
+2024-12-03 16:59:03,976 - Failed authentication attempt for user Pierre
+2024-12-03 16:59:08,480 - User Pierre authenticated successfully
+2024-12-03 17:04:06,727 - Received command: exit from Pierre
+2024-12-03 17:04:06,727 - Client Pierre closed the connection
+2024-12-03 17:04:06,728 - Connection with Pierre closed
+2024-12-03 17:04:06,728 - Server closed
+2024-12-03 17:04:08,533 - Server started and listening on 127.0.0.1:10615
+2024-12-03 17:04:08,533 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 17:04:12,177 - Connection established with ('127.0.0.1', 55522)
+2024-12-03 17:04:21,068 - User classAdmin authenticated successfully
+2024-12-03 17:04:22,766 - Received command: list from classAdmin
+2024-12-03 17:04:22,766 - No files in directory for classAdmin
+2024-12-03 17:04:38,024 - Received command: download ../admin/server.log from classAdmin
+2024-12-03 17:04:38,032 - File ../admin/server.log sent successfully to classAdmin
+2024-12-03 17:04:46,963 - Received command: upload server.log from classAdmin
+2024-12-03 17:04:47,020 - File server.log received successfully from classAdmin
+2024-12-03 17:04:49,335 - Received command: list from classAdmin
+2024-12-03 17:04:49,335 - List of files sent to classAdmin
+2024-12-03 17:04:53,113 - Received command: delete server.log from classAdmin
+2024-12-03 17:04:53,113 - User classAdmin with admin role requested to delete a file
+2024-12-03 17:04:53,113 - File server.log deleted successfully
+2024-12-03 17:04:54,490 - Received command: list from classAdmin
+2024-12-03 17:04:54,490 - No files in directory for classAdmin
+2024-12-03 17:04:55,776 - Received command: exit from classAdmin
+2024-12-03 17:04:55,776 - Client classAdmin closed the connection
+2024-12-03 17:04:55,776 - Connection with classAdmin closed
+2024-12-03 17:04:55,776 - Server closed
+2024-12-03 17:05:50,338 - Server started and listening on 127.0.0.1:10615
+2024-12-03 17:05:50,338 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 17:05:52,219 - Connection established with ('127.0.0.1', 39082)
+2024-12-03 17:05:56,351 - User class authenticated successfully
+2024-12-03 17:05:59,503 - Received command: exit from class
+2024-12-03 17:05:59,504 - Client class closed the connection
+2024-12-03 17:05:59,504 - Connection with class closed
+2024-12-03 17:05:59,504 - Server closed
+2024-12-03 17:06:18,437 - Server started and listening on 127.0.0.1:10615
+2024-12-03 17:06:18,437 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-03 17:06:21,279 - Connection established with ('127.0.0.1', 49358)
+2024-12-03 17:06:28,712 - Failed authentication attempt for user TaylorGraham
+2024-12-03 17:06:37,962 - Failed authentication attempt for user TaylorGraham
+2024-12-03 17:06:46,596 - Failed authentication attempt for user TaylorGraham
+2024-12-03 17:07:49,505 - Failed authentication attempt for user exit
+2024-12-03 17:07:55,969 - Failed authentication attempt for user 

@@ -68,6 +68,9 @@ while not authenticated:
 print("Connection established! Type 'exit' to close the connection.")
 while True:
     command = input("Enter a command (upload <filename> | download <filename> | delete <filename> | manage | list | exit): ")
+    if not command:
+        print("Command cannot be empty!")
+        continue
     ssl_client_socket.send(command.encode())
 
     if command.lower() == "exit":
@@ -135,6 +138,11 @@ while True:
     elif command.lower() == "manage":
         response = ssl_client_socket.recv(1024).decode()
         print(response)
+
+    else:
+        response = ssl_client_socket.recv(1024).decode()
+        print(response)
+        continue
 # //////////////// Command processing ////////////////
 
 
