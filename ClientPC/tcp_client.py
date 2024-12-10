@@ -20,7 +20,7 @@ import os
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Define the server address and port
-HOST = '127.0.0.1'
+HOST = '172.212.203.54'
 PORT = 10615
 
 # Load Client-side SSL context. The client will load the server's certificate to verify the server's identity.

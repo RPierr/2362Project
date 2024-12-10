@@ -296,13 +296,13 @@ while True:
             logging.info("Connection with %s closed", client_address)
 
 
-# Close the SSL-wrapped client socket
-ssl_client_socket.close()
-logging.info("Connection with %s closed", current_user)
+    # Close the SSL-wrapped client socket after exit by client
+    ssl_client_socket.close()
+    logging.info("Connection with %s closed", current_user)
 
-# Close the server
-server_socket.close()
-logging.info("Server closed")
+    # Close the server
+    server_socket.close()
+    logging.info("Server closed")
 
-# Run the server and client scripts in separate terminal windows.
-# The server script should be run first.
+    # Run the server and client scripts in separate terminal windows.
+    # The server script should be run first.
