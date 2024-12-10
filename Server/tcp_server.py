@@ -78,7 +78,7 @@ ROLE_PERMISSIONS = {
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Define the server address and port. Arbritray 
-HOST = '127.0.0.1'
+HOST = '0.0.0.0'
 PORT = 10615
 
 # Load Server-side SSL context. The server loads its own certificate and private key. The client will load the
