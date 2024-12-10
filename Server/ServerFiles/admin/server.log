@@ -1673,3 +1673,16 @@
 2024-12-03 17:06:46,596 - Failed authentication attempt for user TaylorGraham
 2024-12-03 17:07:49,505 - Failed authentication attempt for user exit
 2024-12-03 17:07:55,969 - Failed authentication attempt for user 
+2024-12-10 20:37:18,192 - Server started and listening on 127.0.0.1:10615
+2024-12-10 20:37:18,193 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-10 20:58:42,241 - Server started and listening on 0.0.0.0:10615
+2024-12-10 20:58:42,242 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-10 20:59:10,169 - Connection established with ('167.96.72.147', 46308)
+2024-12-10 21:00:09,008 - Server started and listening on 0.0.0.0:10615
+2024-12-10 21:00:09,009 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-10 21:00:28,456 - Connection established with ('167.96.72.147', 46302)
+2024-12-10 21:00:38,117 - Server started and listening on 0.0.0.0:10615
+2024-12-10 21:00:38,118 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-10 21:00:55,045 - Connection established with ('167.96.72.147', 46286)
+2024-12-10 21:01:07,527 - Server started and listening on 0.0.0.0:10615
+2024-12-10 21:01:07,527 - Credentials loaded from ServerFiles/admin/pwd.txt
