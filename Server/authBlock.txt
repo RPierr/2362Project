@@ -1,0 +1,30 @@
+
+'''
+        # //////////////// Authentication process ////////////////
+        #    authenticated = False
+        #    current_user = None  # Track the current user
+        #    current_role = None # Role
+
+            # Load Credentials and Roles
+        #    CREDENTIALS, ROLES = load_credentials()
+
+        #    while not authenticated:
+        #        ssl_client_socket.send("Username: ".encode())
+        #        username = ssl_client_socket.recv(1024).decode().strip()
+
+        #        ssl_client_socket.send("Password: ".encode())
+        #        password = ssl_client_socket.recv(1024).decode().strip()
+        #        hashed_password = hash_password(password) # Hash the password
+
+                # Check if the username and password are in the database
+        #        if authenticate(username, password, CREDENTIALS):
+        #            ssl_client_socket.send("You are authenticated!".encode())
+        #            authenticated = True
+        #            current_user = username
+        #            current_role = ROLES[username]
+        #            user_folder = os.path.join("ServerFiles", current_user)
+        #            os.makedirs(user_folder, exist_ok=True) # Check that the folder exists, if not create it
+        #        else:
+        #            ssl_client_socket.send("Invalid credentials! Try again".encode())
+         # //////////////// Authentication process ////////////////
+'''

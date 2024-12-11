@@ -20,7 +20,8 @@ import os
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Define the server address and port
-HOST = '172.212.203.54'
+#HOST = '172.212.203.54'
+HOST = '127.0.0.1'
 PORT = 10615
 
 # Load Client-side SSL context. The client will load the server's certificate to verify the server's identity.
@@ -78,9 +79,18 @@ while True:
         break
 
     elif command.startswith("upload"):
+
         # Extract the file path
         filepath = command.split(maxsplit=1)[1]
+
+
+
         if os.path.exists(filepath):
+
+            # Send command to server first
+            ssl_client_socket.send(f"upload {filepath}".encode())
+
+            # Send the file size to the server
             file_size = os.path.getsize(filepath)
             ssl_client_socket.send(str(file_size).encode())
             

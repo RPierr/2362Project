@@ -1746,3 +1746,186 @@
 2024-12-11 15:00:56,422 - Manual server shutdown by signal
 2024-12-11 15:00:56,422 - Server shutdown
 2024-12-11 15:00:56,423 - Server shutdown gracefully
+2024-12-11 19:01:39,557 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:01:48,665 - Connection established with ('127.0.0.1', 52214)
+2024-12-11 19:01:48,667 - Secure connection established with ('127.0.0.1', 52214)
+2024-12-11 19:01:48,669 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:01:54,933 - User Pierre authenticated successfully
+2024-12-11 19:01:57,269 - Received command: list from Pierre
+2024-12-11 19:01:57,269 - List of files sent to Pierre
+2024-12-11 19:02:01,030 - Received command: shutdown from Pierre
+2024-12-11 19:02:01,030 - Server shutdown by Pierre
+2024-12-11 19:02:01,031 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:02:01,679 - Server shutting down...
+2024-12-11 19:02:14,710 - SSL error with ('127.0.0.1', 52214): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-11 19:02:14,710 - Closing connection with ('127.0.0.1', 52214)
+2024-12-11 19:02:14,710 - Server shutdown gracefully
+2024-12-11 19:04:03,090 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:04:04,150 - Manual server shutdown by signal
+2024-12-11 19:04:04,151 - Server shutting down...
+2024-12-11 19:04:04,151 - Server shutdown gracefully
+2024-12-11 19:04:05,931 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:04:09,017 - Connection established with ('127.0.0.1', 36548)
+2024-12-11 19:04:09,019 - Secure connection established with ('127.0.0.1', 36548)
+2024-12-11 19:04:09,019 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:04:12,855 - User admin authenticated successfully
+2024-12-11 19:04:15,815 - Received command: shutdown from admin
+2024-12-11 19:04:15,815 - Server shutdown by admin
+2024-12-11 19:04:15,816 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:04:16,024 - Server shutting down...
+2024-12-11 19:04:37,495 - Failed authentication attempt for user list
+2024-12-11 19:04:37,495 - Unexpected error with client ('127.0.0.1', 36548): too many values to unpack (expected 3)
+2024-12-11 19:04:37,495 - Closing connection with ('127.0.0.1', 36548)
+2024-12-11 19:04:37,495 - Server shutdown gracefully
+2024-12-11 19:04:52,017 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:04:53,800 - Connection established with ('127.0.0.1', 50904)
+2024-12-11 19:04:53,802 - Secure connection established with ('127.0.0.1', 50904)
+2024-12-11 19:04:53,803 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:04:56,806 - User admin authenticated successfully
+2024-12-11 19:04:58,199 - Received command: list from admin
+2024-12-11 19:04:58,199 - List of files sent to admin
+2024-12-11 19:04:59,272 - Received command: list from admin
+2024-12-11 19:04:59,272 - List of files sent to admin
+2024-12-11 19:05:00,165 - Received command: list from admin
+2024-12-11 19:05:00,166 - List of files sent to admin
+2024-12-11 19:05:01,012 - Received command: list from admin
+2024-12-11 19:05:01,013 - List of files sent to admin
+2024-12-11 19:05:01,556 - Received command: list from admin
+2024-12-11 19:05:01,557 - List of files sent to admin
+2024-12-11 19:05:02,123 - Received command: list from admin
+2024-12-11 19:05:02,123 - List of files sent to admin
+2024-12-11 19:05:06,791 - Received command: shutdown from admin
+2024-12-11 19:05:06,792 - Server shutdown by admin
+2024-12-11 19:05:06,792 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:05:06,814 - Server shutting down...
+2024-12-11 19:05:08,791 - Failed authentication attempt for user list
+2024-12-11 19:05:08,791 - Unexpected error with client ('127.0.0.1', 50904): too many values to unpack (expected 3)
+2024-12-11 19:05:08,791 - Closing connection with ('127.0.0.1', 50904)
+2024-12-11 19:05:08,791 - Server shutdown gracefully
+2024-12-11 19:09:17,112 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:09:19,389 - Connection established with ('127.0.0.1', 53854)
+2024-12-11 19:09:19,391 - Secure connection established with ('127.0.0.1', 53854)
+2024-12-11 19:09:19,392 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:09:22,791 - User admin authenticated successfully
+2024-12-11 19:09:24,701 - Received command: shutdown from admin
+2024-12-11 19:09:24,701 - Server shutdown by admin
+2024-12-11 19:09:24,701 - Closing connection with ('127.0.0.1', 53854)
+2024-12-11 19:09:25,395 - Server shutting down...
+2024-12-11 19:09:25,395 - Server shutdown gracefully
+2024-12-11 19:12:52,790 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:12:55,868 - Connection established with ('127.0.0.1', 52986)
+2024-12-11 19:12:55,870 - Secure connection established with ('127.0.0.1', 52986)
+2024-12-11 19:12:55,870 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:13:00,731 - User Pierre authenticated successfully
+2024-12-11 19:13:00,732 - Unexpected error with client ('127.0.0.1', 52986): posix.wait() takes no arguments (1 given)
+2024-12-11 19:13:00,732 - Closing connection with ('127.0.0.1', 52986)
+2024-12-11 19:13:16,234 - Manual server shutdown by signal
+2024-12-11 19:13:16,234 - Server shutting down...
+2024-12-11 19:13:16,234 - Server shutdown gracefully
+2024-12-11 19:14:36,758 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:14:41,997 - Connection established with ('127.0.0.1', 59334)
+2024-12-11 19:14:42,009 - Secure connection established with ('127.0.0.1', 59334)
+2024-12-11 19:14:42,009 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:14:46,162 - User Pierre authenticated successfully
+2024-12-11 19:14:48,764 - Received command: shutdown from Pierre
+2024-12-11 19:14:48,764 - Server shutdown by Pierre
+2024-12-11 19:14:48,764 - Closing connection with ('127.0.0.1', 59334)
+2024-12-11 19:14:49,006 - Server shutting down...
+2024-12-11 19:14:49,007 - Server shutdown gracefully
+2024-12-11 19:15:12,550 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:15:15,085 - Connection established with ('127.0.0.1', 46888)
+2024-12-11 19:15:15,088 - Secure connection established with ('127.0.0.1', 46888)
+2024-12-11 19:15:15,088 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:15:18,713 - Failed authentication attempt for user wrong
+2024-12-11 19:15:44,418 - Empty command received from None
+2024-12-11 19:15:44,418 - SSL error with ('127.0.0.1', 46888): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-11 19:15:44,418 - Closing connection with ('127.0.0.1', 46888)
+2024-12-11 19:15:45,630 - Manual server shutdown by signal
+2024-12-11 19:15:45,630 - Server shutting down...
+2024-12-11 19:15:45,630 - Server shutdown gracefully
+2024-12-11 19:15:47,638 - Server started and listening on 127.0.0.1:10615
+2024-12-11 19:15:49,721 - Connection established with ('127.0.0.1', 49114)
+2024-12-11 19:15:49,723 - Secure connection established with ('127.0.0.1', 49114)
+2024-12-11 19:15:49,723 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 19:15:51,821 - Failed authentication attempt for user wrong
+2024-12-11 19:15:56,077 - Failed authentication attempt for user wrong2
+2024-12-11 19:16:04,221 - User admin authenticated successfully
+2024-12-11 19:16:06,441 - Received command: manage from admin
+2024-12-11 19:16:06,442 - User admin with admin role requested to manage files
+2024-12-11 19:16:08,256 - Received command: shutdown from admin
+2024-12-11 19:16:08,257 - Server shutdown by admin
+2024-12-11 19:16:08,257 - Closing connection with ('127.0.0.1', 49114)
+2024-12-11 19:16:08,740 - Server shutting down...
+2024-12-11 19:16:08,741 - Server shutdown gracefully
+2024-12-11 20:18:34,922 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:18:39,459 - Connection established with ('127.0.0.1', 36610)
+2024-12-11 20:18:39,461 - Secure connection established with ('127.0.0.1', 36610)
+2024-12-11 20:18:39,461 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:18:44,397 - User Pierre authenticated successfully
+2024-12-11 20:18:48,591 - Received command: list from Pierre
+2024-12-11 20:18:48,591 - Error handling client ('127.0.0.1', 36610): [Errno 2] No such file or directory: 'admin'
+2024-12-11 20:18:48,591 - Closing connection with ('127.0.0.1', 36610)
+2024-12-11 20:19:33,062 - Manual server shutdown by signal
+2024-12-11 20:19:33,062 - Server shutting down...
+2024-12-11 20:19:33,062 - Server shutdown gracefully
+2024-12-11 20:19:34,013 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:19:36,111 - Connection established with ('127.0.0.1', 60608)
+2024-12-11 20:19:36,113 - Secure connection established with ('127.0.0.1', 60608)
+2024-12-11 20:19:36,114 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:19:39,151 - User admin authenticated successfully
+2024-12-11 20:19:40,685 - Received command: manage from admin
+2024-12-11 20:19:40,686 - User admin with admin role requested to manage files
+2024-12-11 20:19:43,488 - Received command: list from admin
+2024-12-11 20:19:43,489 - Error handling client ('127.0.0.1', 60608): [Errno 2] No such file or directory: 'admin'
+2024-12-11 20:19:43,489 - Closing connection with ('127.0.0.1', 60608)
+2024-12-11 20:19:52,208 - Manual server shutdown by signal
+2024-12-11 20:19:52,208 - Server shutting down...
+2024-12-11 20:19:52,208 - Server shutdown gracefully
+2024-12-11 20:20:08,683 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:20:10,259 - Connection established with ('127.0.0.1', 43390)
+2024-12-11 20:20:10,261 - Secure connection established with ('127.0.0.1', 43390)
+2024-12-11 20:20:10,262 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:20:14,160 - User admin authenticated successfully
+2024-12-11 20:20:28,023 - Received command: uoload AAzureTTest from admin
+2024-12-11 20:20:28,023 - Permission denied for admin to perform uoload
+2024-12-11 20:20:38,214 - Received command: upload AzureTest from admin
+2024-12-11 20:20:38,255 - Error handling client ('127.0.0.1', 43390): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-11 20:20:38,255 - Closing connection with ('127.0.0.1', 43390)
+2024-12-11 20:20:44,324 - Manual server shutdown by signal
+2024-12-11 20:20:44,324 - Server shutting down...
+2024-12-11 20:20:44,325 - Server shutdown gracefully
+2024-12-11 20:20:45,178 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:20:47,317 - Connection established with ('127.0.0.1', 51574)
+2024-12-11 20:20:47,320 - Secure connection established with ('127.0.0.1', 51574)
+2024-12-11 20:20:47,320 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:20:49,827 - User admin authenticated successfully
+2024-12-11 20:20:53,509 - Received command: upload AzureTest from admin
+2024-12-11 20:20:53,550 - Error handling client ('127.0.0.1', 51574): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-11 20:20:53,551 - Closing connection with ('127.0.0.1', 51574)
+2024-12-11 20:24:23,218 - Manual server shutdown by signal
+2024-12-11 20:24:23,218 - Server shutting down...
+2024-12-11 20:24:23,218 - Server shutdown gracefully
+2024-12-11 20:24:24,797 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:24:27,610 - Connection established with ('127.0.0.1', 34328)
+2024-12-11 20:24:27,612 - Secure connection established with ('127.0.0.1', 34328)
+2024-12-11 20:24:27,612 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:24:31,441 - User admin authenticated successfully
+2024-12-11 20:24:36,711 - Received command: upload AzureTest from admin
+2024-12-11 20:24:36,754 - Error handling client ('127.0.0.1', 34328): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-11 20:24:36,755 - Closing connection with ('127.0.0.1', 34328)
+2024-12-11 20:30:20,807 - Manual server shutdown by signal
+2024-12-11 20:30:20,807 - Server shutting down...
+2024-12-11 20:30:20,807 - Server shutdown gracefully
+2024-12-11 20:30:22,802 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:30:25,000 - Connection established with ('127.0.0.1', 53182)
+2024-12-11 20:30:25,002 - Secure connection established with ('127.0.0.1', 53182)
+2024-12-11 20:30:25,002 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:30:28,530 - User admin authenticated successfully
+2024-12-11 20:30:37,450 - Received command: upload AzureTest from admin
+2024-12-11 20:30:37,494 - Invalid upload command from admin: File size not provided
+2024-12-11 20:30:37,495 - Received command: 153 from admin
+2024-12-11 20:30:37,495 - Permission denied for admin to perform 153
+2024-12-11 20:31:04,901 - Received command: manage from admin
+2024-12-11 20:31:04,901 - User admin with admin role requested to manage files
+2024-12-11 20:31:08,549 - Received command: manage from admin
+2024-12-11 20:31:08,550 - User admin with admin role requested to manage files
