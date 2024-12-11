@@ -95,7 +95,7 @@ ROLE_PERMISSIONS = {
 # Define the server address and port. Arbritray PORT number
 HOST = '0.0.0.0'
 PORT = 10615
-shutdown_flag = False # Flag to shutdown the server
+shutdown_flag = threading.Event() # Flag to signal server shutdown
 active_threads = [] # List of active threads
 
 # Load Server-side SSL context. The server loads its own certificate and private key. The client will load the
@@ -147,7 +147,7 @@ def handle_client(client_socket, client_address):
          # //////////////// Command processing ////////////////
             print("Connection established with user:", current_user)
             print("Waiting for commands...")
-            while not shutdown_flag:
+            while not shutdown_flag.is_set():
 
                 command = ssl_client_socket.recv(1024).decode().strip()
 
@@ -179,7 +179,7 @@ def handle_client(client_socket, client_address):
                 elif command.lower() == "shutdown" and current_role == "admin":
                     ssl_client_socket.send(b"Server is shutting down...")
                     logging.info("Server shutdown by %s", current_user)
-                    shutdown_flag = True
+                    shutdown_flag.set()
                     break
 
 
@@ -305,10 +305,9 @@ def handle_client(client_socket, client_address):
 
 # Signal Handler to shutdown the server
 def signal_handler(sig, frame):
-    global shutdown_flag
     logging.info("Manual server shutdown by signal")
     print("Server is shutting down...")
-    shutdown_flag = True
+    shutdown_flag.set()
     sys.exit(0)
 
 
@@ -321,6 +320,7 @@ def main():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a socket object
     server_socket.bind((HOST, PORT)) # Bind the socket to the defined address and port
     server_socket.listen(5) # Listen for incoming connections, max 5 connections
+    server_socket.settimeout(1) # Set a timeout for the server socket
     print(f"Listening for connections on {HOST}:{PORT}")
     logging.info("Server started and listening on %s:%s", HOST, PORT)
 
@@ -330,17 +330,21 @@ def main():
     # while True:
     try:
 
-        while not shutdown_flag:
-            # Accept a connection
-            client_socket, client_address = server_socket.accept()
-            print(f"Connection from {client_address} has been established!")
-            logging.info("Connection established with %s", client_address)
+        while not shutdown_flag.is_set():
+            # Allow connections only if shutown is not signlaed
+            try:
+                # Accept a connection
+                client_socket, client_address = server_socket.accept()
+                print(f"Connection from {client_address} has been established!")
+                logging.info("Connection established with %s", client_address)
 
-            # Create a new thread to handle the client
-            client_thread = threading.Thread(target=handle_client, args=(client_socket, client_address))
-            client_thread.daemon = True # Close the thread when the main program exits
-            client_thread.start() # Start the thread
-            active_threads.append(client_thread) # Add the thread to the list of active threads
+                # Create a new thread to handle the client
+                client_thread = threading.Thread(target=handle_client, args=(client_socket, client_address))
+                client_thread.daemon = True # Close the thread when the main program exits
+                client_thread.start() # Start the thread
+                active_threads.append(client_thread) # Add the thread to the list of active threads
+            except socket.timeout:
+                continue # Allow loop to continue to check for shutdown flag
     except Exception as e:
         logging.error("An error occurred: %s", e)
     finally:
