@@ -4,6 +4,8 @@ import os
 import hashlib
 import logging
 import threading
+import sys
+import signal
 
 # This is the server program for the client-server communication using SSL.
 # The server will authenticate the client using a username and password, currently hardcoded.
@@ -29,20 +31,30 @@ import threading
 #
 #   X Network the application. Get public IP address (Azure VM) and test client-server communication.
 #
-#   Use multiple clients to test the server's ability to handle multiple connections. (multi-threading)
+#   X Use multiple clients to test the server's ability to handle multiple connections. (multi-threading)
 #
+#   Modularlize the code. Separate the authentication, command processing, and connection handling into functions.
+#   X Gracefully shutdown the server. Either by sending a command or by using a signal handler.
+#   Revamp logging. Include timestamps, IPs, and other relevant information.
+#   Improve multi-threading. Add socket timeouts, optimize logging, limit threads.
+#   Add more commands: Move, Rename, Copy, etc.
+#   Allow clients create new login credentials. (Admins only?)
 #   Implement brute-force protection. Lockout after x failed attempts.
-#   Create 'shared' directory that any user can upload/download to. Only admins should be able to delete/manage
+#   Create 'shared' directory that any user can upload/download to. Only admins should be able to delete/manage.
 #   Consider what the 'manage' command should do. maybe change permissions.
 #   Possibly add a guest role with limited permisions. (Only list?)
-#   Implement a SQL database to handle stored authentication credentials (yes) and roles (maybe)
+#   Implement a SQL database to handle stored authentication credentials (yes) and roles. (maybe)
+#   Implement rate-limiting to prevent DoS attacks.
+#   Utilize ftp or sftp instead of custom file transfer system. Use port 21 or 22. No more cusotm port.
 
-# //////////////////////// Logging //////////////////////////////////
-#logging.basicConfig(filename="ServerFiles/admin/server.log", level=logging.INFO, format="%(asctime)s - %(message)s")
-# //////////////////////// Logging //////////////////////////////////
+# Longer-term Goals:
+#   Implement a firewall to block malicious IPs.
+#   Implement a web interface for the server. (maybe)
+#   Implement a GUI for the client. (maybe)
+#   Implement a file explorer for the client. (maybe)
+#   Implement a file editor for the client. (maybe)
+#   Look into purchasing SSL certificate from a CA.
 
-
-# ///////////////// Authentication Process /////////////////////////
 
 # Function to load credentials from data source, currently "pwd.txt"
 def load_credentials(file_path="ServerFiles/admin/pwd.txt"):
@@ -56,10 +68,13 @@ def load_credentials(file_path="ServerFiles/admin/pwd.txt"):
     logging.info("Credentials loaded from %s", file_path)
     return credentials, roles
 
+
 # Function to hash a password, uses SHA256, same as stored credentials
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
+
+# Function to authenticate a user based on username and password
 def authenticate(username, password, credentials):
     password_hash = hash_password(password)
     if username in credentials and credentials[username] == password_hash:
@@ -69,29 +84,30 @@ def authenticate(username, password, credentials):
         logging.warning("Failed authentication attempt for user %s", username)
         return False
 
+
 # Dictionary of Role-based Permissions
 ROLE_PERMISSIONS = {
     "admin" : {"upload", "download", "list", "delete", "manage"},
     "user" : {"upload", "download", "list"}
     }
-# ///////////////// Authentication Process /////////////////////////
 
 
-
-# //////////////// Server setup and connection process ////////////////
-
-
-# Define the server address and port. Arbritray 
+# Define the server address and port. Arbritray PORT number
 HOST = '0.0.0.0'
 PORT = 10615
+shutdown_flag = False # Flag to shutdown the server
+active_threads = [] # List of active threads
 
 # Load Server-side SSL context. The server loads its own certificate and private key. The client will load the
 # server's cert to verify the server's identity.
 context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
 context.load_cert_chain(certfile="ServerFiles/admin/server.crt", keyfile="ServerFiles/admin/server.key")
 
+
 # Function to handle client connections
 def handle_client(client_socket, client_address):
+
+    global shutdown_flag
     try:
         # Attempt to wrap the client socket with SSL
         ssl_client_socket = context.wrap_socket(client_socket, server_side=True)
@@ -131,7 +147,7 @@ def handle_client(client_socket, client_address):
          # //////////////// Command processing ////////////////
             print("Connection established with user:", current_user)
             print("Waiting for commands...")
-            while True:
+            while not shutdown_flag:
 
                 command = ssl_client_socket.recv(1024).decode().strip()
 
@@ -157,6 +173,13 @@ def handle_client(client_socket, client_address):
                 if command.lower() == "exit":
                     print("Client closed the connection.")
                     logging.info("Client %s closed the connection", current_user)
+                    break
+
+                # The server is shutting down
+                elif command.lower() == "shutdown" and current_role == "admin":
+                    ssl_client_socket.send(b"Server is shutting down...")
+                    logging.info("Server shutdown by %s", current_user)
+                    shutdown_flag = True
                     break
 
 
@@ -280,24 +303,34 @@ def handle_client(client_socket, client_address):
         logging.info("Closing connection with %s", client_address)
         client_socket.close()
 
+# Signal Handler to shutdown the server
+def signal_handler(sig, frame):
+    global shutdown_flag
+    logging.info("Manual server shutdown by signal")
+    print("Server is shutting down...")
+    shutdown_flag = True
+    sys.exit(0)
+
+
 # Main Server Loop
 def main():
-    # Create a socket object
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    global shutdown_flag
+    signal.signal(signal.SIGINT, signal_handler) # Register the signal handler
 
-    # Bind the socket to the defined address and port
-    server_socket.bind((HOST, PORT))
-
-    # Listen for incoming connections
-    server_socket.listen()
+    
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a socket object
+    server_socket.bind((HOST, PORT)) # Bind the socket to the defined address and port
+    server_socket.listen(5) # Listen for incoming connections, max 5 connections
     print(f"Listening for connections on {HOST}:{PORT}")
     logging.info("Server started and listening on %s:%s", HOST, PORT)
 
     
 
     # Accept connections continuously
-    while True:
-        try:
+    # while True:
+    try:
+
+        while not shutdown_flag:
             # Accept a connection
             client_socket, client_address = server_socket.accept()
             print(f"Connection from {client_address} has been established!")
@@ -307,16 +340,21 @@ def main():
             client_thread = threading.Thread(target=handle_client, args=(client_socket, client_address))
             client_thread.daemon = True # Close the thread when the main program exits
             client_thread.start() # Start the thread
-        except Exception as e:
-            logging.error("An error occurred: %s", e)
+            active_threads.append(client_thread) # Add the thread to the list of active threads
+    except Exception as e:
+        logging.error("An error occurred: %s", e)
+    finally:
+        logging.info("Server shutting down...")
+
+        for thread in active_threads:
+            thread.join() # Wait for all threads to finish
+        server_socket.close()
+        logging.info("Server shutdown gracefully")
             
-     # //////////////// Server setup and connection process ////////////////
 
 if __name__ == "__main__":
     logging.basicConfig(filename="ServerFiles/admin/server.log", level=logging.INFO, format="%(asctime)s - %(message)s")
     main()
-
-        
 
     # Run the server and client scripts in separate terminal windows.
     # The server script should be run first.
