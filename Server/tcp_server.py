@@ -7,55 +7,60 @@ import threading
 import sys
 import signal
 
-# This is the server program for the client-server communication using SSL.
-# The server will authenticate the client using a username and password, currently hardcoded.
-# The server will then receive a message from the client and respond with a message of its own.
-# Then close the connection.
+"""
+ This is the server program for the client-server communication using SSL.
+ The server will authenticate the client using a username and password, currently hardcoded.
+ The server will then receive a message from the client and respond with a message of its own.
+ Then close the connection.
+ Kind of broke the command processing functions. Will fix later.
 
-# Kind of broke the command processing functions. Will fix later.
-# Notes:
-#   
-#   Uploading and Downloading for admins and non-admins work now. Filepaths entered into the client are relative to the user's folder.
-#   Admins can access other folders with "../" in the filepath, but non-admins cannot. Uploads still upload to user's folder.
-#
-#   Resolved empty commands and malformed commands. Invalid commands are now handled better.
-#
-# Goals: 
-#   X Implement a file transfer system using TCP and SSL. The server should wait for user input
-#   to receive commands to either send or receive files.
-#    
-#   X Implement some kind of RBAC. Users and admins with different permissions/actions.
-#
-#   X Implement usage of stored hashed credentials. Compare to user-given credentials (to be hashed by server).
-#
-#   X Implement a logging/audit system
-#
-#   X Network the application. Get public IP address (Azure VM) and test client-server communication.
-#
-#   X Use multiple clients to test the server's ability to handle multiple connections. (multi-threading)
-#
-#   WIP Modularlize the code. Separate the authentication, command processing, and connection handling into functions.
-#   
-#   X Gracefully shutdown the server. Either by sending a command or by using a signal handler.
-#   Revamp logging. Include timestamps, IPs, and other relevant information.
-#   Improve multi-threading. Add socket timeouts, optimize logging, limit threads.
-#   Add more commands: Move, Rename, Copy, etc.
-#   Allow clients create new login credentials. (Admins only?)
-#   Implement brute-force protection. Lockout after x failed attempts.
-#   Create 'shared' directory that any user can upload/download to. Only admins should be able to delete/manage.
-#   Consider what the 'manage' command should do. maybe change permissions.
-#   Possibly add a guest role with limited permisions. (Only list?)
-#   Implement a SQL database to handle stored authentication credentials (yes) and roles. (maybe)
-#   Implement rate-limiting to prevent DoS attacks.
-#   Utilize ftp or sftp instead of custom file transfer system. Use port 21 or 22. No more cusotm port.
 
-# Longer-term Goals:
-#   Implement a firewall to block malicious IPs.
-#   Implement a web interface for the server. (maybe)
-#   Implement a GUI for the client. (maybe)
-#   Implement a file explorer for the client. (maybe)
-#   Implement a file editor for the client. (maybe)
-#   Look into purchasing SSL certificate from a CA.
+ Notes:
+   
+   Uploading and Downloading for admins and non-admins work now. Filepaths entered into the client are relative to the user's folder.
+   Admins can access other folders with "../" in the filepath, but non-admins cannot. Uploads still upload to user's folder.
+
+   Resolved empty commands and malformed commands. Invalid commands are now handled better.
+
+   
+ Goals: 
+   X Implement a file transfer system using TCP and SSL. The server should wait for user input
+   to receive commands to either send or receive files.
+    
+   X Implement some kind of RBAC. Users and admins with different permissions/actions.
+
+   X Implement usage of stored hashed credentials. Compare to user-given credentials (to be hashed by server).
+
+   X Implement a logging/audit system
+
+   X Network the application. Get public IP address (Azure VM) and test client-server communication.
+
+   X Use multiple clients to test the server's ability to handle multiple connections. (multi-threading)
+
+   X Modularlize the code. Separate the authentication, command processing, and connection handling into functions.
+   
+   X Gracefully shutdown the server. Either by sending a command or by using a signal handler.
+
+   Revamp logging. Include timestamps, IPs, and other relevant information.
+   Improve multi-threading. Add socket timeouts, optimize logging, limit threads.
+   Add more commands: Move, Rename, Copy, etc.
+   Allow clients create new login credentials. (Admins only?)
+   Implement brute-force protection. Lockout after x failed attempts.
+   Create 'shared' directory that any user can upload/download to. Only admins should be able to delete/manage.
+   Consider what the 'manage' command should do. maybe change a user's permissions.
+   Possibly add a guest role with limited permisions. (Only list?)
+   Implement a SQL database to handle stored authentication credentials (yes) and roles. (maybe)
+   Implement rate-limiting to prevent DoS attacks.
+   Utilize ftp or sftp instead of custom file transfer system. Use port 21 or 22. No more cusotm port.
+
+ Longer-term Goals:
+   Implement a firewall to block malicious IPs.
+   Implement a web interface for the server. (maybe)
+   Implement a GUI for the client. (maybe)
+   Implement a file explorer for the client. (maybe)
+   Implement a file editor for the client. (maybe)
+   Look into purchasing SSL certificate from a CA.
+"""
 
 
 # Function to load credentials from data source, currently "pwd.txt"
@@ -163,7 +168,7 @@ def check_permissions(role, action):
 
 
 # Function to process commands given by the user
-def process_command(command, ssl_client_socket, current_user, current_role):
+def process_command(command, ssl_client_socket, current_user, current_role, current_folder):
     """
     Processes the command given by the user. Extracts the action 
     and parameters from string. Handles error cases and invalid commands.
@@ -171,6 +176,8 @@ def process_command(command, ssl_client_socket, current_user, current_role):
     :param command: The command given by the user
     :param ssl_client_socket: The SSL-wrapped socket object
     :param current_user: The current user
+    :param current_role: The current role of the user
+    :param current_folder: The current folder of the user
     """
     if not command:
         ssl_client_socket.send(b"Invalid Command: Command is empty.")
@@ -187,6 +194,15 @@ def process_command(command, ssl_client_socket, current_user, current_role):
     
     print(f"Received command: {command}")
     logging.info("Received command: %s from %s", command, current_user)
+
+    # Validate command
+    valid_commands = {"upload", "download", "list", "delete", "manage", "exit", "shutdown"}
+    
+    # Check if the action is valid
+    if action.lower() not in valid_commands:
+        ssl_client_socket.send(b"Invalid Command: Command not recognized.")
+        logging.warning("Invalid command received from %s: %s", current_user, command)
+        return
 
     # Check permissions for the action
     if not check_permissions(current_role, action):
@@ -209,15 +225,15 @@ def process_command(command, ssl_client_socket, current_user, current_role):
     
     # Handle specific actions/commands
     if action == "upload":
-        handle_upload(command, ssl_client_socket, current_user, current_role)
+        handle_upload(command, ssl_client_socket, current_user, current_folder)
     elif action == "download":
-        handle_download(command, ssl_client_socket, current_user, current_role)
+        handle_download(command, ssl_client_socket, current_user, current_folder)
     elif action == "list":
-        handle_list(command, ssl_client_socket, current_user, current_role)
+        handle_list(ssl_client_socket, current_user, current_folder)
     elif action == "delete":
         handle_delete(command, ssl_client_socket, current_user, current_role)
     elif action == "manage":
-        handle_manage(command, ssl_client_socket, current_user, current_role)
+        handle_manage(ssl_client_socket, current_user)
     else:
         ssl_client_socket.send(b"Invalid Command from %s: Command not recognized.", current_user)
         logging.warning("Invalid command received from %s: %s", current_user, command)
@@ -251,6 +267,7 @@ def handle_upload(command, socket, user, folder):
     
     # Determine the file path
     file_path = os.path.join(folder, filename)
+    print(file_path)
 
     # Check if the file already exists
     if os.path.exists(file_path):
@@ -260,15 +277,18 @@ def handle_upload(command, socket, user, folder):
     
     # Receive the file
     with open(file_path, "wb") as file:
+        print(f"Receiving file {filename}...")
         received = 0
         while received < file_size:
             data = socket.recv(1024)
             file.write(data)
             received += len(data)
 
+    # After file is received
     print(f"File {filename} received successfully!")
     logging.info("File %s received successfully from %s", filename, user)
-    
+    socket.send(b"File uploaded successfully!")
+
 
 def handle_download(command, socket, user, folder):
     """
@@ -313,11 +333,10 @@ def handle_download(command, socket, user, folder):
         logging.warning("File %s not found for user %s", relative_path, user)
 
 
-def handle_list(command, socket, user, folder):
+def handle_list(socket, user, folder):
     """
     Handle listing the files in the user's folder.
 
-    :param command: The command given by the client
     :param socket: The SSL-wrapped socket object
     :param user: The current user
     :param folder: The user's folder
@@ -370,7 +389,7 @@ def handle_delete(command, socket, user, folder):
             logging.warning("File %s not found for deletion", filename)
 
         
-def handle_manage(command, socket, user, folder):
+def handle_manage(socket, user):
     """
     Handle file management (future command) (admin only).
 
@@ -390,21 +409,15 @@ def handle_manage(command, socket, user, folder):
         logging.info("User %s with admin role requested to manage files", user)
 
 
-
-
-
-
-
 # Dictionary of Role-based Permissions
 ROLE_PERMISSIONS = {
-    "admin" : {"upload", "download", "list", "delete", "manage"},
+    "admin" : {"upload", "download", "list", "delete", "manage", "shutdown"},
     "user" : {"upload", "download", "list"}
     }
 
-
 # Define the server address and port. Arbritray PORT number
-#HOST = '0.0.0.0'
-HOST = '127.0.0.1'
+HOST = '0.0.0.0'
+#HOST = '127.0.0.1'
 PORT = 10615
 shutdown_flag = threading.Event() # Flag to signal server shutdown
 active_threads = [] # List of active threads
@@ -413,6 +426,7 @@ active_threads = [] # List of active threads
 # server's cert to verify the server's identity.
 context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
 context.load_cert_chain(certfile="ServerFiles/admin/server.crt", keyfile="ServerFiles/admin/server.key")
+#context.load_cert_chain(certfile="/workspaces/2362Project/Server/ServerFiles/admin/server.crt", keyfile="/workspaces/2362Project/Server/ServerFiles/admin/server.key")
 
 
 # Function to handle client connections
@@ -450,7 +464,7 @@ def handle_client(client_socket, client_address):
                 command = ssl_client_socket.recv(1024).decode().strip()
 
                 # Process the command
-                result = process_command(command, ssl_client_socket, current_user, current_role)
+                result = process_command(command, ssl_client_socket, current_user, current_role, user_folder)
                 if result == "exit" or result == "shutdown":
                     break
 
@@ -469,6 +483,7 @@ def handle_client(client_socket, client_address):
         logging.info("Closing connection with %s", client_address)
         client_socket.close()
 
+
 # Signal Handler to shutdown the server
 def signal_handler(sig, frame):
     logging.info("Manual server shutdown by signal")
@@ -479,6 +494,9 @@ def signal_handler(sig, frame):
 
 # Main Server Loop
 def main():
+    """
+    The main function to start the server and listen for incoming connections. 
+    """
     global shutdown_flag
     signal.signal(signal.SIGINT, signal_handler) # Register the signal handler
 
@@ -491,11 +509,9 @@ def main():
     logging.info("Server started and listening on %s:%s", HOST, PORT)
 
     
-
     # Accept connections continuously
     # while True:
     try:
-
         while not shutdown_flag.is_set():
             # Allow connections only if shutown is not signlaed
             try:

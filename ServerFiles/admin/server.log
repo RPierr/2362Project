@@ -1,0 +1,6 @@
+2024-12-12 16:12:22,252 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:12:46,437 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:12:50,709 - Connection established with ('127.0.0.1', 46208)
+2024-12-12 16:12:50,718 - Secure connection established with ('127.0.0.1', 46208)
+2024-12-12 16:12:50,718 - Error handling client ('127.0.0.1', 46208): [Errno 2] No such file or directory: 'ServerFiles/admin/pwd.txt'
+2024-12-12 16:12:50,719 - Closing connection with ('127.0.0.1', 46208)

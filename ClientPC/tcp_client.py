@@ -81,14 +81,14 @@ while True:
     elif command.startswith("upload"):
 
         # Extract the file path
-        filepath = command.split(maxsplit=1)[1]
-
+        try:
+            filepath = command.split(maxsplit=1)[1]
+        except IndexError:
+            print("Please provide a filename")
+            continue
 
 
         if os.path.exists(filepath):
-
-            # Send command to server first
-            ssl_client_socket.send(f"upload {filepath}".encode())
 
             # Send the file size to the server
             file_size = os.path.getsize(filepath)
@@ -98,9 +98,19 @@ while True:
             ack = ssl_client_socket.recv(1024).decode()
             if ack == "ACK":
                 with open(filepath, "rb") as file:
-                    for data in file:
-                        ssl_client_socket.send(data)
+                    print(f"Sending file {filepath} to the server...")
+                    bytes_sent = 0
+                    while bytes_sent < file_size:
+                        data = file.read(1024)
+                        if not data:
+                            break
+                        ssl_client_socket.sendall(data)
+                        bytes_sent += len(data)
                 print(f"File {filepath} sent successfully!")
+                
+                # Receive confirmation from the server
+                response = ssl_client_socket.recv(1024).decode()
+                print(response)
             else:
                 print("Failed to receive ACK from the server")
         else:
@@ -109,8 +119,11 @@ while True:
 
     elif command.startswith("download"):
         # Extract the filepath
-        filepath = command.split(maxsplit=1)[1]
-
+        try:
+            filepath = command.split(maxsplit=1)[1]
+        except IndexError:
+            print("Please provide a filename")
+            continue
         # Send the filename to the server
         # ssl_client_socket.send(filepath.encode())
 

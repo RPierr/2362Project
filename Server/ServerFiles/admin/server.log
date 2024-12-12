@@ -1929,3 +1929,528 @@
 2024-12-11 20:31:04,901 - User admin with admin role requested to manage files
 2024-12-11 20:31:08,549 - Received command: manage from admin
 2024-12-11 20:31:08,550 - User admin with admin role requested to manage files
+2024-12-11 20:33:36,733 - Manual server shutdown by signal
+2024-12-11 20:33:36,733 - Server shutting down...
+2024-12-11 20:33:40,727 - Received command: exit from admin
+2024-12-11 20:33:40,727 - SSL error with ('127.0.0.1', 53182): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-11 20:33:40,727 - Closing connection with ('127.0.0.1', 53182)
+2024-12-11 20:33:40,727 - Server shutdown gracefully
+2024-12-11 20:33:43,003 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:33:44,906 - Connection established with ('127.0.0.1', 53648)
+2024-12-11 20:33:44,909 - Secure connection established with ('127.0.0.1', 53648)
+2024-12-11 20:33:44,909 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:33:47,431 - User admin authenticated successfully
+2024-12-11 20:33:50,091 - Received command: exit from admin
+2024-12-11 20:33:50,091 - Permission denied for admin to perform exit
+2024-12-11 20:33:50,091 - SSL error with ('127.0.0.1', 53648): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-11 20:33:50,091 - Closing connection with ('127.0.0.1', 53648)
+2024-12-11 20:33:53,994 - Manual server shutdown by signal
+2024-12-11 20:33:53,995 - Server shutting down...
+2024-12-11 20:33:53,995 - Server shutdown gracefully
+2024-12-11 20:33:59,509 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:34:04,075 - Connection established with ('127.0.0.1', 46606)
+2024-12-11 20:34:04,077 - Secure connection established with ('127.0.0.1', 46606)
+2024-12-11 20:34:04,077 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:34:07,990 - User admin authenticated successfully
+2024-12-11 20:34:09,308 - Received command: exit from admin
+2024-12-11 20:34:09,308 - Permission denied for admin to perform exit
+2024-12-11 20:34:09,308 - SSL error with ('127.0.0.1', 46606): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-11 20:34:09,308 - Closing connection with ('127.0.0.1', 46606)
+2024-12-11 20:34:10,379 - Connection established with ('127.0.0.1', 46618)
+2024-12-11 20:34:10,381 - Secure connection established with ('127.0.0.1', 46618)
+2024-12-11 20:34:10,381 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:34:15,483 - User Pierre authenticated successfully
+2024-12-11 20:34:18,777 - Received command: shutdown from Pierre
+2024-12-11 20:34:18,778 - Permission denied for Pierre to perform shutdown
+2024-12-11 20:34:22,600 - Received command: ok from Pierre
+2024-12-11 20:34:22,600 - Permission denied for Pierre to perform ok
+2024-12-11 20:34:24,232 - Received command: now from Pierre
+2024-12-11 20:34:24,232 - Permission denied for Pierre to perform now
+2024-12-11 20:34:25,709 - Received command: do it from Pierre
+2024-12-11 20:34:25,709 - Permission denied for Pierre to perform do
+2024-12-11 20:34:28,348 - Received command: shutdown from Pierre
+2024-12-11 20:34:28,348 - Permission denied for Pierre to perform shutdown
+2024-12-11 20:34:30,743 - Received command: shutdown from Pierre
+2024-12-11 20:34:30,744 - Permission denied for Pierre to perform shutdown
+2024-12-11 20:34:32,680 - Received command: shutdown from Pierre
+2024-12-11 20:34:32,680 - Permission denied for Pierre to perform shutdown
+2024-12-11 20:34:55,375 - Manual server shutdown by signal
+2024-12-11 20:34:55,376 - Server shutting down...
+2024-12-11 20:34:57,601 - Received command: exit from Pierre
+2024-12-11 20:34:57,601 - Permission denied for Pierre to perform exit
+2024-12-11 20:34:57,601 - Closing connection with ('127.0.0.1', 46618)
+2024-12-11 20:34:57,602 - Server shutdown gracefully
+2024-12-11 20:34:59,853 - Server started and listening on 127.0.0.1:10615
+2024-12-11 20:35:01,823 - Connection established with ('127.0.0.1', 55606)
+2024-12-11 20:35:01,827 - Secure connection established with ('127.0.0.1', 55606)
+2024-12-11 20:35:01,827 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-11 20:35:06,007 - User Pierre authenticated successfully
+2024-12-11 20:35:07,638 - Received command: shutdown from Pierre
+2024-12-11 20:35:07,638 - Server shutdown by Pierre
+2024-12-11 20:35:07,638 - Closing connection with ('127.0.0.1', 55606)
+2024-12-11 20:35:07,830 - Server shutting down...
+2024-12-11 20:35:07,831 - Server shutdown gracefully
+2024-12-12 15:39:11,232 - Server started and listening on 127.0.0.1:10615
+2024-12-12 15:39:17,580 - Connection established with ('127.0.0.1', 48814)
+2024-12-12 15:39:17,584 - Secure connection established with ('127.0.0.1', 48814)
+2024-12-12 15:39:17,584 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 15:39:21,067 - User admin authenticated successfully
+2024-12-12 15:39:22,591 - Received command: manage from admin
+2024-12-12 15:39:22,592 - User admin with admin role requested to manage files
+2024-12-12 15:39:44,538 - Received command: upload AzureTest from admin
+2024-12-12 15:39:44,579 - Invalid upload command from admin: File size not provided
+2024-12-12 15:39:44,580 - Received command: 153 from admin
+2024-12-12 15:39:44,580 - Permission denied for admin to perform 153
+2024-12-12 15:42:23,190 - Received command: shutdown from admin
+2024-12-12 15:42:23,190 - Server shutdown by admin
+2024-12-12 15:42:23,190 - Closing connection with ('127.0.0.1', 48814)
+2024-12-12 15:42:23,768 - Server shutting down...
+2024-12-12 15:42:23,768 - Server shutdown gracefully
+2024-12-12 15:49:50,946 - Server started and listening on 127.0.0.1:10615
+2024-12-12 15:50:47,482 - Connection established with ('127.0.0.1', 44238)
+2024-12-12 15:50:47,485 - Secure connection established with ('127.0.0.1', 44238)
+2024-12-12 15:50:47,485 - Error handling client ('127.0.0.1', 44238): [Errno 2] No such file or directory: 'ServerFiles/admin/pwd.txt'
+2024-12-12 15:50:47,485 - Closing connection with ('127.0.0.1', 44238)
+2024-12-12 15:51:51,975 - Manual server shutdown by signal
+2024-12-12 15:52:12,165 - Server started and listening on 127.0.0.1:10615
+2024-12-12 15:52:15,847 - Connection established with ('127.0.0.1', 59470)
+2024-12-12 15:52:15,855 - Secure connection established with ('127.0.0.1', 59470)
+2024-12-12 15:52:15,855 - Error handling client ('127.0.0.1', 59470): [Errno 2] No such file or directory: 'ServerFiles/admin/pwd.txt'
+2024-12-12 15:52:15,856 - Closing connection with ('127.0.0.1', 59470)
+2024-12-12 15:53:01,818 - Manual server shutdown by signal
+2024-12-12 15:53:01,819 - Server shutting down...
+2024-12-12 15:53:01,819 - Server shutdown gracefully
+2024-12-12 15:53:40,347 - Manual server shutdown by signal
+2024-12-12 15:54:18,819 - Server started and listening on 127.0.0.1:10615
+2024-12-12 15:54:32,388 - Connection established with ('127.0.0.1', 44282)
+2024-12-12 15:54:32,391 - Secure connection established with ('127.0.0.1', 44282)
+2024-12-12 15:54:32,391 - Error handling client ('127.0.0.1', 44282): [Errno 2] No such file or directory: 'ServerFiles/admin/pwd.txt'
+2024-12-12 15:54:32,391 - Closing connection with ('127.0.0.1', 44282)
+2024-12-12 15:55:50,712 - Server started and listening on 127.0.0.1:10615
+2024-12-12 15:57:33,669 - Server started and listening on 127.0.0.1:10615
+2024-12-12 15:59:53,490 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:02:19,389 - Connection established with ('127.0.0.1', 50896)
+2024-12-12 16:02:19,394 - Secure connection established with ('127.0.0.1', 50896)
+2024-12-12 16:02:19,395 - Error handling client ('127.0.0.1', 50896): [Errno 2] No such file or directory: 'ServerFiles/admin/pwd.txt'
+2024-12-12 16:02:19,395 - Closing connection with ('127.0.0.1', 50896)
+2024-12-12 16:04:17,493 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:04:21,562 - Connection established with ('127.0.0.1', 57938)
+2024-12-12 16:04:21,567 - Secure connection established with ('127.0.0.1', 57938)
+2024-12-12 16:04:21,568 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:04:26,586 - User admin authenticated successfully
+2024-12-12 16:04:34,827 - Received command: upload AzureTest from admin
+2024-12-12 16:04:34,867 - Invalid upload command from admin: File size not provided
+2024-12-12 16:04:34,868 - Received command: 153 from admin
+2024-12-12 16:04:34,868 - Permission denied for admin to perform 153
+2024-12-12 16:04:48,108 - Manual server shutdown by signal
+2024-12-12 16:04:48,108 - Server shutting down...
+2024-12-12 16:04:50,218 - Received command: exit from admin
+2024-12-12 16:04:50,219 - SSL error with ('127.0.0.1', 57938): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 16:04:50,219 - Closing connection with ('127.0.0.1', 57938)
+2024-12-12 16:04:50,220 - Server shutdown gracefully
+2024-12-12 16:05:11,755 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:05:17,395 - Connection established with ('127.0.0.1', 43606)
+2024-12-12 16:05:17,402 - Secure connection established with ('127.0.0.1', 43606)
+2024-12-12 16:05:17,402 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:05:20,810 - User admin authenticated successfully
+2024-12-12 16:05:25,311 - Received command: upload AzureTest from admin
+2024-12-12 16:05:25,355 - Invalid upload command from admin: File size not provided
+2024-12-12 16:05:25,356 - Received command: 153 from admin
+2024-12-12 16:05:25,356 - Permission denied for admin to perform 153
+2024-12-12 16:05:51,112 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:05:54,092 - Connection established with ('127.0.0.1', 48850)
+2024-12-12 16:05:54,097 - Secure connection established with ('127.0.0.1', 48850)
+2024-12-12 16:05:54,098 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:05:58,012 - User admin authenticated successfully
+2024-12-12 16:06:20,985 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:06:32,610 - Connection established with ('127.0.0.1', 39582)
+2024-12-12 16:06:32,615 - Secure connection established with ('127.0.0.1', 39582)
+2024-12-12 16:06:32,615 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:06:38,222 - User admin authenticated successfully
+2024-12-12 16:06:42,349 - Received command: manage from admin
+2024-12-12 16:06:42,349 - User admin with admin role requested to manage files
+2024-12-12 16:13:55,806 - Manual server shutdown by signal
+2024-12-12 16:14:04,056 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:14:06,561 - Connection established with ('127.0.0.1', 52434)
+2024-12-12 16:14:06,564 - Secure connection established with ('127.0.0.1', 52434)
+2024-12-12 16:14:06,564 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:14:10,970 - User admin authenticated successfully
+2024-12-12 16:15:27,936 - Received command: exit from admin
+2024-12-12 16:15:27,938 - Permission denied for admin to perform exit
+2024-12-12 16:15:27,938 - SSL error with ('127.0.0.1', 52434): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 16:15:27,938 - Closing connection with ('127.0.0.1', 52434)
+2024-12-12 16:15:30,898 - Manual server shutdown by signal
+2024-12-12 16:15:30,898 - Server shutting down...
+2024-12-12 16:15:30,899 - Server shutdown gracefully
+2024-12-12 16:15:38,271 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:15:41,872 - Connection established with ('127.0.0.1', 60316)
+2024-12-12 16:15:53,135 - Secure connection established with ('127.0.0.1', 60316)
+2024-12-12 16:16:21,745 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:16:43,061 - User admin authenticated successfully
+2024-12-12 16:17:22,722 - Received command: upload AzureTest from admin
+2024-12-12 16:18:21,259 - Invalid upload command from admin: File size not provided
+2024-12-12 16:18:45,724 - Received command: 153 from admin
+2024-12-12 16:18:49,261 - Permission denied for admin to perform 153
+2024-12-12 16:19:21,578 - Received command: upload AzureTest from admin
+2024-12-12 16:19:21,579 - Invalid upload command from admin: File size not provided
+2024-12-12 16:19:21,579 - Received command: 153 from admin
+2024-12-12 16:19:21,580 - Permission denied for admin to perform 153
+2024-12-12 16:19:52,282 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:19:55,760 - Connection established with ('127.0.0.1', 57198)
+2024-12-12 16:19:55,765 - Secure connection established with ('127.0.0.1', 57198)
+2024-12-12 16:19:55,765 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:19:59,342 - User admin authenticated successfully
+2024-12-12 16:20:15,522 - Received command: upload AzureTest from admin
+2024-12-12 16:21:16,275 - Error handling client ('127.0.0.1', 57198): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-12 16:21:17,250 - Closing connection with ('127.0.0.1', 57198)
+2024-12-12 16:21:33,456 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:21:34,672 - Connection established with ('127.0.0.1', 47498)
+2024-12-12 16:21:34,678 - Secure connection established with ('127.0.0.1', 47498)
+2024-12-12 16:21:34,679 - Credentials loaded from /workspaces/2362Project/Server/ServerFiles/admin/pwd.txt
+2024-12-12 16:21:37,440 - User admin authenticated successfully
+2024-12-12 16:21:47,680 - Received command: upload AzureTest from admin
+2024-12-12 16:24:03,410 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:24:09,397 - Connection established with ('127.0.0.1', 59880)
+2024-12-12 16:24:09,399 - Secure connection established with ('127.0.0.1', 59880)
+2024-12-12 16:24:09,399 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:24:13,871 - User admin authenticated successfully
+2024-12-12 16:24:17,955 - Received command: upload AzureTest from admin
+2024-12-12 16:24:17,999 - Error handling client ('127.0.0.1', 59880): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-12 16:24:17,999 - Closing connection with ('127.0.0.1', 59880)
+2024-12-12 16:26:12,557 - Manual server shutdown by signal
+2024-12-12 16:26:12,557 - Server shutting down...
+2024-12-12 16:26:12,557 - Server shutdown gracefully
+2024-12-12 16:26:17,983 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:26:20,483 - Connection established with ('127.0.0.1', 48850)
+2024-12-12 16:26:20,486 - Secure connection established with ('127.0.0.1', 48850)
+2024-12-12 16:26:20,486 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:26:23,197 - User admin authenticated successfully
+2024-12-12 16:26:27,028 - Received command: upload AzureTest from admin
+2024-12-12 16:26:27,071 - Error handling client ('127.0.0.1', 48850): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-12 16:26:27,071 - Closing connection with ('127.0.0.1', 48850)
+2024-12-12 16:26:58,881 - Manual server shutdown by signal
+2024-12-12 16:26:58,881 - Server shutting down...
+2024-12-12 16:26:58,881 - Server shutdown gracefully
+2024-12-12 16:27:01,420 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:27:03,266 - Connection established with ('127.0.0.1', 57434)
+2024-12-12 16:27:03,269 - Secure connection established with ('127.0.0.1', 57434)
+2024-12-12 16:27:03,269 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:27:07,489 - User admin authenticated successfully
+2024-12-12 16:27:11,177 - Received command: upload AzureTest from admin
+2024-12-12 16:27:11,219 - Error handling client ('127.0.0.1', 57434): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-12 16:27:11,219 - Closing connection with ('127.0.0.1', 57434)
+2024-12-12 16:35:29,812 - Manual server shutdown by signal
+2024-12-12 16:35:29,812 - Server shutting down...
+2024-12-12 16:35:29,812 - Server shutdown gracefully
+2024-12-12 16:35:32,127 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:35:34,804 - Connection established with ('127.0.0.1', 45660)
+2024-12-12 16:35:34,806 - Secure connection established with ('127.0.0.1', 45660)
+2024-12-12 16:35:34,806 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:35:37,521 - User admin authenticated successfully
+2024-12-12 16:35:44,823 - Received command: upload AzureTEst from admin
+2024-12-12 16:35:44,863 - Invalid upload command from admin: File size not provided
+2024-12-12 16:35:53,192 - Received command: upload AzureTEst from admin
+2024-12-12 16:35:53,235 - Invalid upload command from admin: File size not provided
+2024-12-12 16:35:57,794 - Received command: upload AzureTest from admin
+2024-12-12 16:35:57,835 - Error handling client ('127.0.0.1', 45660): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-12 16:35:57,835 - Closing connection with ('127.0.0.1', 45660)
+2024-12-12 16:36:43,084 - Manual server shutdown by signal
+2024-12-12 16:36:43,084 - Server shutting down...
+2024-12-12 16:36:43,084 - Server shutdown gracefully
+2024-12-12 16:36:48,047 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:36:51,007 - Connection established with ('127.0.0.1', 45200)
+2024-12-12 16:36:51,009 - Secure connection established with ('127.0.0.1', 45200)
+2024-12-12 16:36:51,009 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:36:53,742 - User admin authenticated successfully
+2024-12-12 16:37:04,034 - Received command: upload AzureTest from admin
+2024-12-12 16:37:04,075 - Error handling client ('127.0.0.1', 45200): [Errno 2] No such file or directory: 'admin/AzureTest'
+2024-12-12 16:37:04,075 - Closing connection with ('127.0.0.1', 45200)
+2024-12-12 16:51:04,999 - Manual server shutdown by signal
+2024-12-12 16:51:05,000 - Server shutting down...
+2024-12-12 16:51:05,000 - Server shutdown gracefully
+2024-12-12 16:51:06,544 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:51:08,713 - Connection established with ('127.0.0.1', 55700)
+2024-12-12 16:51:08,715 - Secure connection established with ('127.0.0.1', 55700)
+2024-12-12 16:51:08,716 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:51:11,095 - User guest authenticated successfully
+2024-12-12 16:51:16,395 - Received command: upload AzureTest from guest
+2024-12-12 16:51:16,435 - Error handling client ('127.0.0.1', 55700): [Errno 2] No such file or directory: 'user/AzureTest'
+2024-12-12 16:51:16,435 - Closing connection with ('127.0.0.1', 55700)
+2024-12-12 16:55:29,466 - Manual server shutdown by signal
+2024-12-12 16:55:29,466 - Server shutting down...
+2024-12-12 16:55:29,466 - Server shutdown gracefully
+2024-12-12 16:55:30,576 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:55:32,700 - Connection established with ('127.0.0.1', 36640)
+2024-12-12 16:55:32,703 - Secure connection established with ('127.0.0.1', 36640)
+2024-12-12 16:55:32,703 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:55:36,279 - User guest authenticated successfully
+2024-12-12 16:55:40,301 - Received command: upload AzureTest from guest
+2024-12-12 16:55:40,343 - Error handling client ('127.0.0.1', 36640): [Errno 2] No such file or directory: 'user/AzureTest'
+2024-12-12 16:55:40,344 - Closing connection with ('127.0.0.1', 36640)
+2024-12-12 16:57:13,883 - Manual server shutdown by signal
+2024-12-12 16:57:13,883 - Server shutting down...
+2024-12-12 16:57:13,883 - Server shutdown gracefully
+2024-12-12 16:57:16,035 - Server started and listening on 127.0.0.1:10615
+2024-12-12 16:57:18,362 - Connection established with ('127.0.0.1', 44790)
+2024-12-12 16:57:18,365 - Secure connection established with ('127.0.0.1', 44790)
+2024-12-12 16:57:18,365 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 16:57:21,305 - User guest authenticated successfully
+2024-12-12 16:57:25,816 - Received command: upload AzureTest from guest
+2024-12-12 16:57:25,856 - File AzureTest received successfully from guest
+2024-12-12 16:58:46,297 - Empty command received from guest
+2024-12-12 16:58:46,298 - SSL error with ('127.0.0.1', 44790): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 16:58:46,298 - Closing connection with ('127.0.0.1', 44790)
+2024-12-12 17:08:28,420 - Manual server shutdown by signal
+2024-12-12 17:08:28,421 - Server shutting down...
+2024-12-12 17:08:28,421 - Server shutdown gracefully
+2024-12-12 17:08:30,516 - Server started and listening on 127.0.0.1:10615
+2024-12-12 17:08:52,804 - Connection established with ('127.0.0.1', 33070)
+2024-12-12 17:08:52,806 - Secure connection established with ('127.0.0.1', 33070)
+2024-12-12 17:08:52,807 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 17:08:55,629 - User guest authenticated successfully
+2024-12-12 17:09:00,464 - Received command: list from guest
+2024-12-12 17:09:00,465 - Error handling client ('127.0.0.1', 33070): [Errno 2] No such file or directory: 'user'
+2024-12-12 17:09:00,465 - Closing connection with ('127.0.0.1', 33070)
+2024-12-12 17:10:29,826 - Manual server shutdown by signal
+2024-12-12 17:10:29,826 - Server shutting down...
+2024-12-12 17:10:29,826 - Server shutdown gracefully
+2024-12-12 17:10:31,078 - Server started and listening on 127.0.0.1:10615
+2024-12-12 17:10:33,061 - Connection established with ('127.0.0.1', 33826)
+2024-12-12 17:10:33,063 - Secure connection established with ('127.0.0.1', 33826)
+2024-12-12 17:10:33,063 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 17:10:35,836 - User guest authenticated successfully
+2024-12-12 17:10:36,909 - Received command: list from guest
+2024-12-12 17:10:36,909 - List of files sent to guest
+2024-12-12 17:12:09,907 - Received command: download AzureTest from guest
+2024-12-12 17:12:09,907 - File AzureTest not found for user guest
+2024-12-12 19:12:31,835 - Server started and listening on 127.0.0.1:10615
+2024-12-12 19:12:36,774 - Connection established with ('127.0.0.1', 59198)
+2024-12-12 19:12:36,777 - Secure connection established with ('127.0.0.1', 59198)
+2024-12-12 19:12:36,777 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:12:47,229 - User guest authenticated successfully
+2024-12-12 19:12:48,986 - Received command: list from guest
+2024-12-12 19:12:48,986 - List of files sent to guest
+2024-12-12 19:12:59,967 - Received command: download file.txt from guest
+2024-12-12 19:12:59,968 - File file.txt sent successfully to guest
+2024-12-12 19:13:12,014 - Received command: upload test.py from guest
+2024-12-12 19:13:12,059 - File test.py received successfully from guest
+2024-12-12 19:13:16,287 - Received command: upload dne from guest
+2024-12-12 19:13:16,330 - Invalid upload command from guest: File size not provided
+2024-12-12 19:13:19,231 - Received command: download dne from guest
+2024-12-12 19:13:19,231 - File dne not found for user guest
+2024-12-12 19:13:24,313 - Received command: list from guest
+2024-12-12 19:13:24,314 - List of files sent to guest
+2024-12-12 19:14:52,041 - Received command: shutdown from guest
+2024-12-12 19:14:52,041 - Permission denied for guest to perform shutdown
+2024-12-12 19:14:56,457 - Received command: shutdown from guest
+2024-12-12 19:14:56,457 - Permission denied for guest to perform shutdown
+2024-12-12 19:16:15,146 - Received command: download from guest
+2024-12-12 19:16:15,147 - Invalid download command from guest: Filename not provided
+2024-12-12 19:16:15,148 - SSL error with ('127.0.0.1', 59198): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 19:16:15,148 - Closing connection with ('127.0.0.1', 59198)
+2024-12-12 19:16:19,195 - Manual server shutdown by signal
+2024-12-12 19:16:19,195 - Server shutting down...
+2024-12-12 19:16:19,196 - Server shutdown gracefully
+2024-12-12 19:16:20,309 - Server started and listening on 127.0.0.1:10615
+2024-12-12 19:16:26,182 - Connection established with ('127.0.0.1', 49112)
+2024-12-12 19:16:26,185 - Secure connection established with ('127.0.0.1', 49112)
+2024-12-12 19:16:26,185 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:16:29,501 - User guest authenticated successfully
+2024-12-12 19:16:33,051 - Received command: dpwnl from guest
+2024-12-12 19:16:33,051 - Permission denied for guest to perform dpwnl
+2024-12-12 19:16:37,354 - Received command: nope from guest
+2024-12-12 19:16:37,354 - Permission denied for guest to perform nope
+2024-12-12 19:16:39,178 - Received command: download from guest
+2024-12-12 19:16:39,178 - Invalid download command from guest: Filename not provided
+2024-12-12 19:16:39,180 - SSL error with ('127.0.0.1', 49112): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 19:16:39,180 - Closing connection with ('127.0.0.1', 49112)
+2024-12-12 19:17:25,195 - Manual server shutdown by signal
+2024-12-12 19:17:25,196 - Server shutting down...
+2024-12-12 19:17:25,196 - Server shutdown gracefully
+2024-12-12 19:17:26,198 - Server started and listening on 127.0.0.1:10615
+2024-12-12 19:17:27,757 - Connection established with ('127.0.0.1', 42528)
+2024-12-12 19:17:27,759 - Secure connection established with ('127.0.0.1', 42528)
+2024-12-12 19:17:27,759 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:17:30,042 - User guest authenticated successfully
+2024-12-12 19:17:33,582 - Received command: downlpoad from guest
+2024-12-12 19:17:33,583 - Permission denied for guest to perform downlpoad
+2024-12-12 19:17:38,379 - Received command: download from guest
+2024-12-12 19:17:38,380 - Invalid download command from guest: Filename not provided
+2024-12-12 19:17:41,419 - Received command: down from guest
+2024-12-12 19:17:41,419 - Permission denied for guest to perform down
+2024-12-12 19:17:44,634 - Received command: dk from guest
+2024-12-12 19:17:44,634 - Permission denied for guest to perform dk
+2024-12-12 19:17:46,922 - Received command: down from guest
+2024-12-12 19:17:46,922 - Permission denied for guest to perform down
+2024-12-12 19:17:49,002 - Received command: download from guest
+2024-12-12 19:17:49,003 - Invalid download command from guest: Filename not provided
+2024-12-12 19:18:14,251 - Received command: download dne from guest
+2024-12-12 19:18:14,251 - File dne not found for user guest
+2024-12-12 19:19:04,490 - Received command: downloaddne from guest
+2024-12-12 19:19:04,491 - Permission denied for guest to perform downloaddne
+2024-12-12 19:19:07,566 - Received command: download dne from guest
+2024-12-12 19:19:07,567 - File dne not found for user guest
+2024-12-12 19:19:09,466 - Received command: ja from guest
+2024-12-12 19:19:09,466 - Permission denied for guest to perform ja
+2024-12-12 19:19:10,682 - Received command: list from guest
+2024-12-12 19:19:10,682 - List of files sent to guest
+2024-12-12 19:19:12,094 - Received command: list from guest
+2024-12-12 19:19:12,094 - List of files sent to guest
+2024-12-12 19:19:13,223 - Received command: list from guest
+2024-12-12 19:19:13,223 - List of files sent to guest
+2024-12-12 19:19:14,249 - Received command: list from guest
+2024-12-12 19:19:14,249 - List of files sent to guest
+2024-12-12 19:19:15,002 - Received command: list from guest
+2024-12-12 19:19:15,002 - List of files sent to guest
+2024-12-12 19:19:17,181 - Received command: download dne from guest
+2024-12-12 19:19:17,182 - File dne not found for user guest
+2024-12-12 19:19:19,466 - Received command: shutdown from guest
+2024-12-12 19:19:19,466 - Permission denied for guest to perform shutdown
+2024-12-12 19:19:21,917 - Received command: d from guest
+2024-12-12 19:19:21,917 - Permission denied for guest to perform d
+2024-12-12 19:19:22,208 - Received command: d from guest
+2024-12-12 19:19:22,208 - Permission denied for guest to perform d
+2024-12-12 19:19:22,457 - Received command: d from guest
+2024-12-12 19:19:22,457 - Permission denied for guest to perform d
+2024-12-12 19:19:22,811 - Received command: d from guest
+2024-12-12 19:19:22,812 - Permission denied for guest to perform d
+2024-12-12 19:19:23,072 - Received command: d from guest
+2024-12-12 19:19:23,072 - Permission denied for guest to perform d
+2024-12-12 19:19:23,290 - Received command: d from guest
+2024-12-12 19:19:23,290 - Permission denied for guest to perform d
+2024-12-12 19:19:23,497 - Received command: d from guest
+2024-12-12 19:19:23,497 - Permission denied for guest to perform d
+2024-12-12 19:19:25,643 - Received command: exit from guest
+2024-12-12 19:19:25,643 - Permission denied for guest to perform exit
+2024-12-12 19:19:25,643 - SSL error with ('127.0.0.1', 42528): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 19:19:25,644 - Closing connection with ('127.0.0.1', 42528)
+2024-12-12 19:19:29,387 - Manual server shutdown by signal
+2024-12-12 19:19:29,388 - Server shutting down...
+2024-12-12 19:19:29,388 - Server shutdown gracefully
+2024-12-12 19:19:30,453 - Server started and listening on 127.0.0.1:10615
+2024-12-12 19:19:34,238 - Connection established with ('127.0.0.1', 60480)
+2024-12-12 19:19:34,240 - Secure connection established with ('127.0.0.1', 60480)
+2024-12-12 19:19:34,240 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:19:39,579 - User guest authenticated successfully
+2024-12-12 19:19:45,178 - Received command: download notreal from guest
+2024-12-12 19:19:45,178 - File notreal not found for user guest
+2024-12-12 19:19:49,230 - Received command: download from guest
+2024-12-12 19:19:49,230 - Invalid download command from guest: Filename not provided
+2024-12-12 19:19:51,388 - Received command: down from guest
+2024-12-12 19:19:51,388 - Permission denied for guest to perform down
+2024-12-12 19:19:54,478 - Received command: download notreal from guest
+2024-12-12 19:19:54,478 - File notreal not found for user guest
+2024-12-12 19:21:11,771 - Received command: list from guest
+2024-12-12 19:21:11,771 - List of files sent to guest
+2024-12-12 19:21:16,891 - Received command: exit from guest
+2024-12-12 19:21:16,891 - SSL error with ('127.0.0.1', 60480): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 19:21:16,891 - Closing connection with ('127.0.0.1', 60480)
+2024-12-12 19:21:19,389 - Manual server shutdown by signal
+2024-12-12 19:21:19,389 - Server shutting down...
+2024-12-12 19:21:19,389 - Server shutdown gracefully
+2024-12-12 19:21:22,804 - Server started and listening on 127.0.0.1:10615
+2024-12-12 19:21:25,644 - Connection established with ('127.0.0.1', 45026)
+2024-12-12 19:21:25,646 - Secure connection established with ('127.0.0.1', 45026)
+2024-12-12 19:21:25,646 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:21:29,224 - User guest authenticated successfully
+2024-12-12 19:21:30,746 - Received command: list from guest
+2024-12-12 19:21:30,746 - List of files sent to guest
+2024-12-12 19:21:32,766 - Received command: download dne from guest
+2024-12-12 19:21:32,766 - File dne not found for user guest
+2024-12-12 19:21:37,598 - Received command: download dne from guest
+2024-12-12 19:21:37,598 - File dne not found for user guest
+2024-12-12 19:21:40,020 - Received command: download dne from guest
+2024-12-12 19:21:40,020 - File dne not found for user guest
+2024-12-12 19:21:41,721 - Received command: download from guest
+2024-12-12 19:21:41,721 - Invalid download command from guest: Filename not provided
+2024-12-12 19:21:43,883 - Received command: down from guest
+2024-12-12 19:21:43,883 - Permission denied for guest to perform down
+2024-12-12 19:21:52,670 - Received command: download from guest
+2024-12-12 19:21:52,670 - Invalid download command from guest: Filename not provided
+2024-12-12 19:21:57,983 - Received command: down down from guest
+2024-12-12 19:21:57,983 - Permission denied for guest to perform down
+2024-12-12 19:24:59,136 - Received command: exit from guest
+2024-12-12 19:24:59,136 - SSL error with ('127.0.0.1', 45026): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 19:24:59,136 - Closing connection with ('127.0.0.1', 45026)
+2024-12-12 19:25:00,810 - Manual server shutdown by signal
+2024-12-12 19:25:00,811 - Server shutting down...
+2024-12-12 19:25:00,811 - Server shutdown gracefully
+2024-12-12 19:25:01,797 - Server started and listening on 127.0.0.1:10615
+2024-12-12 19:25:03,998 - Connection established with ('127.0.0.1', 56858)
+2024-12-12 19:25:04,001 - Secure connection established with ('127.0.0.1', 56858)
+2024-12-12 19:25:04,001 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:25:06,746 - User guest authenticated successfully
+2024-12-12 19:25:07,755 - Received command: down from guest
+2024-12-12 19:25:07,755 - Permission denied for guest to perform down
+2024-12-12 19:25:10,372 - Received command: down down from guest
+2024-12-12 19:25:10,372 - Permission denied for guest to perform down
+2024-12-12 19:25:14,039 - Received command: list from guest
+2024-12-12 19:25:14,040 - List of files sent to guest
+2024-12-12 19:25:16,299 - Received command: down from guest
+2024-12-12 19:25:16,299 - Permission denied for guest to perform down
+2024-12-12 19:25:17,802 - Received command: list from guest
+2024-12-12 19:25:17,802 - List of files sent to guest
+2024-12-12 19:25:19,115 - Received command: down down from guest
+2024-12-12 19:25:19,115 - Permission denied for guest to perform down
+2024-12-12 19:25:20,552 - Received command: list from guest
+2024-12-12 19:25:20,552 - List of files sent to guest
+2024-12-12 19:25:26,352 - Received command: download down from guest
+2024-12-12 19:25:26,352 - File down not found for user guest
+2024-12-12 19:25:27,755 - Received command: list from guest
+2024-12-12 19:25:27,755 - List of files sent to guest
+2024-12-12 19:25:29,919 - Received command: download nope from guest
+2024-12-12 19:25:29,920 - File nope not found for user guest
+2024-12-12 19:25:31,147 - Received command: list from guest
+2024-12-12 19:25:31,147 - List of files sent to guest
+2024-12-12 19:25:32,591 - Received command: down from guest
+2024-12-12 19:25:32,591 - Permission denied for guest to perform down
+2024-12-12 19:25:34,154 - Received command: what from guest
+2024-12-12 19:25:34,154 - Permission denied for guest to perform what
+2024-12-12 19:25:35,706 - Received command: okay from guest
+2024-12-12 19:25:35,706 - Permission denied for guest to perform okay
+2024-12-12 19:25:37,834 - Received command: down from guest
+2024-12-12 19:25:37,835 - Permission denied for guest to perform down
+2024-12-12 19:25:38,985 - Received command: list from guest
+2024-12-12 19:25:38,985 - List of files sent to guest
+2024-12-12 19:25:42,218 - Received command: manage from guest
+2024-12-12 19:25:42,218 - Permission denied for guest to perform manage
+2024-12-12 19:28:46,924 - Received command: exit from guest
+2024-12-12 19:28:46,924 - Permission denied for guest to perform exit
+2024-12-12 19:28:46,924 - SSL error with ('127.0.0.1', 56858): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 19:28:46,924 - Closing connection with ('127.0.0.1', 56858)
+2024-12-12 19:28:51,594 - Connection established with ('127.0.0.1', 50060)
+2024-12-12 19:28:51,596 - Secure connection established with ('127.0.0.1', 50060)
+2024-12-12 19:28:51,596 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:28:56,239 - Failed authentication attempt for user Pierre
+2024-12-12 19:29:01,195 - User Pierre authenticated successfully
+2024-12-12 19:29:03,935 - Received command: download dne from Pierre
+2024-12-12 19:29:03,936 - File dne not found for user Pierre
+2024-12-12 19:29:06,363 - Received command: down from Pierre
+2024-12-12 19:29:06,364 - Permission denied for Pierre to perform down
+2024-12-12 19:29:09,115 - Received command: what from Pierre
+2024-12-12 19:29:09,115 - Permission denied for Pierre to perform what
+2024-12-12 19:30:00,571 - Received command: exit from Pierre
+2024-12-12 19:30:00,571 - Permission denied for Pierre to perform exit
+2024-12-12 19:30:00,572 - SSL error with ('127.0.0.1', 50060): EOF occurred in violation of protocol (_ssl.c:2406)
+2024-12-12 19:30:00,572 - Closing connection with ('127.0.0.1', 50060)
+2024-12-12 19:30:01,931 - Manual server shutdown by signal
+2024-12-12 19:30:01,931 - Server shutting down...
+2024-12-12 19:30:01,931 - Server shutdown gracefully
+2024-12-12 19:30:14,933 - Server started and listening on 127.0.0.1:10615
+2024-12-12 19:30:18,028 - Connection established with ('127.0.0.1', 42476)
+2024-12-12 19:30:18,030 - Secure connection established with ('127.0.0.1', 42476)
+2024-12-12 19:30:18,031 - Credentials loaded from ServerFiles/admin/pwd.txt
+2024-12-12 19:30:22,459 - User Pierre authenticated successfully
+2024-12-12 19:30:45,452 - Received command: down from Pierre
+2024-12-12 19:30:45,452 - Invalid command received from Pierre: down
+2024-12-12 19:30:48,011 - Received command: okay from Pierre
+2024-12-12 19:30:48,011 - Invalid command received from Pierre: okay
+2024-12-12 19:30:50,235 - Received command: thanks from Pierre
+2024-12-12 19:30:50,235 - Invalid command received from Pierre: thanks
+2024-12-12 19:30:51,071 - Received command: nice from Pierre
+2024-12-12 19:30:51,071 - Invalid command received from Pierre: nice
+2024-12-12 19:30:53,994 - Received command: shutdown from Pierre
+2024-12-12 19:30:53,994 - Server shutdown by Pierre
+2024-12-12 19:30:53,994 - Closing connection with ('127.0.0.1', 42476)
+2024-12-12 19:30:54,065 - Server shutting down...
+2024-12-12 19:30:54,065 - Server shutdown gracefully

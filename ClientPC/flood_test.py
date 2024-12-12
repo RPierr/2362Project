@@ -2,7 +2,7 @@ import socket
 import ssl
 
 # Server connection details
-HOST = "127.0.0.1"  # Server IP address
+HOST = "172.212.203.54"  # Server IP address
 PORT = 10615        # port number
 
 # Number of commands to send
