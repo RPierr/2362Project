@@ -11,7 +11,6 @@ BASE_DIR = "ServerFiles"
 PWD_FILE = "ServerFiles/admin/lsu.txt"
 
 
-
 # Logging
 logging.basicConfig(filename="ServerFiles/admin/sftp_server.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
@@ -114,10 +113,11 @@ def load_credentials(lsu_file):
 
 
 
+
 # Function to start the SFTP server
 def start_sftp_server():
     # Load host keys
-    host_key = paramiko.RSAKey(filename="ServerFiles/admin/server.key")
+    host_key = paramiko.RSAKey(filename="ServerFiles/admin/SFTPserver.key")
 
     # Create a transport object
     transport = Transport((HOST, PORT))
