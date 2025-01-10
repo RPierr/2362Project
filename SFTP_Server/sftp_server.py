@@ -59,59 +59,6 @@ class MySFTPServer(SFTPServerInterface):
         except FileNotFoundError:
             return SFTP_NO_SUCH_FILE
 
-# Define the Custom Auth Server Interface
-class CustomAuthServer(paramiko.ServerInterface):
-    """
-    Custome Paramko server interface for authentication
-    """
-
-    def __init__(self, creds):
-        super().__init__()
-        self.creds = creds
-
-    def check_auth_password(self, username, password):
-        """
-        Check the user provided pass with stored hash
-        """
-        if username in self.creds:
-            stored_hash = self.creds[username]['hash']
-            privided_hash = hashlib.sha256(password.encode('utf-8')).hexdigest()
-            if stored_hash == privided_hash:
-                return paramiko.AUTH_SUCCESSFUL
-            
-        return paramiko.AUTH_FAILED
-    
-    # def check_user_role(self, username):
-
-# Authentication
-def load_credentials(lsu_file):
-    """
-    Returns a dictionary with the credentials:
-    {
-        "username": "hashedPassword": "role"
-    }
-    """
-
-    creds = {}
-    if os.path.exists(lsu_file):
-        with open(lsu_file, "r", encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith("//"):
-                    continue
-
-                # Fromat: username:hashedPassword:role
-                parts = line.split(":")
-                if len(parts) == 3:
-                    username, hashPass, role = parts
-                    creds[username] = {
-                        "hashedPassword": hashPass,
-                        "role": role
-                    }
-
-    return creds
-
-
 
 
 # Function to start the SFTP server
@@ -123,11 +70,9 @@ def start_sftp_server():
     transport = Transport((HOST, PORT))
     transport.add_server_key(host_key)
 
-    # Load credentials from lsu.txt
-    creds = load_credentials(PWD_FILE)
 
     # Define the custom auth server
-    server = CustomAuthServer(creds)
+    server = paramiko.ServerInterface()
 
     # Start the transport
     transport.start_server(server=server)

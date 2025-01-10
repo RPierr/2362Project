@@ -9,8 +9,8 @@ PORT = 22
 
 def connect_to_server():
     # Prompt for username and password
-    username = input("Enter your SSH username: ").strip()
-    password = input("Enter your SSH password: ").strip()
+    username = input("Username: ").strip()
+    password = input("Password: ").strip()
 
     # Create an SSH client
     ssh_client = paramiko.SSHClient()
